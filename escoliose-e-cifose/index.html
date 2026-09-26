@@ -176,10 +176,31 @@
 
   /* Local */
   .local{background:var(--branco);}
-  .local .wrap{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
-  .local address{font-style:normal; font-size:1.08rem; margin-bottom:18px;}
-  .local .extras{list-style:none; margin-bottom:26px; color:var(--aco);}
-  .local .extras li{padding:6px 0;}
+  .local .wrap{display:grid; grid-template-columns:1fr 1.2fr; gap:48px; align-items:stretch;}
+  .local h2{margin:14px 0 22px;}
+  .local-card{border:1px solid var(--cinza); padding:26px; margin-bottom:16px; border-radius:var(--radius);}
+  .local-card h4{font-family:'Sora',sans-serif; font-weight:600; font-size:1rem; margin-bottom:8px; display:flex; align-items:center; gap:8px;}
+  .local-card h4 svg{width:18px; height:18px; color:var(--cobre); flex:none;}
+  .local-card p{color:var(--aco); font-size:.92rem; margin-bottom:14px;}
+  .local-card p:last-child{margin-bottom:0;}
+  .local-card a{font-family:'Sora',sans-serif; font-size:.78rem; font-weight:600; color:var(--cobre);}
+  .map-frame{border-radius:var(--radius); overflow:hidden; min-height:340px; border:1px solid var(--cinza); filter:saturate(.9) contrast(1.02);}
+  .map-frame iframe{width:100%; height:100%; min-height:340px; border:0; display:block;}
+
+  /* Nota Doctoralia */
+  .rating{display:inline-flex; align-items:center; flex-wrap:wrap; gap:6px 12px; padding:10px 14px; margin-bottom:26px; border:1px solid rgba(174,182,186,.35); border-radius:var(--radius); text-decoration:none; color:var(--off-white); font-size:.92rem;}
+  .rating:hover{border-color:var(--cobre-claro);}
+  .rating .stars{display:inline-flex; gap:2px; color:var(--cobre-claro);}
+  .rating .stars svg{width:16px; height:16px;}
+  .rating strong{font-family:'Sora',sans-serif; font-weight:600;}
+  .rating small{color:var(--cinza); font-size:.84rem;}
+  .rating-light{color:var(--ardosia); border-color:var(--areia); margin:0 0 22px;}
+  .rating-light .stars{color:var(--cobre);}
+  .rating-light small{color:var(--aco);}
+
+  /* Link para o site completo */
+  .top-link{font-size:.9rem; color:var(--cinza); text-decoration:none; margin-left:auto; margin-right:18px; white-space:nowrap;}
+  .top-link:hover{color:var(--off-white);}
 
   /* CTA final */
   .final{background:linear-gradient(160deg,var(--preto-azulado) 0%,var(--ardosia) 100%); color:var(--off-white); text-align:center;}
@@ -220,6 +241,7 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/">Otávio Vitório<small>Ortopedia e Cirurgia da Coluna</small></a>
+    <a class="top-link" href="/">Site completo</a>
     <a class="btn btn-primary" href="https://wa.me/5531987357216?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20escoliose%2Fcifose%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
   </div>
 </header>
@@ -239,7 +261,12 @@
         </a>
         <a class="btn btn-ghost" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener">Agendar online</a>
       </div>
-      <p class="price-note">Consulta particular · <strong>R$ 600</strong> · Atendimento com hora marcada, no Prado</p>
+      <p class="price-note" style="margin-bottom:18px;">Consulta particular · <strong>R$ 600</strong> · Atendimento com hora marcada, no Prado</p>
+      <a class="rating" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener" aria-label="Nota 5 de 5 no Doctoralia, com 77 avaliações de pacientes. Ver avaliações">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+        <strong>5,0 no Doctoralia</strong>
+        <small>77 avaliações de pacientes</small>
+      </a>
       <div class="creds">
         <div><strong>CRM-MG 86882</strong>RQE 62884 / 62889</div>
         <div><strong>UFMG</strong>Graduação em Medicina</div>
@@ -331,6 +358,12 @@
         <li><strong>Equipe de Cirurgia de Coluna</strong><span>Hospital Felício Rocho</span></li>
         <li><strong>CRM-MG 86882 · RQE 62884 / 62889</strong></li>
       </ul>
+      <a class="rating rating-light" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener" aria-label="Nota 5 de 5 no Doctoralia, com 77 avaliações de pacientes. Ver avaliações">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+        <strong>5,0 no Doctoralia</strong>
+        <small>77 avaliações de pacientes</small>
+      </a>
+      <br>
       <a class="btn btn-ghost-dark" href="/">Conhecer o site completo</a>
     </div>
   </div>
@@ -369,17 +402,23 @@
   <div class="wrap">
     <div>
       <p class="eyebrow">Localização</p>
-      <h2>Consultório no Prado, Belo Horizonte</h2>
-      <address>Rua Jaceguai, 208, Sala 708, Edifício Cayler<br>Prado, Belo Horizonte/MG · CEP 30411-073</address>
-      <ul class="extras">
-        <li>Consultório privativo, com hora marcada</li>
-        <li>Estacionamento no próprio edifício</li>
-        <li>Também atende no Hospital Felício Rocho (Barro Preto)</li>
-      </ul>
-      <a class="btn btn-ghost-dark" href="https://www.google.com/maps/search/?api=1&query=Rua+Jaceguai+208+Prado+Belo+Horizonte+MG" target="_blank" rel="noopener">Ver no Google Maps</a>
+      <h2>Onde encontrar o Dr. Otávio</h2>
+      <div class="local-card">
+        <h4>Consultório — Prado</h4>
+        <p>Rua Jaceguai, 208 — Sala 708, Edifício Cayler<br>Prado, Belo Horizonte/MG — 30411-073</p>
+        <a href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener">Agendar online →</a>
+      </div>
+      <div class="local-card">
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 010 6H9"/></svg> Estacionamento</h4>
+        <p>Vagas disponíveis no próprio edifício, com fácil acesso para quem chega de carro.</p>
+      </div>
+      <div class="local-card">
+        <h4>Também atende em</h4>
+        <p>Hospital Felício Rocho (Barro Preto) e Elcenter (Contagem), para procedimentos e infiltrações.</p>
+      </div>
     </div>
-    <div>
-      <p class="fine-note" style="margin-top:6px;">Prefere conversar antes? Envie uma mensagem pelo WhatsApp e a equipe do consultório responde suas dúvidas sobre o agendamento.</p>
+    <div class="map-frame">
+      <iframe src="https://maps.google.com/maps?q=Rua+Jaceguai%2C+208%2C+Prado%2C+Belo+Horizonte%2FMG%2C+30411-073&t=m&z=16&output=embed&iwloc=near" loading="lazy" title="Localização do consultório — Rua Jaceguai, 208, Prado, Belo Horizonte/MG" aria-label="Mapa com a localização do consultório"></iframe>
     </div>
   </div>
 </section>
@@ -387,7 +426,7 @@
 <section class="final">
   <div class="wrap">
     <h2>Entenda a sua coluna e decida com segurança</h2>
-    <p>Agende sua avaliação com o Dr. Otávio Vitório.</p>
+    <p style="margin-bottom:18px;">Agende sua avaliação com o Dr. Otávio Vitório.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://wa.me/5531987357216?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20escoliose%2Fcifose%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
       <a class="btn btn-ghost" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener">Agendar online</a>
