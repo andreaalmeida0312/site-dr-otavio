@@ -10,6 +10,13 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-18476924700');
+
+  // Conversão "Clique WhatsApp": dispara em qualquer link para wa.me
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('a[href*="wa.me"]');
+    if (!link) return;
+    gtag('event', 'conversion', {'send_to': 'AW-18476924700/YLMqCKGy_IYdEJz-vepE'});
+  }, true);
 </script>
 <title>Cirurgião de Coluna em Belo Horizonte | Dr. Otávio Vitório</title>
 <meta name="description" content="Dr. Otávio Vitório, ortopedista e cirurgião de coluna em Belo Horizonte. CRM MG 86882 | RQE 62884/62889. Tratamento de hérnia de disco, lombalgia, escoliose e cervicalgia. Agende sua consulta no Prado, BH.">
