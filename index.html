@@ -9,6 +9,8 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+  // Página de saúde: não coletar sinais de personalização de anúncios
+  gtag('set', 'allow_ad_personalization_signals', false);
   gtag('config', 'AW-18476924700');
 
   // Conversão "Clique WhatsApp": dispara em qualquer link para wa.me
