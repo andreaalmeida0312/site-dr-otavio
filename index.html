@@ -105,11 +105,14 @@
   .nav-dropdown-trigger svg{width:11px; height:11px; transition:transform .2s ease; flex:none;}
   .nav-dropdown.open .nav-dropdown-trigger svg{transform:rotate(180deg);}
   .nav-dropdown-panel{
-    position:absolute; top:calc(100% + 16px); right:0; min-width:220px;
+    position:absolute; top:100%; right:0; min-width:220px; padding-top:16px;
+    opacity:0; visibility:hidden; transform:translateY(6px); pointer-events:none;
+    transition:opacity .18s ease, transform .18s ease, visibility .18s;
+  }
+  .nav-dropdown-panel-inner{
     background:var(--branco); border:1px solid var(--areia); border-radius:var(--radius);
     box-shadow:0 16px 32px -12px rgba(36,59,74,.18);
-    padding:8px; opacity:0; visibility:hidden; transform:translateY(6px); pointer-events:none;
-    transition:opacity .18s ease, transform .18s ease, visibility .18s;
+    padding:8px;
   }
   .nav-dropdown-panel a{display:block; padding:9px 12px; font-size:.85rem; font-weight:500; color:var(--ardosia); border-radius:4px; white-space:nowrap;}
   .nav-dropdown-panel a::after{display:none;}
@@ -537,11 +540,13 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
       <div class="nav-dropdown-panel">
-        <a href="/escoliose-e-cifose/">Escoliose e cifose</a>
-        <a href="/lombalgia/">Dor lombar</a>
-        <a href="/hernia-de-disco/">Hérnia de disco</a>
-        <a href="/dor-cervical/">Dor cervical</a>
-        <a href="/estenose-do-canal/">Estenose do canal</a>
+        <div class="nav-dropdown-panel-inner">
+          <a href="/escoliose-e-cifose/">Escoliose e cifose</a>
+          <a href="/lombalgia/">Dor lombar</a>
+          <a href="/hernia-de-disco/">Hérnia de disco</a>
+          <a href="/dor-cervical/">Dor cervical</a>
+          <a href="/estenose-do-canal/">Estenose do canal</a>
+        </div>
       </div>
     </div>
   </nav>
