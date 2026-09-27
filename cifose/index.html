@@ -144,8 +144,6 @@
   /* Explicação */
   .cards{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
   .card{background:var(--branco); padding:34px 32px; border-top:3px solid var(--cobre);}
-  .card-illus{width:100px; flex:none;}
-  .card-illus svg{width:100%; height:auto; display:block;}
   .card h3{font-size:1.4rem; margin-bottom:12px;}
   .card p{color:var(--aco);}
 
@@ -253,10 +251,6 @@
   .depo-more a:hover{color:var(--off-white);}
   @media(max-width:860px){ .depo-grid{grid-template-columns:1fr 1fr;} }
   @media(max-width:600px){ .depo-grid{grid-template-columns:1fr;} }
-  @media(max-width:520px){
-    .card{flex-direction:column; gap:0;}
-    .card-illus{width:84px; margin-bottom:18px;}
-  }
   @media (max-width:899px){
     section{padding:52px 0;}
     .hero .wrap, .principle .wrap, .doctor .wrap, .local .wrap{grid-template-columns:1fr; gap:36px;}
@@ -339,28 +333,8 @@
     <h2>Cifose: o que é e por que acontece</h2>
     <div class="cards">
       <div class="card">
-        <div class="card-illus" aria-hidden="true">
-          <svg viewBox="0 0 160 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="72" cy="24" r="13" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
-            <path d="M48,52 C60,70 66,90 70,120 C74,148 80,168 90,194" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
-            <path d="M104,50 C100,72 96,94 96,120 C96,148 98,168 100,194" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
-            <path d="M48,54 Q76,40 104,52" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
-            <path d="M90,194 Q95,206 100,194" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
-            <path d="M76,50 C110,72 108,110 78,128 C60,140 66,166 92,192" stroke="var(--cobre)" stroke-width="3" stroke-linecap="round" fill="none"/>
-            <circle cx="76" cy="50" r="3" fill="var(--cobre)"/>
-            <circle cx="98" cy="70" r="3" fill="var(--cobre)"/>
-            <circle cx="100" cy="98" r="3" fill="var(--cobre)"/>
-            <circle cx="80" cy="122" r="3" fill="var(--cobre)"/>
-            <circle cx="66" cy="148" r="3" fill="var(--cobre)"/>
-            <circle cx="76" cy="172" r="3" fill="var(--cobre)"/>
-            <circle cx="92" cy="192" r="3" fill="var(--cobre)"/>
-            <line x1="76" y1="50" x2="92" y2="192" stroke="var(--aco)" stroke-width="1.5" stroke-dasharray="3 5" opacity="0.55"/>
-          </svg>
-        </div>
-        <div class="card-body">
-          <h3>O que é</h3>
-          <p>Curvatura exagerada da coluna torácica, vista de lado, que dá o aspecto de "corcunda" ou costas arredondadas. Um certo grau de curva nessa região é normal; a cifose se refere ao excesso dessa curvatura, que pode ser flexível ou rígida.</p>
-        </div>
+        <h3>O que é</h3>
+        <p>Curvatura exagerada da coluna torácica, vista de lado, que dá o aspecto de "corcunda" ou costas arredondadas. Um certo grau de curva nessa região é normal; a cifose se refere ao excesso dessa curvatura, que pode ser flexível ou rígida.</p>
       </div>
       <div class="card">
         <h3>Causas comuns</h3>

@@ -144,8 +144,6 @@
   /* Explicação */
   .cards{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
   .card{background:var(--branco); padding:34px 32px; border-top:3px solid var(--cobre);}
-  .card-illus{width:100px; flex:none;}
-  .card-illus svg{width:100%; height:auto; display:block;}
   .card h3{font-size:1.4rem; margin-bottom:12px;}
   .card p{color:var(--aco);}
 
@@ -253,10 +251,6 @@
   .depo-more a:hover{color:var(--off-white);}
   @media(max-width:860px){ .depo-grid{grid-template-columns:1fr 1fr;} }
   @media(max-width:600px){ .depo-grid{grid-template-columns:1fr;} }
-  @media(max-width:520px){
-    .card{flex-direction:column; gap:0;}
-    .card-illus{width:84px; margin-bottom:18px;}
-  }
   @media (max-width:899px){
     section{padding:52px 0;}
     .hero .wrap, .principle .wrap, .doctor .wrap, .local .wrap{grid-template-columns:1fr; gap:36px;}
@@ -339,29 +333,8 @@
     <h2>Escoliose: o que é e por que acontece</h2>
     <div class="cards">
       <div class="card">
-        <div class="card-illus" aria-hidden="true">
-          <svg viewBox="0 0 160 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="80" cy="18" r="13" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
-            <path d="M52,44 C46,60 44,90 48,120 C50,145 46,165 42,195" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
-            <path d="M108,44 C114,60 116,90 112,120 C110,145 114,165 118,195" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
-            <path d="M50,48 Q80,32 112,42" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
-            <path d="M42,195 Q80,207 118,195" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
-            <line x1="80" y1="46" x2="80" y2="190" stroke="var(--aco)" stroke-width="1.5" stroke-dasharray="3 5" opacity="0.55"/>
-            <path d="M80,46 C95,70 65,95 80,120 C92,145 68,165 80,190" stroke="var(--cobre)" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="80" cy="46" r="3" fill="var(--cobre)"/>
-            <circle cx="91" cy="66" r="3" fill="var(--cobre)"/>
-            <circle cx="79" cy="92" r="3" fill="var(--cobre)"/>
-            <circle cx="80" cy="120" r="3" fill="var(--cobre)"/>
-            <circle cx="89" cy="145" r="3" fill="var(--cobre)"/>
-            <circle cx="71" cy="168" r="3" fill="var(--cobre)"/>
-            <circle cx="80" cy="190" r="3" fill="var(--cobre)"/>
-            <line x1="55" y1="47" x2="105" y2="41" stroke="var(--ardosia)" stroke-width="2.2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="card-body">
-          <h3>O que é</h3>
-          <p>Desvio lateral da coluna, geralmente com rotação das vértebras. Visto por trás, o eixo deixa de ser reto e forma uma curva em "C" ou em "S". Pode ser identificada na infância e na adolescência, ou se desenvolver e mudar ao longo da vida adulta.</p>
-        </div>
+        <h3>O que é</h3>
+        <p>Desvio lateral da coluna, geralmente com rotação das vértebras. Visto por trás, o eixo deixa de ser reto e forma uma curva em "C" ou em "S". Pode ser identificada na infância e na adolescência, ou se desenvolver e mudar ao longo da vida adulta.</p>
       </div>
       <div class="card">
         <h3>Causas comuns</h3>
