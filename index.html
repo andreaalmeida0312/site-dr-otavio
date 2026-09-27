@@ -89,10 +89,36 @@
   .logo{display:flex; align-items:center; gap:12px; font-family:'Sora',sans-serif; font-weight:600; letter-spacing:.02em; font-size:1.02rem;}
   .logo .mono{width:38px; height:38px; display:flex; align-items:center; justify-content:center; flex:none;}
   .logo .mono svg{width:100%; height:100%;}
-  nav.main-nav{display:flex; gap:34px; font-size:.86rem; font-weight:500;}
+  nav.main-nav{display:flex; align-items:center; gap:34px; font-size:.86rem; font-weight:500;}
   nav.main-nav a{position:relative; padding:4px 0;}
   nav.main-nav a::after{content:""; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--cobre); transition:width .25s ease;}
   nav.main-nav a:hover::after{width:100%;}
+
+  /* ---------- specialties dropdown (desktop) ---------- */
+  .nav-dropdown{position:relative;}
+  .nav-dropdown-trigger{
+    font:inherit; color:inherit; background:none; border:none; cursor:pointer;
+    display:flex; align-items:center; gap:5px; padding:4px 0; position:relative;
+  }
+  .nav-dropdown-trigger::after{content:""; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--cobre); transition:width .25s ease;}
+  .nav-dropdown-trigger:hover::after, .nav-dropdown.open .nav-dropdown-trigger::after{width:100%;}
+  .nav-dropdown-trigger svg{width:11px; height:11px; transition:transform .2s ease; flex:none;}
+  .nav-dropdown.open .nav-dropdown-trigger svg{transform:rotate(180deg);}
+  .nav-dropdown-panel{
+    position:absolute; top:calc(100% + 16px); right:0; min-width:220px;
+    background:var(--branco); border:1px solid var(--areia); border-radius:var(--radius);
+    box-shadow:0 16px 32px -12px rgba(36,59,74,.18);
+    padding:8px; opacity:0; visibility:hidden; transform:translateY(6px); pointer-events:none;
+    transition:opacity .18s ease, transform .18s ease, visibility .18s;
+  }
+  .nav-dropdown-panel a{display:block; padding:9px 12px; font-size:.85rem; font-weight:500; color:var(--ardosia); border-radius:4px; white-space:nowrap;}
+  .nav-dropdown-panel a::after{display:none;}
+  .nav-dropdown-panel a:hover{background:var(--off-white); color:var(--cobre);}
+  .nav-dropdown.open .nav-dropdown-panel{opacity:1; visibility:visible; transform:none; pointer-events:auto;}
+  @media(hover:hover){
+    .nav-dropdown:hover .nav-dropdown-panel{opacity:1; visibility:visible; transform:none; pointer-events:auto;}
+    .nav-dropdown:hover .nav-dropdown-trigger::after{width:100%;}
+  }
   .header-cta{
     display:inline-block; background:var(--cobre); color:#fff; font-family:'Sora',sans-serif; font-size:.82rem; font-weight:600;
     padding:11px 22px; border-radius:var(--radius); letter-spacing:.02em; transition:background .2s ease;
@@ -134,6 +160,21 @@
     display:inline-block; background:var(--cobre); color:#fff; font-size:1rem; padding:14px 30px; border-radius:var(--radius); margin-top:10px;
   }
   body.menu-open{overflow:hidden;}
+
+  /* ---------- specialties accordion (mobile) ---------- */
+  .mobile-dropdown{display:flex; flex-direction:column; align-items:center;}
+  .mobile-dropdown-trigger{
+    font-family:'Sora',sans-serif; font-size:1.25rem; font-weight:600; color:var(--ardosia);
+    background:none; border:none; cursor:pointer; display:flex; align-items:center; gap:8px;
+  }
+  .mobile-dropdown-trigger svg{width:18px; height:18px; transition:transform .2s ease; flex:none;}
+  .mobile-dropdown.open .mobile-dropdown-trigger svg{transform:rotate(180deg);}
+  .mobile-dropdown-panel{
+    display:flex; flex-direction:column; align-items:center; gap:16px;
+    max-height:0; overflow:hidden; transition:max-height .25s ease, margin-top .25s ease; margin-top:0;
+  }
+  .mobile-dropdown.open .mobile-dropdown-panel{max-height:240px; margin-top:18px;}
+  .mobile-dropdown-panel a{font-family:'Inter',sans-serif; font-size:1.05rem; font-weight:500; color:var(--aco);}
 
   /* ---------- vertebral signature nav (desktop only) ---------- */
   .spine-nav{
@@ -486,10 +527,18 @@
   <nav class="main-nav">
     <a href="#depoimentos">Depoimentos</a>
     <a href="#diagnosticos">Diagnósticos</a>
-    <a href="/escoliose-e-cifose/">Escoliose e cifose</a>
     <a href="#sobre">Sobre</a>
     <a href="#consultorio">Consultório</a>
     <a href="#localizacao">Localização</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">
+        Especialidades
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="nav-dropdown-panel">
+        <a href="/escoliose-e-cifose/">Escoliose e cifose</a>
+      </div>
+    </div>
   </nav>
   <a class="header-cta" href="https://wa.me/5531987357216?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar consulta</a>
   <a class="header-cta-mobile" href="https://wa.me/5531987357216?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar</a>
@@ -502,10 +551,18 @@
   </button>
   <a href="#depoimentos">Depoimentos</a>
   <a href="#diagnosticos">Diagnósticos</a>
-  <a href="/escoliose-e-cifose/">Escoliose e cifose</a>
   <a href="#sobre">Sobre</a>
   <a href="#consultorio">Consultório</a>
   <a href="#localizacao">Localização</a>
+  <div class="mobile-dropdown">
+    <button class="mobile-dropdown-trigger" type="button" aria-expanded="false">
+      Especialidades
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="mobile-dropdown-panel">
+      <a href="/escoliose-e-cifose/">Escoliose e cifose</a>
+    </div>
+  </div>
   <a class="header-cta" href="https://wa.me/5531987357216?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
 </nav>
 
@@ -1016,6 +1073,41 @@
     if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMenu);
     window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
   }
+
+  // specialties dropdown (desktop)
+  document.querySelectorAll('.nav-dropdown').forEach(dd => {
+    const trigger = dd.querySelector('.nav-dropdown-trigger');
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = dd.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', isOpen);
+    });
+  });
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.nav-dropdown.open').forEach(dd => {
+      if (!dd.contains(e.target)) {
+        dd.classList.remove('open');
+        dd.querySelector('.nav-dropdown-trigger').setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.nav-dropdown.open').forEach(dd => {
+        dd.classList.remove('open');
+        dd.querySelector('.nav-dropdown-trigger').setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // specialties accordion (mobile)
+  document.querySelectorAll('.mobile-dropdown').forEach(dd => {
+    const trigger = dd.querySelector('.mobile-dropdown-trigger');
+    trigger.addEventListener('click', () => {
+      const isOpen = dd.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', isOpen);
+    });
+  });
 
   // tag cloud toggle
   const tagBtn = document.getElementById('tagCloudToggle');
