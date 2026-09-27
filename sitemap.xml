@@ -6,7 +6,12 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://drotaviovitorio.com.br/escoliose-e-cifose/</loc>
+    <loc>https://drotaviovitorio.com.br/escoliose/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://drotaviovitorio.com.br/cifose/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
