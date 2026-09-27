@@ -143,11 +143,16 @@
 
   /* Diferença */
   .cards{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
-  .card{background:var(--branco); padding:34px 32px; border-top:3px solid var(--cobre);}
-  .card-illus{width:96px; margin-bottom:20px;}
+  .card{background:var(--branco); padding:34px 32px; border-top:3px solid var(--cobre); display:flex; gap:28px; align-items:flex-start;}
+  .card-illus{width:100px; flex:none;}
   .card-illus svg{width:100%; height:auto; display:block;}
+  .card-body{flex:1; min-width:0;}
   .card h3{font-size:1.4rem; margin-bottom:12px;}
   .card p{color:var(--aco);}
+  @media(max-width:520px){
+    .card{flex-direction:column; gap:0;}
+    .card-illus{width:84px; margin-bottom:18px;}
+  }
 
   /* Princípio */
   .principle{background:var(--ardosia); color:var(--off-white);}
@@ -358,8 +363,10 @@
             <line x1="55" y1="47" x2="105" y2="41" stroke="var(--ardosia)" stroke-width="2.2" stroke-linecap="round"/>
           </svg>
         </div>
-        <h3>Escoliose</h3>
-        <p>Desvio lateral da coluna, geralmente com rotação das vértebras. Visto por trás, o eixo deixa de ser reto e forma uma curva em "C" ou em "S". Pode ser identificada na infância e na adolescência, ou se desenvolver e mudar ao longo da vida adulta.</p>
+        <div class="card-body">
+          <h3>Escoliose</h3>
+          <p>Desvio lateral da coluna, geralmente com rotação das vértebras. Visto por trás, o eixo deixa de ser reto e forma uma curva em "C" ou em "S". Pode ser identificada na infância e na adolescência, ou se desenvolver e mudar ao longo da vida adulta.</p>
+        </div>
       </div>
       <div class="card">
         <div class="card-illus" aria-hidden="true">
@@ -376,8 +383,10 @@
             <circle cx="78" cy="150" r="3" fill="var(--cobre)"/>
           </svg>
         </div>
-        <h3>Cifose</h3>
-        <p>Curvatura da coluna para a frente, mais comum na região torácica (parte alta das costas). Algum grau de cifose é normal. Quando acentuada (hipercifose), pode causar dor, alteração da postura e limitação nas atividades do dia a dia.</p>
+        <div class="card-body">
+          <h3>Cifose</h3>
+          <p>Curvatura da coluna para a frente, mais comum na região torácica (parte alta das costas). Algum grau de cifose é normal. Quando acentuada (hipercifose), pode causar dor, alteração da postura e limitação nas atividades do dia a dia.</p>
+        </div>
       </div>
     </div>
   </div>
