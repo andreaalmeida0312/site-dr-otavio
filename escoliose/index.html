@@ -142,6 +142,15 @@
   .fine-note{font-size:.92rem; color:var(--aco); max-width:70ch;}
 
   /* Explicação */
+  .causa-header{display:flex; align-items:center; gap:32px; margin-bottom:36px;}
+  .causa-illus{width:100px; flex:none;}
+  .causa-illus svg{width:100%; height:auto; display:block;}
+  .causa-header .eyebrow{margin-bottom:10px;}
+  .causa-header h2{margin-bottom:0;}
+  @media(max-width:560px){
+    .causa-header{gap:20px;}
+    .causa-illus{width:64px;}
+  }
   .cards{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
   .card{background:var(--branco); padding:34px 32px; border-top:3px solid var(--cobre);}
   .card h3{font-size:1.4rem; margin-bottom:12px;}
@@ -329,8 +338,31 @@
 
 <section>
   <div class="wrap">
-    <p class="eyebrow">Entenda a causa</p>
-    <h2>Escoliose: o que é e por que acontece</h2>
+    <div class="causa-header">
+      <div class="causa-illus" aria-hidden="true">
+        <svg viewBox="0 0 160 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="80" cy="18" r="13" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
+          <path d="M52,44 C46,60 44,90 48,120 C50,145 46,165 42,195" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
+          <path d="M108,44 C114,60 116,90 112,120 C110,145 114,165 118,195" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
+          <path d="M50,48 Q80,32 112,42" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
+          <path d="M42,195 Q80,207 118,195" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
+          <line x1="80" y1="46" x2="80" y2="190" stroke="var(--aco)" stroke-width="1.5" stroke-dasharray="3 5" opacity="0.55"/>
+          <path d="M80,46 C95,70 65,95 80,120 C92,145 68,165 80,190" stroke="var(--cobre)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="80" cy="46" r="3" fill="var(--cobre)"/>
+          <circle cx="91" cy="66" r="3" fill="var(--cobre)"/>
+          <circle cx="79" cy="92" r="3" fill="var(--cobre)"/>
+          <circle cx="80" cy="120" r="3" fill="var(--cobre)"/>
+          <circle cx="89" cy="145" r="3" fill="var(--cobre)"/>
+          <circle cx="71" cy="168" r="3" fill="var(--cobre)"/>
+          <circle cx="80" cy="190" r="3" fill="var(--cobre)"/>
+          <line x1="55" y1="47" x2="105" y2="41" stroke="var(--ardosia)" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <p class="eyebrow">Entenda a causa</p>
+        <h2>Escoliose: o que é e por que acontece</h2>
+      </div>
+    </div>
     <div class="cards">
       <div class="card">
         <h3>O que é</h3>

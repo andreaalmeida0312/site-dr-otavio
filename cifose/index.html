@@ -142,6 +142,15 @@
   .fine-note{font-size:.92rem; color:var(--aco); max-width:70ch;}
 
   /* Explicação */
+  .causa-header{display:flex; align-items:center; gap:32px; margin-bottom:36px;}
+  .causa-illus{width:100px; flex:none;}
+  .causa-illus svg{width:100%; height:auto; display:block;}
+  .causa-header .eyebrow{margin-bottom:10px;}
+  .causa-header h2{margin-bottom:0;}
+  @media(max-width:560px){
+    .causa-header{gap:20px;}
+    .causa-illus{width:64px;}
+  }
   .cards{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
   .card{background:var(--branco); padding:34px 32px; border-top:3px solid var(--cobre);}
   .card h3{font-size:1.4rem; margin-bottom:12px;}
@@ -329,8 +338,26 @@
 
 <section>
   <div class="wrap">
-    <p class="eyebrow">Entenda a causa</p>
-    <h2>Cifose: o que é e por que acontece</h2>
+    <div class="causa-header">
+      <div class="causa-illus" aria-hidden="true">
+        <svg viewBox="0 0 160 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M85,33 C70,42 55,55 55,78 C55,100 65,118 75,132 C78,142 78,148 78,152 L96,152 C98,140 102,122 106,100 C110,78 112,55 100,35 C95,28 90,28 85,33 Z" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
+          <circle cx="98" cy="20" r="12" stroke="var(--cinza)" stroke-width="1.5" opacity="0.6"/>
+          <line x1="85" y1="35" x2="80" y2="150" stroke="var(--aco)" stroke-width="1.5" stroke-dasharray="3 5" opacity="0.55"/>
+          <path d="M85,35 C68,50 58,68 62,88 C65,105 72,120 78,150" stroke="var(--cobre)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="85" cy="35" r="3" fill="var(--cobre)"/>
+          <circle cx="70" cy="52" r="3" fill="var(--cobre)"/>
+          <circle cx="61" cy="72" r="3" fill="var(--cobre)"/>
+          <circle cx="65" cy="95" r="3" fill="var(--cobre)"/>
+          <circle cx="73" cy="118" r="3" fill="var(--cobre)"/>
+          <circle cx="78" cy="150" r="3" fill="var(--cobre)"/>
+        </svg>
+      </div>
+      <div>
+        <p class="eyebrow">Entenda a causa</p>
+        <h2>Cifose: o que é e por que acontece</h2>
+      </div>
+    </div>
     <div class="cards">
       <div class="card">
         <h3>O que é</h3>
