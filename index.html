@@ -17,6 +17,7 @@
   // Página de saúde: não coletar sinais de personalização de anúncios
   gtag('set', 'allow_ad_personalization_signals', false);
   gtag('config', 'AW-18476924700');
+  gtag('config', 'G-1HES65MM4S');
 
   // Conversão "Clique WhatsApp": dispara em qualquer link para wa.me
   document.addEventListener('click', function (e) {
@@ -516,6 +517,17 @@
   footer .fine{font-size:.76rem; color:var(--aco);}
   footer nav{display:flex; gap:22px; font-size:.82rem;}
 </style>
+<script>
+(function(){
+  if(!location.hash) return;
+  document.documentElement.style.scrollBehavior='auto';
+  addEventListener('load', function(){
+    var t=document.querySelector(location.hash);
+    if(t) t.scrollIntoView();
+    setTimeout(function(){ document.documentElement.style.scrollBehavior=''; }, 50);
+  });
+})();
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
