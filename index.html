@@ -128,6 +128,7 @@
   .logo .mono{width:38px; height:38px; display:flex; align-items:center; justify-content:center; flex:none;}
   .logo .mono svg{width:100%; height:100%;}
   nav.main-nav{display:flex; align-items:center; gap:34px; font-size:.86rem; font-weight:500;}
+  nav.main-nav a, .nav-dropdown-trigger{white-space:nowrap;}
   nav.main-nav a{position:relative; padding:4px 0;}
   nav.main-nav a::after{content:""; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--cobre); transition:width .25s ease;}
   nav.main-nav a:hover::after{width:100%;}
@@ -169,17 +170,19 @@
     display:none; background:var(--cobre); color:#fff; font-family:'Sora',sans-serif; font-size:.76rem; font-weight:600;
     padding:9px 14px; border-radius:var(--radius); letter-spacing:.01em; white-space:nowrap;
   }
-  @media(max-width:900px){ .header-cta-mobile{display:inline-block;} }
+  @media(max-width:1000px){ .header-cta-mobile{display:inline-block;} }
   .menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:6px; z-index:210; position:relative;}
   .menu-toggle span{display:block; width:24px; height:2px; background:var(--ardosia); margin:5px 0; transition:transform .25s ease, opacity .25s ease;}
   .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
   .menu-toggle.open span:nth-child(2){opacity:0;}
   .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-  @media(min-width:901px) and (max-width:1120px){
-    nav.main-nav{gap:20px; font-size:.8rem;}
-    .header-cta{padding-left:14px; padding-right:14px;}
+  @media(min-width:1001px) and (max-width:1120px){
+    nav.main-nav{gap:14px; font-size:.78rem;}
+    .header-cta{padding-left:12px; padding-right:12px; font-size:.78rem;}
+    header, header.solid{padding-left:24px; padding-right:24px;}
+    .logo{font-size:.92rem; gap:8px;}
   }
-  @media(max-width:900px){
+  @media(max-width:1000px){
     nav.main-nav, .header-cta{display:none;}
     .menu-toggle{display:block;}
   }
@@ -589,6 +592,7 @@
     <a href="#depoimentos">Depoimentos</a>
     <a href="#diagnosticos">Diagnósticos</a>
     <a href="#sobre">Sobre</a>
+    <a href="/producao-cientifica/">Produção científica</a>
     <a href="#consultorio">Consultório</a>
     <a href="#localizacao">Localização</a>
     <div class="nav-dropdown">
@@ -620,6 +624,7 @@
   <a href="#depoimentos">Depoimentos</a>
   <a href="#diagnosticos">Diagnósticos</a>
   <a href="#sobre">Sobre</a>
+  <a href="/producao-cientifica/">Produção científica</a>
   <a href="#consultorio">Consultório</a>
   <a href="#localizacao">Localização</a>
   <div class="mobile-dropdown">
