@@ -13,7 +13,24 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18476924700"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  // Modo teste: ?teste=1 desliga o envio de dados (Google Ads e GA4) neste navegador; ?teste=0 volta ao normal
+  var modoTeste = false;
+  try {
+    var qTeste = new URLSearchParams(location.search).get('teste');
+    if (qTeste === '1') localStorage.setItem('modo_teste', '1');
+    if (qTeste === '0') localStorage.removeItem('modo_teste');
+    modoTeste = localStorage.getItem('modo_teste') === '1';
+  } catch (e) {}
+  if (modoTeste) {
+    window['ga-disable-G-1HES65MM4S'] = true;
+    document.addEventListener('DOMContentLoaded', function () {
+      var b = document.createElement('div');
+      b.textContent = 'MODO TESTE: nada é enviado ao Google. Para sair, abra o site com ?teste=0';
+      b.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#b00020;color:#fff;font:600 12px/1.3 sans-serif;text-align:center;padding:6px 8px';
+      document.body.appendChild(b);
+    });
+  }
+  function gtag(){ if (!modoTeste) dataLayer.push(arguments); }
   gtag('js', new Date());
   // Página de saúde: não coletar sinais de personalização de anúncios
   gtag('set', 'allow_ad_personalization_signals', false);
