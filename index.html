@@ -348,24 +348,31 @@
   .publications-list .ic{color:var(--cobre); flex:none; margin-top:2px;}
   .publications-list .ic svg{width:19px; height:19px;}
   .publications-list strong{color:var(--ardosia); font-weight:600;}
+  .publications-more{display:inline-block; margin-top:28px; font-family:'Sora',sans-serif; font-size:.84rem; font-weight:600; color:var(--cobre-btn); text-decoration:none; border-bottom:1px solid rgba(148,96,58,.4); padding-bottom:2px;}
+  .publications-more:hover{color:var(--cobre-btn-hover);}
 
   .publications-carousel-wrap{margin-top:56px; max-width:100%; overflow:hidden; padding:0 clamp(24px,5vw,64px); box-sizing:border-box;}
   .publications-carousel-label{font-size:.72rem; color:var(--cobre); text-transform:uppercase; letter-spacing:.06em; font-weight:600; margin-bottom:16px;}
+  .publications-carousel-head{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:16px;}
+  .publications-carousel-head .publications-carousel-label{margin-bottom:0;}
+  .publications-carousel-nav{display:flex; gap:8px; flex:none;}
+  .publications-carousel-nav button{width:38px; height:38px; border-radius:50%; border:1.5px solid var(--cobre); background:transparent; color:var(--cobre); font-size:1.3rem; line-height:1; cursor:pointer; transition:background .15s, color .15s;}
+  .publications-carousel-nav button:hover{background:var(--cobre); color:var(--branco);}
   .publications-carousel{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:24px; width:100%; box-sizing:border-box;
+    display:flex; gap:20px; width:100%; box-sizing:border-box; overflow-x:auto; overflow-y:hidden; padding-bottom:12px; scroll-snap-type:x proximity;
+    scroll-behavior:smooth; -webkit-overflow-scrolling:touch; scrollbar-width:thin; scrollbar-color:var(--cobre) transparent;
   }
+  .publications-carousel::-webkit-scrollbar{height:5px;}
+  .publications-carousel::-webkit-scrollbar-thumb{background:var(--cobre); border-radius:10px;}
   .publications-carousel figure{
+    flex:0 0 230px; scroll-snap-align:start;
     margin:0; border-radius:var(--radius); overflow:hidden; aspect-ratio:4/5; position:relative;
   }
   .publications-carousel img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(.95) contrast(1.03);}
   @media(max-width:900px){
-    .publications-carousel{
-      display:flex; gap:16px; overflow-x:auto; overflow-y:hidden; padding-bottom:10px; scroll-snap-type:x proximity;
-      -webkit-overflow-scrolling:touch; scrollbar-width:thin; scrollbar-color:var(--cobre) transparent;
-    }
-    .publications-carousel::-webkit-scrollbar{height:5px;}
-    .publications-carousel::-webkit-scrollbar-thumb{background:var(--cobre); border-radius:10px;}
-    .publications-carousel figure{flex:0 0 200px; scroll-snap-align:start;}
+    .publications-carousel{gap:16px;}
+    .publications-carousel-nav{display:none;}
+    .publications-carousel figure{flex-basis:200px;}
   }
   @media(max-width:560px){ .publications-carousel figure{flex-basis:160px;} }
 
@@ -990,10 +997,17 @@
         <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><line x1="3.5" y1="10" x2="20.5" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span><strong>20º Congresso da Sociedade Brasileira de Coluna (Curitiba, 2026)</strong> — apresentação de pôsteres científicos</span></li>
         <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><line x1="3.5" y1="10" x2="20.5" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span><strong>25º Congresso Mineiro de Ortopedia e Traumatologia (Ouro Preto, agosto de 2026)</strong> — participação em debate de mesa-redonda</span></li>
       </ul>
+      <a class="publications-more" href="/producao-cientifica/">Ver toda a produção científica →</a>
     </div>
   </div>
   <div class="publications-carousel-wrap reveal">
-      <p class="publications-carousel-label">Congressos, eventos e produção científica</p>
+      <div class="publications-carousel-head">
+        <p class="publications-carousel-label">Congressos, eventos e produção científica</p>
+        <div class="publications-carousel-nav">
+          <button type="button" data-dir="prev" aria-label="Fotos anteriores">&#8249;</button>
+          <button type="button" data-dir="next" aria-label="Próximas fotos">&#8250;</button>
+        </div>
+      </div>
       <div class="publications-carousel">
         <figure><img src="/images/congresso-deformidade-pediatrica.jpg" loading="lazy" decoding="async" alt="Dr. Otávio Vitório em congresso internacional sobre deformidade espinhal pediátrica"></figure>
         <figure><img src="/images/congresso-sessao-cientifica.jpg" loading="lazy" decoding="async" alt="Dr. Otávio Vitório apresentando em sessão científica de congresso de coluna"></figure>
@@ -1007,6 +1021,19 @@
       </div>
     </div>
   </div>
+  <script>
+  (function () {
+    var trilho = document.querySelector('.publications-carousel');
+    if (!trilho) return;
+    document.querySelectorAll('.publications-carousel-nav button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = trilho.querySelector('figure');
+        var passo = (f ? f.getBoundingClientRect().width + 20 : 250) * 2;
+        trilho.scrollBy({ left: b.getAttribute('data-dir') === 'prev' ? -passo : passo, behavior: 'smooth' });
+      });
+    });
+  })();
+  </script>
 </section>
 
 <section class="journey">
