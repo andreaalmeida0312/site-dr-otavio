@@ -50,9 +50,12 @@
       gtag('event', 'conversion', {'send_to': 'AW-18476924700/M-wbCPSwjYsdEJz-vepE'});
     }
   }, true);
-  // Clique em "Ligar": só registra no GA4 (não é conversão do Google Ads)
+  // Clique em "Ligar": GA4 (phone_click) + conversão secundária "Clique Ligar" no Google Ads
   document.addEventListener('click', function (e) {
-    if (e.target.closest && e.target.closest('a[href^="tel:"]')) gtag('event', 'phone_click');
+    if (e.target.closest && e.target.closest('a[href^="tel:"]')) {
+      gtag('event', 'phone_click');
+      gtag('event', 'conversion', {'send_to': 'AW-18476924700/nbesCLK2j5UdEJz-vepE'});
+    }
   }, true);
 </script>
 <title>Hérnia de Disco em Belo Horizonte | Dr. Otávio Vitório</title>
