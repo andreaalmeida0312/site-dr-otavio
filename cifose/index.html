@@ -367,6 +367,8 @@
   .doc-strip span{display:block; font-size:.82rem; line-height:1.4; color:var(--cinza); margin-top:2px;}
   @media (min-width:900px){ .doc-strip{display:none;} }
   @media (max-width:560px){ .lead-extra{display:none;} .doc-strip{margin-bottom:14px;} }
+  .floating-cta{transition:opacity .25s ease, transform .2s ease, background .2s ease;}
+  .floating-cta.is-away{opacity:0; pointer-events:none; transform:translateY(10px);}
 </style>
 <script>
 (function(){
@@ -657,5 +659,16 @@
   <span>Agendar</span>
 </a>
 
+<script>
+  // Esconde o balão do WhatsApp enquanto o botão do topo está visível; mostra ao rolar a página
+  (function () {
+    var f = document.querySelector('.floating-cta');
+    var b = document.querySelector('.hero .btn-primary, .hero a[href*="wa.me"]');
+    if (!f || !b || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) { f.classList.toggle('is-away', e.isIntersecting); });
+    }).observe(b);
+  })();
+</script>
 </body>
 </html>
