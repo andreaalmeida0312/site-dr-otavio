@@ -50,6 +50,10 @@
       gtag('event', 'conversion', {'send_to': 'AW-18476924700/M-wbCPSwjYsdEJz-vepE'});
     }
   }, true);
+  // Clique em "Ligar": só registra no GA4 (não é conversão do Google Ads)
+  document.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('a[href^="tel:"]')) gtag('event', 'phone_click');
+  }, true);
 </script>
 <title>Cifose em Belo Horizonte | Dr. Otávio Vitório</title>
 <meta name="description" content="Cifose (corcunda) nem sempre exige cirurgia. Avaliação individualizada com Dr. Otávio Vitório, ortopedista e cirurgião de coluna em BH. Consulta R$ 600.">
@@ -351,6 +355,8 @@
     html{scroll-behavior:auto;}
     *{transition:none !important;}
   }
+  .tel-num{display:none;}
+  @media (min-width:700px){ .tel-num{display:inline;} }
 </style>
 <script>
 (function(){
@@ -388,6 +394,7 @@
           Agendar pelo WhatsApp
         </a>
         <a class="btn btn-ghost" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener">Agendar online</a>
+        <a class="btn btn-ghost" href="tel:+5531986535956" aria-label="Ligar para o consultório, (31) 98653-5956">Ligar<span class="tel-num">&nbsp;(31) 98653-5956</span></a>
       </div>
       <p class="price-note" style="margin-bottom:18px;">Consulta particular · <strong>R$ 600</strong> · Atendimento com hora marcada</p>
       <a class="rating" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener" aria-label="Nota 5 de 5 no Doctoralia, com 77 avaliações de pacientes. Ver avaliações">
@@ -619,6 +626,7 @@
     <div class="cta-row">
       <a class="btn btn-primary" href="https://wa.me/5531986535956?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20cifose%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
       <a class="btn btn-ghost" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener">Agendar online</a>
+        <a class="btn btn-ghost" href="tel:+5531986535956" aria-label="Ligar para o consultório, (31) 98653-5956">Ligar<span class="tel-num">&nbsp;(31) 98653-5956</span></a>
     </div>
   </div>
 </section>
