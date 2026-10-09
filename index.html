@@ -50,13 +50,6 @@
       gtag('event', 'conversion', {'send_to': 'AW-18476924700/M-wbCPSwjYsdEJz-vepE'});
     }
   }, true);
-  // Clique em "Ligar": GA4 (phone_click) + conversão secundária "Clique Ligar" no Google Ads
-  document.addEventListener('click', function (e) {
-    if (e.target.closest && e.target.closest('a[href^="tel:"]')) {
-      gtag('event', 'phone_click');
-      gtag('event', 'conversion', {'send_to': 'AW-18476924700/nbesCLK2j5UdEJz-vepE'});
-    }
-  }, true);
 </script>
 <title>Ortopedista e Cirurgião de Coluna em Belo Horizonte | Dr. Otávio Vitório</title>
 <link rel="canonical" href="https://drotaviovitorio.com.br/">
@@ -558,8 +551,6 @@
   footer .logo{color:var(--off-white);}
   footer .fine{font-size:.76rem; color:var(--aco);}
   footer nav{display:flex; gap:22px; font-size:.82rem;}
-  .tel-num{display:none;}
-  @media (min-width:700px){ .tel-num{display:inline;} }
   .floating-cta{transition:opacity .25s ease, transform .2s ease, background .2s ease;}
   .floating-cta.is-away{opacity:0; pointer-events:none; transform:translateY(10px);}
   .logo .mono-photo{display:none;}
@@ -570,6 +561,8 @@
     #siteHeader .logo .mono-photo{display:block; width:48px; height:48px; border-radius:50%; overflow:hidden; flex:none; border:1.5px solid rgba(166,109,69,.55);}
     #siteHeader .logo .mono-photo img{display:block; width:100%; height:100%; object-fit:cover; object-position:50% 0%; transform:scale(2.5); transform-origin:50% 12%;}
   }
+  /* celular: botões do topo e do convite final com a mesma largura */
+  @media (max-width:560px){ .cta-row > a:not(:only-child){flex:1 1 100%; text-align:center;} }
 </style>
 <script>
 (function(){
@@ -590,7 +583,6 @@
   "medicalSpecialty": "Orthopedic",
   "url": "https://drotaviovitorio.com.br/",
   "image": "https://drotaviovitorio.com.br/images/hero-photo.jpg",
-  "telephone": "+5531986535956",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Rua Jaceguai, 208, Sala 708, Edifício Cayler",
@@ -681,7 +673,6 @@
       <div class="cta-row reveal">
         <a class="btn-primary" href="https://wa.me/5531986535956?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
         <a class="btn-ghost" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener">Agendar online</a>
-        <a class="btn-ghost" href="tel:+5531986535956" aria-label="Ligar para o consultório, (31) 98653-5956">Ligar<span class="tel-num">&nbsp;(31) 98653-5956</span></a>
       </div>
       <p class="price-note reveal">Consulta particular · <strong>R$ 600</strong></p>
       <p class="hero-expect-label reveal">O que você terá na sua avaliação</p>
@@ -1152,7 +1143,6 @@
     <div class="cta-row reveal" style="justify-content:center;">
       <a class="btn-primary" href="https://wa.me/5531986535956?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
       <a class="btn-ghost" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener" style="border-color:rgba(242,243,241,.4); color:var(--off-white);">Agendar online</a>
-        <a class="btn-ghost" href="tel:+5531986535956" aria-label="Ligar para o consultório, (31) 98653-5956" style="border-color:rgba(242,243,241,.4); color:var(--off-white);">Ligar<span class="tel-num">&nbsp;(31) 98653-5956</span></a>
     </div>
   </div>
 </section>

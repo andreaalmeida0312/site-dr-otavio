@@ -50,13 +50,6 @@
       gtag('event', 'conversion', {'send_to': 'AW-18476924700/M-wbCPSwjYsdEJz-vepE'});
     }
   }, true);
-  // Clique em "Ligar": GA4 (phone_click) + conversão secundária "Clique Ligar" no Google Ads
-  document.addEventListener('click', function (e) {
-    if (e.target.closest && e.target.closest('a[href^="tel:"]')) {
-      gtag('event', 'phone_click');
-      gtag('event', 'conversion', {'send_to': 'AW-18476924700/nbesCLK2j5UdEJz-vepE'});
-    }
-  }, true);
 </script>
 <title>Estenose do Canal Vertebral em Belo Horizonte | Dr. Otávio Vitório</title>
 <meta name="description" content="Avaliação especializada de estenose do canal vertebral em Belo Horizonte com o Dr. Otávio Vitório, ortopedista e cirurgião de coluna. CRM-MG 86882 | RQE 62889. Consulta particular no Prado.">
@@ -293,8 +286,6 @@
     html{scroll-behavior:auto;}
     *{transition:none !important;}
   }
-  .tel-num{display:none;}
-  @media (min-width:700px){ .tel-num{display:inline;} }
   .floating-cta{transition:opacity .25s ease, transform .2s ease, background .2s ease;}
   .floating-cta.is-away{opacity:0; pointer-events:none; transform:translateY(10px);}
 
@@ -383,6 +374,8 @@
   /* menos espaço entre "Sua consulta" e "Sobre o médico" nas páginas de especialidade */
   section.sobre{padding-top:40px;}
   @media(max-width:720px){ section.sobre{padding-top:20px;} }
+  /* celular: botões do topo e do convite final com a mesma largura */
+  @media (max-width:560px){ .cta-row > a:not(:only-child){flex:1 1 100%; text-align:center;} }
 </style>
 <script>
 (function(){
@@ -420,7 +413,6 @@
           Agendar pelo WhatsApp
         </a>
         <a class="btn btn-ghost" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener">Agendar online</a>
-        <a class="btn btn-ghost" href="tel:+5531986535956" aria-label="Ligar para o consultório, (31) 98653-5956">Ligar<span class="tel-num">&nbsp;(31) 98653-5956</span></a>
       </div>
       <p class="price-note" style="margin-bottom:18px;">Consulta particular · <strong>R$ 600</strong> · Atendimento com hora marcada</p>
       <a class="rating" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener" aria-label="Nota 5 de 5 no Doctoralia, com 77 avaliações de pacientes. Ver avaliações">
@@ -712,7 +704,6 @@
     <div class="cta-row">
       <a class="btn btn-primary" href="https://wa.me/5531986535956?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20estenose%20do%20canal%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
       <a class="btn btn-ghost" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener">Agendar online</a>
-        <a class="btn btn-ghost" href="tel:+5531986535956" aria-label="Ligar para o consultório, (31) 98653-5956">Ligar<span class="tel-num">&nbsp;(31) 98653-5956</span></a>
     </div>
   </div>
 </section>
