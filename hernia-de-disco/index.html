@@ -288,7 +288,8 @@
   }
   .doc-strip{display:flex; align-items:center; gap:14px; margin-bottom:20px;}
   .doc-strip .ph{display:block; width:64px; height:64px; border-radius:50%; overflow:hidden; border:2px solid rgba(242,243,241,.4); flex:none; margin:0;}
-  .doc-strip .ph img{display:block; width:100%; height:100%; object-fit:cover; object-position:50% 0%; transform:scale(2.5); transform-origin:50% 12%;}
+  .doc-strip .ph{position:relative;}
+  .doc-strip .ph img{position:absolute; display:block; width:290%; max-width:none; height:auto; left:-91.8%; top:-39.2%;}
   .doc-strip strong{display:block; font-family:"Sora",sans-serif; font-size:1rem; color:var(--off-white);}
   .doc-strip span{display:block; font-size:.82rem; line-height:1.4; color:var(--cinza); margin-top:2px;}
   .price-pill{display:inline-block; margin:2px 0 18px; padding:7px 16px; line-height:1.3; border:1px solid var(--cobre-claro); border-radius:999px; font-size:.9rem; color:var(--off-white);}
