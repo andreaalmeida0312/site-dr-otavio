@@ -123,7 +123,7 @@
     display:flex; align-items:center; justify-content:space-between;
     padding:22px 40px; transition:background .3s ease, padding .3s ease, box-shadow .3s ease;
   }
-  header.solid{ background:rgba(242,243,241,.92); backdrop-filter:blur(8px); padding:14px 40px; box-shadow:0 1px 0 rgba(36,59,74,.08); }
+  header.solid{ background:rgba(242,243,241,.97); padding:14px 40px; box-shadow:0 1px 0 rgba(36,59,74,.08); }
   .logo{display:flex; align-items:center; gap:12px; font-family:'Sora',sans-serif; font-weight:600; letter-spacing:.02em; font-size:1.02rem;}
   .logo .mono{width:38px; height:38px; display:flex; align-items:center; justify-content:center; flex:none;}
   .logo .mono svg{width:100%; height:100%;}
@@ -298,7 +298,7 @@
   .hero-media{position:relative; overflow:hidden; min-height:300px; margin-top:87px;}
   .hero-media img{
     position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:top center;
-    filter:saturate(.92) contrast(1.05); display:block;
+ display:block;
   }
   .hero-media::before{
     content:""; position:absolute; left:0; top:0; bottom:0; width:160px; z-index:1;
@@ -342,7 +342,7 @@
     content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:var(--cobre); border-radius:var(--radius); z-index:0;
   }
   .sobre-photo{aspect-ratio:3/4; border-radius:var(--radius); overflow:hidden; position:relative; z-index:1;}
-  .sobre-photo img{width:100%; height:100%; object-fit:cover; object-position:top center; filter:saturate(.93) contrast(1.04);}
+  .sobre-photo img{width:100%; height:100%; object-fit:cover; object-position:top center;}
   .sobre-photo::after{
     content:""; position:absolute; inset:0; pointer-events:none;
     background:linear-gradient(180deg, transparent 60%, rgba(27,36,42,.55));
@@ -370,7 +370,7 @@
   .publications .wrap{display:grid; grid-template-columns:.85fr 1.15fr; gap:60px; align-items:center;}
   @media(max-width:900px){ .publications .wrap{grid-template-columns:1fr; gap:36px;} }
   .publications-photo{border-radius:var(--radius); overflow:hidden; aspect-ratio:4/5; position:relative;}
-  .publications-photo img{width:100%; height:100%; object-fit:cover; object-position:top center; filter:saturate(.95) contrast(1.03);}
+  .publications-photo img{width:100%; height:100%; object-fit:cover; object-position:top center;}
   .publications h2{font-size:clamp(1.6rem,2.8vw,2.1rem); margin:14px 0 20px;}
   .publications-list{margin-top:26px; display:grid; gap:20px;}
   .publications-list li{list-style:none; display:flex; gap:14px; align-items:flex-start; font-size:.9rem; color:var(--aco); line-height:1.5;}
@@ -397,7 +397,7 @@
     flex:0 0 230px; scroll-snap-align:start;
     margin:0; border-radius:var(--radius); overflow:hidden; aspect-ratio:4/5; position:relative;
   }
-  .publications-carousel img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(.95) contrast(1.03);}
+  .publications-carousel img{width:100%; height:100%; object-fit:cover; display:block;}
   @media(max-width:900px){
     .publications-carousel{gap:16px;}
     .publications-carousel-nav{display:none;}
@@ -492,7 +492,7 @@
   .consult-photos{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
   @media(max-width:760px){ .consult-photos{grid-template-columns:1fr;} }
   .consult-photos .ph{aspect-ratio:4/5; width:100%; border-radius:var(--radius); position:relative; overflow:hidden;}
-  .consult-photos .ph img{width:100%; height:100%; object-fit:cover; object-position:center; display:block; filter:saturate(.95) contrast(1.03);}
+  .consult-photos .ph img{width:100%; height:100%; object-fit:cover; object-position:center; display:block;}
 
   /* ---------- localização ---------- */
   .local{background:var(--branco);}
@@ -505,7 +505,7 @@
   .local-card h4 svg{width:18px; height:18px; color:var(--cobre); flex:none;}
   .local-card p{color:var(--aco); font-size:.92rem; margin-bottom:14px;}
   .local-card a{font-family:'Sora',sans-serif; font-size:.78rem; font-weight:600; color:var(--cobre);}
-  .map-frame{border-radius:var(--radius); overflow:hidden; min-height:340px; border:1px solid var(--cinza); filter:saturate(.9) contrast(1.02);}
+  .map-frame{border-radius:var(--radius); overflow:hidden; min-height:340px; border:1px solid var(--cinza);}
   .map-frame iframe{width:100%; height:100%; min-height:340px; border:0; display:block;}
 
   /* ---------- rating badge ---------- */
@@ -631,8 +631,6 @@
 }
 </script>
 <link rel="stylesheet" href="/assets/componentes.css?v=4">
-<link rel="preconnect" href="https://maps.google.com">
-<link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
 </head>
 <body>
 
@@ -1228,7 +1226,7 @@
       </div>
     </div>
     <div class="map-frame reveal">
-      <iframe src="https://maps.google.com/maps?q=Rua+Jaceguai%2C+208%2C+Prado%2C+Belo+Horizonte%2FMG%2C+30411-073&t=m&z=16&output=embed&iwloc=near" loading="lazy" title="Localização do consultório — Rua Jaceguai, 208, Prado, Belo Horizonte/MG" aria-label="Mapa com a localização do consultório"></iframe>
+      <iframe data-src="https://maps.google.com/maps?q=Rua+Jaceguai%2C+208%2C+Prado%2C+Belo+Horizonte%2FMG%2C+30411-073&t=m&z=16&output=embed&iwloc=near" title="Localização do consultório — Rua Jaceguai, 208, Prado, Belo Horizonte/MG" aria-label="Mapa com a localização do consultório"></iframe>
     </div>
   </div>
 </section>
@@ -1371,6 +1369,6 @@
   })();
 </script>
 <script src="/assets/componentes.js?v=4" defer></script>
-<script src="/assets/mapa.js?v=1" defer></script>
+<script src="/assets/mapa.js?v=2" defer></script>
 </body>
 </html>

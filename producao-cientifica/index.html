@@ -67,7 +67,9 @@
 <meta name="twitter:image" content="https://drotaviovitorio.com.br/images/og/producao-cientifica.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -220,7 +222,7 @@
   }
   .gallery::-webkit-scrollbar{height:5px;}
   .gallery::-webkit-scrollbar-thumb{background:var(--cobre); border-radius:10px;}
-  .gallery img{flex:0 0 240px; width:240px; aspect-ratio:4/5; object-fit:cover; border-radius:var(--radius); filter:saturate(.95) contrast(1.03); scroll-snap-align:start;}
+  .gallery img{flex:0 0 240px; width:240px; aspect-ratio:4/5; object-fit:cover; border-radius:var(--radius); scroll-snap-align:start;}
 
   .final{background:linear-gradient(160deg,var(--preto-azulado) 0%,var(--ardosia) 100%); color:var(--off-white); text-align:center;}
   .final h2{color:var(--off-white); margin-inline:auto; max-width:22ch;}
@@ -265,7 +267,7 @@
   /* celular: botões do topo e do convite final com a mesma largura */
   @media (max-width:560px){ .cta-row > a{flex:1 1 100%; text-align:center;} }
 </style>
-<link rel="stylesheet" href="/assets/cabecalho.css?v=1">
+<link rel="stylesheet" href="/assets/cabecalho.css?v=2">
 </head>
 <body>
 

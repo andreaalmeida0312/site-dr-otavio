@@ -67,7 +67,9 @@
 <meta name="twitter:image" content="https://drotaviovitorio.com.br/images/og/escoliose.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -283,7 +285,7 @@
   .local-card p{color:var(--aco); font-size:.92rem; margin-bottom:14px;}
   .local-card p:last-child{margin-bottom:0;}
   .local-card a{font-family:'Sora',sans-serif; font-size:.78rem; font-weight:600; color:var(--cobre);}
-  .map-frame{border-radius:var(--radius); overflow:hidden; min-height:340px; border:1px solid var(--cinza); filter:saturate(.9) contrast(1.02);}
+  .map-frame{border-radius:var(--radius); overflow:hidden; min-height:340px; border:1px solid var(--cinza);}
   .map-frame iframe{width:100%; height:100%; min-height:340px; border:0; display:block;}
 
   /* Nota Doctoralia */
@@ -380,7 +382,7 @@
     content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:var(--cobre); border-radius:var(--radius); z-index:0;
   }
   .sobre-photo{aspect-ratio:3/4; border-radius:var(--radius); overflow:hidden; position:relative; z-index:1;}
-  .sobre-photo img{width:100%; height:100%; object-fit:cover; object-position:top center; filter:saturate(.93) contrast(1.04);}
+  .sobre-photo img{width:100%; height:100%; object-fit:cover; object-position:top center;}
   .sobre-photo::after{
     content:""; position:absolute; inset:0; pointer-events:none;
     background:linear-gradient(180deg, transparent 60%, rgba(27,36,42,.55));
@@ -408,7 +410,7 @@
   .publications .wrap{display:grid; grid-template-columns:.85fr 1.15fr; gap:60px; align-items:center;}
   @media(max-width:900px){ .publications .wrap{grid-template-columns:1fr; gap:36px;} }
   .publications-photo{border-radius:var(--radius); overflow:hidden; aspect-ratio:4/5; position:relative;}
-  .publications-photo img{width:100%; height:100%; object-fit:cover; object-position:top center; filter:saturate(.95) contrast(1.03);}
+  .publications-photo img{width:100%; height:100%; object-fit:cover; object-position:top center;}
   .publications h2{font-size:clamp(1.6rem,2.8vw,2.1rem); margin:14px 0 20px;}
   .publications-list{margin-top:26px; display:grid; gap:20px;}
   .publications-list li{list-style:none; display:flex; gap:14px; align-items:flex-start; font-size:.9rem; color:var(--aco); line-height:1.5;}
@@ -435,7 +437,7 @@
     flex:0 0 230px; scroll-snap-align:start;
     margin:0; border-radius:var(--radius); overflow:hidden; aspect-ratio:4/5; position:relative;
   }
-  .publications-carousel img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(.95) contrast(1.03);}
+  .publications-carousel img{width:100%; height:100%; object-fit:cover; display:block;}
   @media(max-width:900px){
     .publications-carousel{gap:16px;}
     .publications-carousel-nav{display:none;}
@@ -506,9 +508,7 @@
 })();
 </script>
 <link rel="stylesheet" href="/assets/componentes.css?v=4">
-<link rel="stylesheet" href="/assets/cabecalho.css?v=1">
-<link rel="preconnect" href="https://maps.google.com">
-<link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/cabecalho.css?v=2">
 </head>
 <body>
 
@@ -942,7 +942,7 @@
       </div>
     </div>
     <div class="map-frame">
-      <iframe src="https://maps.google.com/maps?q=Rua+Jaceguai%2C+208%2C+Prado%2C+Belo+Horizonte%2FMG%2C+30411-073&t=m&z=16&output=embed&iwloc=near" loading="lazy" title="Localização do consultório — Rua Jaceguai, 208, Prado, Belo Horizonte/MG" aria-label="Mapa com a localização do consultório"></iframe>
+      <iframe data-src="https://maps.google.com/maps?q=Rua+Jaceguai%2C+208%2C+Prado%2C+Belo+Horizonte%2FMG%2C+30411-073&t=m&z=16&output=embed&iwloc=near" title="Localização do consultório — Rua Jaceguai, 208, Prado, Belo Horizonte/MG" aria-label="Mapa com a localização do consultório"></iframe>
     </div>
   </div>
 </section>
@@ -1046,6 +1046,6 @@
 </script>
 <script src="/assets/componentes.js?v=4" defer></script>
 <script src="/assets/cabecalho.js?v=1" defer></script>
-<script src="/assets/mapa.js?v=1" defer></script>
+<script src="/assets/mapa.js?v=2" defer></script>
 </body>
 </html>
