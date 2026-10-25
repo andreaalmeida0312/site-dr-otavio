@@ -170,13 +170,13 @@
     display:none; background:var(--cobre); color:#fff; font-family:'Sora',sans-serif; font-size:.76rem; font-weight:600;
     padding:9px 14px; border-radius:var(--radius); letter-spacing:.01em; white-space:nowrap;
   }
-  @media(max-width:1300px){ .header-cta-mobile{display:inline-block;} }
+  @media(max-width:1180px){ .header-cta-mobile{display:inline-block;} }
   .menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:6px; z-index:210; position:relative;}
   .menu-toggle span{display:block; width:24px; height:2px; background:var(--ardosia); margin:5px 0; transition:transform .25s ease, opacity .25s ease;}
   .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
   .menu-toggle.open span:nth-child(2){opacity:0;}
   .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-  @media(min-width:1301px){ .logo, .header-cta{white-space:nowrap;} }
+  @media(min-width:1181px){ .logo, .header-cta{white-space:nowrap;} }
   @media(min-width:1601px){ nav.main-nav{gap:30px;} }
   @media(min-width:1451px) and (max-width:1600px){ nav.main-nav{gap:20px; font-size:.82rem;} }
   @media(min-width:1381px) and (max-width:1450px){ nav.main-nav{gap:15px; font-size:.79rem;} }
@@ -186,7 +186,13 @@
     header, header.solid{padding-left:24px; padding-right:24px;}
     .logo{font-size:.92rem; gap:8px;}
   }
-  @media(max-width:1300px){
+  @media(min-width:1181px) and (max-width:1300px){
+    nav.main-nav{gap:10px; font-size:.75rem;}
+    .header-cta{padding-left:12px; padding-right:12px; font-size:.78rem;}
+    header, header.solid{padding-left:24px; padding-right:24px;}
+    .logo{font-size:.92rem; gap:8px;}
+  }
+  @media(max-width:1180px){
     nav.main-nav, .header-cta{display:none;}
     .menu-toggle{display:block;}
   }
@@ -634,7 +640,6 @@
   <a href="#hero" class="logo"><span class="mono-photo"><img src="/images/dr-otavio.jpg" alt="" width="40" height="60"></span><span class="mono"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="13" stroke="#A66D45" stroke-width="1.6" stroke-dasharray="64 18" transform="rotate(-52 20 20)"/><path d="M11 12 L20 27 L29 12" stroke="#243B4A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Otávio Vitório</a>
   <nav class="main-nav">
     <a href="#depoimentos">Depoimentos</a>
-    <a href="#diagnosticos">Diagnósticos</a>
     <a href="#sobre">Sobre</a>
     <a href="/producao-cientifica/">Produção científica</a>
     <a href="#consultorio">Consultório</a>
@@ -684,7 +689,6 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
   </button>
   <a href="#depoimentos">Depoimentos</a>
-  <a href="#diagnosticos">Diagnósticos</a>
   <a href="#sobre">Sobre</a>
   <a href="/producao-cientifica/">Produção científica</a>
   <a href="#consultorio">Consultório</a>
