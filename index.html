@@ -176,7 +176,11 @@
   .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
   .menu-toggle.open span:nth-child(2){opacity:0;}
   .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-  @media(min-width:1001px) and (max-width:1120px){
+  .logo, .header-cta{white-space:nowrap;}
+  @media(min-width:1281px) and (max-width:1450px){
+    nav.main-nav{gap:22px;}
+  }
+  @media(min-width:1001px) and (max-width:1280px){
     nav.main-nav{gap:10px; font-size:.75rem;}
     .header-cta{padding-left:12px; padding-right:12px; font-size:.78rem;}
     header, header.solid{padding-left:24px; padding-right:24px;}
@@ -306,24 +310,12 @@
   }
   @media(max-width:900px){ .hero-media{min-height:280px; max-height:340px; margin-top:0;} .hero-media::before{display:none;} }
 
-  /* hero escuro (computador): o fundo da capa tem a mesma cor do fundo da foto, sem emenda visível */
+  /* capa (computador): fundo claro e foto em cartão com moldura em cobre, sem degradê */
   @media(min-width:901px){
-    .hero{background:#111518;}
-    .hero-content{background:transparent;}
-    .hero h1{color:var(--off-white);}
-    .hero h1 em, .hero .eyebrow, .hero-expect-label{color:var(--cobre-claro);}
-    .hero .eyebrow::before{background:var(--cobre-claro);}
-    .hero p.lead, .hero-expect div{color:#C4CCD1;}
-    .hero-expect svg, .hero-credentials svg{color:var(--cobre-claro);}
-    .hero .price-note, .hero-credentials div{color:#9AA7AF;}
-    .hero .price-note strong, .hero-credentials strong{color:var(--off-white);}
-    .hero-credentials{border-top-color:rgba(242,243,241,.16);}
-    .hero-media::before{width:240px; background:linear-gradient(90deg,#111518,rgba(17,21,24,0));}
-    .hero-media::after{display:none;}
-    /* cabeçalho sobre a capa escura (volta ao normal quando fica sólido ao rolar) */
-    header:not(.solid) .logo, header:not(.solid) nav.main-nav > a, header:not(.solid) .nav-dropdown-trigger{color:var(--off-white);}
-    header:not(.solid) .logo .mono path{stroke:var(--off-white);}
-    header:not(.solid) .menu-toggle:not(.open) span{background:var(--off-white);}
+    .hero-media{overflow:visible; isolation:isolate; align-self:center; min-height:0; margin:100px clamp(40px,5.5vw,88px) 40px clamp(8px,1.5vw,24px);}
+    .hero-media img{position:static; height:auto; aspect-ratio:4/5; border-radius:var(--radius); box-shadow:0 22px 48px rgba(27,36,42,.18);}
+    .hero-media::before{display:none;}
+    .hero-media::after{inset:16px -16px -16px 16px; border:1.5px solid var(--cobre); background:none; z-index:-1;}
   }
 
   /* ---------- sobre ---------- */
