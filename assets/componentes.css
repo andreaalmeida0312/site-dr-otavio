@@ -85,3 +85,14 @@
 /* ===== Cabeçalho das páginas de especialidade: link do guia ===== */
 .top-link + .top-link{margin-left:0;}
 @media (max-width:560px){ .top-link .so-desk{display:none;} .top-link{margin-right:12px;} }
+
+/* ===== Mapa da coluna (imagem com números clicáveis) ===== */
+.guia-mapa{max-width:520px; margin:0 auto 10px;}
+.guia-mapa-box{position:relative;}
+.guia-mapa-box img{width:100%; height:auto; border:1px solid var(--areia); background:#fff; display:block;}
+.mapa-pin{position:absolute; display:block; border-radius:999px; text-decoration:none;}
+.mapa-pin:hover, .mapa-pin:focus-visible{outline:3px solid var(--cobre); background:rgba(166,109,69,.14);}
+.mapa-pin-circ{border-radius:50%;}
+.guia-mapa figcaption{font-size:.86rem; color:var(--aco); margin-top:8px;}
+.guia-ampliar{margin-top:10px; background:none; border:1px solid var(--cobre); color:var(--cobre-btn); border-radius:999px; padding:10px 20px; font-family:'Sora',sans-serif; font-weight:600; font-size:.88rem; cursor:pointer; min-height:44px;}
+.guia-ampliar:hover{background:var(--cobre-btn); color:#fff;}

@@ -34,9 +34,9 @@
     montarLightbox();
     lastFocus = btn;
     var img = btn.querySelector('img');
-    lbImg.src = btn.getAttribute('data-full') || img.currentSrc || img.src;
-    lbImg.alt = img.alt || '';
-    var cap = btn.parentNode.querySelector('figcaption');
+    lbImg.src = btn.getAttribute('data-full') || (img && (img.currentSrc || img.src)) || '';
+    lbImg.alt = (img && img.alt) || btn.getAttribute('data-alt') || '';
+    var cap = (btn.closest('figure') || btn.parentNode).querySelector('figcaption');
     lbCap.textContent = cap ? cap.textContent : '';
     lbScroll.classList.remove('zoom');
     lbZoomBtn.textContent = 'Ampliar';
@@ -44,7 +44,7 @@
     document.documentElement.style.overflow = 'hidden';
     if (window.innerWidth < 700) alternarZoom();
     lb.querySelector('[data-lb-close]').focus();
-    ev('guia_imagem_ampliada', { pagina: location.pathname, imagem: (img.getAttribute('src') || '').split('/').pop() });
+    ev('guia_imagem_ampliada', { pagina: location.pathname, imagem: (lbImg.getAttribute('src') || '').split('/').pop() });
   }
   function fecharLb() {
     lb.hidden = true;
@@ -52,7 +52,7 @@
     if (lastFocus) lastFocus.focus();
   }
   document.addEventListener('click', function (e) {
-    var b = e.target.closest && e.target.closest('.guia-zoom');
+    var b = e.target.closest && e.target.closest('.guia-zoom, .guia-ampliar');
     if (b) { e.preventDefault(); abrirLb(b); }
   });
 

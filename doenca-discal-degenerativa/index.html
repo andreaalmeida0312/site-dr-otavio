@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18476924700"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  // Modo teste: ?teste=1 desliga o envio de dados (Google Ads e GA4) neste navegador; ?teste=0 volta ao normal
+  var modoTeste = false;
+  try {
+    var qTeste = new URLSearchParams(location.search).get('teste');
+    if (qTeste === '1') localStorage.setItem('modo_teste', '1');
+    if (qTeste === '0') localStorage.removeItem('modo_teste');
+    modoTeste = localStorage.getItem('modo_teste') === '1';
+  } catch (e) {}
+  if (modoTeste) {
+    window['ga-disable-G-1HES65MM4S'] = true;
+    document.addEventListener('DOMContentLoaded', function () {
+      var b = document.createElement('div');
+      b.textContent = 'MODO TESTE: nada é enviado ao Google. Para sair, abra o site com ?teste=0';
+      b.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#b00020;color:#fff;font:600 12px/1.3 sans-serif;text-align:center;padding:6px 8px';
+      document.body.appendChild(b);
+    });
+  }
+  function gtag(){ if (!modoTeste) dataLayer.push(arguments); }
+  gtag('js', new Date());
+  // Página de saúde: não coletar sinais de personalização de anúncios
+  gtag('set', 'allow_ad_personalization_signals', false);
+  gtag('config', 'AW-18476924700');
+  gtag('config', 'G-1HES65MM4S');
+
+  // Conversão "Clique WhatsApp": dispara em qualquer link para wa.me
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('a[href*="wa.me"]');
+    if (link) {
+      gtag('event', 'whatsapp_click');
+      gtag('event', 'conversion', {'send_to': 'AW-18476924700/YLMqCKGy_IYdEJz-vepE'});
+      return;
+    }
+    if (e.target.closest && e.target.closest('a[href*="doctoralia"]')) {
+      gtag('event', 'doctoralia_click');
+      gtag('event', 'conversion', {'send_to': 'AW-18476924700/M-wbCPSwjYsdEJz-vepE'});
+    }
+  }, true);
+</script>
+<title>Doença discal degenerativa em Belo Horizonte | Dr. Otávio Vitório</title>
+<meta name="description" content="Doença discal degenerativa: o que é, sintomas, diferença para hérnia de disco, tratamento e quando a cirurgia é considerada. Dr. Otávio Vitório, CRM-MG 86882 | RQE 62889.">
+<link rel="canonical" href="https://drotaviovitorio.com.br/doenca-discal-degenerativa/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Doença discal degenerativa em Belo Horizonte | Dr. Otávio Vitório">
+<meta property="og:description" content="Entenda a doença discal degenerativa com ilustração: o desgaste do disco é comum e nem sempre causa dor. Veja sintomas, tratamento e quando operar.">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Dr. Otávio Vitório",
+  "url": "https://drotaviovitorio.com.br/doenca-discal-degenerativa/",
+  "medicalSpecialty": "Orthopedic",
+  "identifier": "CRM-MG 86882",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Jaceguai, 208, Sala 708, Edifício Cayler",
+    "addressLocality": "Belo Horizonte",
+    "addressRegion": "MG",
+    "postalCode": "30411-073",
+    "addressCountry": "BR"
+  }
+}
+</script>
+<style>
+  :root{
+    --ardosia:#243B4A;
+    --cobre:#A66D45;
+    --cobre-btn:#94603A;
+    --cobre-btn-hover:#7F5030;
+    --cobre-claro:#C28A61;
+    --cinza:#AEB6BA;
+    --off-white:#F2F3F1;
+    --preto-azulado:#1B242A;
+    --aco:#5B7180;
+    --areia:#D6D1C8;
+    --branco:#FFFFFF;
+    --maxw:1120px;
+    --radius:2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ardosia);
+    background:var(--off-white);
+    line-height:1.65;
+    font-size:1.0625rem;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block; max-width:100%; height:auto;}
+  a{color:inherit;}
+  h1,h2,h3{font-family:'Sora',system-ui,sans-serif; font-weight:600; color:var(--ardosia); line-height:1.15; text-wrap:balance;}
+  a:focus-visible, summary:focus-visible{outline:3px solid var(--cobre-claro); outline-offset:3px;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    font-family:'Sora',sans-serif; font-size:.74rem; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--cobre); font-weight:600; margin-bottom:14px;
+  }
+  section{padding:72px 0;}
+  h2{font-size:clamp(1.6rem,3.2vw,2.2rem); margin-bottom:18px;}
+  .section-lead{color:var(--aco); max-width:62ch; margin-bottom:36px;}
+
+  /* Botões */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    font-family:'Sora',sans-serif; font-weight:600; font-size:1rem;
+    padding:16px 26px; border-radius:var(--radius); text-decoration:none;
+    transition:background .15s, border-color .15s, color .15s;
+    min-height:52px;
+  }
+  .btn svg{width:22px; height:22px; flex-shrink:0;}
+  .btn-primary{background:var(--cobre-btn); color:var(--branco);}
+  .btn-primary:hover{background:var(--cobre-btn-hover);}
+  .btn-ghost{border:1.5px solid rgba(242,243,241,.5); color:var(--off-white);}
+  .btn-ghost:hover{border-color:var(--off-white);}
+  .btn-ghost-dark{border:1.5px solid var(--ardosia); color:var(--ardosia);}
+  .btn-ghost-dark:hover{background:var(--ardosia); color:var(--off-white);}
+
+  /* Header */
+  header.top{background:var(--preto-azulado); color:var(--off-white);}
+  header.top .wrap{display:flex; align-items:center; justify-content:space-between; gap:16px; height:68px;}
+  .brand{font-family:'Sora',sans-serif; font-weight:600; font-size:1.05rem; text-decoration:none; letter-spacing:.01em;}
+  .brand small{display:block; font-family:'Inter',sans-serif; font-weight:400; font-size:.72rem; color:var(--cinza); letter-spacing:.04em;}
+  header.top .btn{padding:10px 18px; min-height:44px; font-size:.92rem;}
+
+  /* Hero */
+  .hero{background:linear-gradient(160deg,var(--preto-azulado) 0%,var(--ardosia) 100%); color:var(--off-white); padding:56px 0 64px;}
+  .hero .wrap{display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center;}
+  .hero h1{color:var(--off-white); font-size:clamp(2rem,4.6vw,3.1rem); margin-bottom:20px;}
+  .hero .lead{color:#D3D9DC; font-size:1.12rem; max-width:52ch; margin-bottom:28px;}
+  .cta-row{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:16px;}
+  .price-note{font-size:.95rem; color:var(--cinza); margin-bottom:30px;}
+  .price-note strong{color:var(--off-white); font-weight:600;}
+  .creds{display:flex; flex-wrap:wrap; gap:10px 26px; padding-top:24px; border-top:1px solid rgba(174,182,186,.28); font-size:.88rem; color:var(--cinza);}
+  .creds strong{display:block; color:var(--off-white); font-weight:600; font-size:.92rem;}
+  .hero-photo{position:relative;}
+  .hero-photo img{width:100%; border-radius:var(--radius); aspect-ratio:4/5; object-fit:cover; object-position:top;}
+  .hero-photo::after{content:""; position:absolute; inset:14px -14px -14px 14px; border:1.5px solid var(--cobre); border-radius:var(--radius); z-index:-1;}
+
+  /* Sinais */
+  .signs{background:var(--branco);}
+  .sign-list{list-style:none; display:grid; grid-template-columns:repeat(2,1fr); gap:14px 40px; margin-bottom:22px;}
+  .sign-list li{display:flex; gap:14px; align-items:flex-start; padding:16px 0; border-bottom:1px solid var(--areia);}
+  .sign-list svg{width:22px; height:22px; flex-shrink:0; margin-top:3px; color:var(--cobre);}
+  .fine-note{font-size:.92rem; color:var(--aco); max-width:70ch;}
+
+  /* Explicação */
+  .cards{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+  .card{background:var(--branco); padding:34px 32px; border-top:3px solid var(--cobre);}
+  .card h3{font-size:1.4rem; margin-bottom:12px;}
+  .card p{color:var(--aco);}
+
+  /* Princípio */
+  .principle{background:var(--ardosia); color:var(--off-white);}
+  .principle .wrap{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
+  .principle h2{color:var(--off-white);}
+  .principle p{color:#D3D9DC; margin-bottom:16px;}
+  .principle .big{font-family:'Sora',sans-serif; font-size:clamp(1.5rem,3vw,2rem); font-weight:600; line-height:1.25; color:var(--cobre-claro);}
+
+  /* Avaliação */
+  .check-list{list-style:none; display:grid; gap:0; max-width:760px;}
+  .check-list li{display:flex; gap:16px; padding:18px 0; border-bottom:1px solid var(--areia); align-items:flex-start;}
+  .check-list svg{width:22px; height:22px; flex-shrink:0; margin-top:3px; color:var(--cobre);}
+  .check-list strong{display:block; font-weight:600;}
+  .check-list span{color:var(--aco); font-size:.97rem;}
+
+  /* Médico */
+  .doctor{background:var(--branco);}
+  .doctor .wrap{display:grid; grid-template-columns:.9fr 1.1fr; gap:56px; align-items:center;}
+  .doctor img{border-radius:var(--radius); aspect-ratio:4/5; object-fit:cover; object-position:top; width:100%; max-width:380px;}
+  .doctor ul{list-style:none; margin:22px 0 26px;}
+  .doctor li{padding:12px 0; border-bottom:1px solid var(--areia);}
+  .doctor li strong{display:block; font-weight:600;}
+  .doctor li span{color:var(--aco); font-size:.95rem;}
+
+  /* FAQ */
+  details{background:var(--branco); border-bottom:1px solid var(--areia);}
+  details:first-of-type{border-top:1px solid var(--areia);}
+  summary{cursor:pointer; list-style:none; padding:22px 8px; font-family:'Sora',sans-serif; font-weight:600; font-size:1.05rem; display:flex; justify-content:space-between; gap:20px; align-items:center;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+"; font-size:1.5rem; color:var(--cobre); font-weight:400; line-height:1;}
+  details[open] summary::after{content:"–";}
+  details p{padding:0 8px 24px; color:var(--aco); max-width:72ch;}
+  .faq-wrap{max-width:820px;}
+
+  /* Local */
+  .local{background:var(--branco);}
+  .local .wrap{display:grid; grid-template-columns:1fr 1.2fr; gap:48px; align-items:stretch;}
+  .local h2{margin:14px 0 22px;}
+  .local-card{border:1px solid var(--cinza); padding:26px; margin-bottom:16px; border-radius:var(--radius);}
+  .local-card h4{font-family:'Sora',sans-serif; font-weight:600; font-size:1rem; margin-bottom:8px; display:flex; align-items:center; gap:8px;}
+  .local-card h4 svg{width:18px; height:18px; color:var(--cobre); flex:none;}
+  .local-card p{color:var(--aco); font-size:.92rem; margin-bottom:14px;}
+  .local-card p:last-child{margin-bottom:0;}
+  .local-card a{font-family:'Sora',sans-serif; font-size:.78rem; font-weight:600; color:var(--cobre);}
+  .map-frame{border-radius:var(--radius); overflow:hidden; min-height:340px; border:1px solid var(--cinza); filter:saturate(.9) contrast(1.02);}
+  .map-frame iframe{width:100%; height:100%; min-height:340px; border:0; display:block;}
+
+  /* Nota Doctoralia */
+  .rating{display:inline-flex; align-items:center; flex-wrap:wrap; gap:6px 12px; padding:10px 14px; margin-bottom:26px; border:1px solid rgba(174,182,186,.35); border-radius:var(--radius); text-decoration:none; color:var(--off-white); font-size:.92rem;}
+  .rating:hover{border-color:var(--cobre-claro);}
+  .rating .stars{display:inline-flex; gap:2px; color:var(--cobre-claro);}
+  .rating .stars svg{width:16px; height:16px;}
+  .rating strong{font-family:'Sora',sans-serif; font-weight:600;}
+  .rating small{color:var(--cinza); font-size:.84rem;}
+
+  /* Link para o site completo */
+  .top-link{font-size:.9rem; color:var(--cinza); text-decoration:none; margin-left:auto; margin-right:18px; white-space:nowrap;}
+  .top-link:hover{color:var(--off-white);}
+
+  /* CTA final */
+  .final{background:linear-gradient(160deg,var(--preto-azulado) 0%,var(--ardosia) 100%); color:var(--off-white); text-align:center;}
+  .final h2{color:var(--off-white); margin-inline:auto; max-width:22ch;}
+  .final p{color:#D3D9DC; max-width:52ch; margin:0 auto 30px;}
+  .final .cta-row{justify-content:center;}
+
+  footer{background:var(--preto-azulado); color:var(--cinza); padding:36px 0; font-size:.86rem;}
+  footer p+p{margin-top:8px;}
+  footer a{color:var(--off-white);}
+
+  /* Botão flutuante de WhatsApp */
+  .floating-cta{
+    position:fixed; right:24px; bottom:24px; z-index:150;
+    display:flex; align-items:center; gap:10px;
+    background:#4A7C59; color:#fff; padding:15px 24px; border-radius:32px; text-decoration:none;
+    font-family:'Sora',sans-serif; font-weight:600; font-size:.85rem;
+    box-shadow:0 16px 34px -8px rgba(74,124,89,.45);
+    transition:transform .2s ease, background .2s ease;
+  }
+  .floating-cta:hover{background:#3D6749; transform:translateY(-2px);}
+  .floating-cta svg{width:19px; height:19px; flex:none;}
+  @media(max-width:560px){ .floating-cta span{display:none;} .floating-cta{padding:15px; border-radius:50%;} }
+
+  /* Depoimentos */
+  .depo{background:var(--ardosia); color:var(--off-white);}
+  .depo .eyebrow{color:var(--cobre-claro);}
+  .depo h2{color:var(--off-white); margin:14px 0 40px; max-width:600px;}
+  .depo-top{display:flex; align-items:center; gap:32px; flex-wrap:wrap; margin-bottom:44px;}
+  .rating-badge{display:inline-flex; align-items:center; gap:16px; background:rgba(242,243,241,.06); border:1px solid rgba(242,243,241,.2); padding:16px 24px; border-radius:var(--radius); flex:none;}
+  .rating-badge .num{font-family:'Sora',sans-serif; font-size:2.1rem; font-weight:700; color:var(--off-white); line-height:1;}
+  .rating-badge .meta{display:flex; flex-direction:column; gap:3px;}
+  .rating-badge .stars{color:var(--cobre-claro); font-size:.95rem; letter-spacing:.1em;}
+  .rating-badge .count{font-size:.78rem; color:var(--cinza);}
+  .mentioned-label{font-size:.72rem; color:var(--cinza); text-transform:uppercase; letter-spacing:.06em; margin-bottom:9px;}
+  .mentioned-tags{display:flex; flex-wrap:wrap; gap:10px;}
+  .mentioned-tags span{font-size:.8rem; color:var(--off-white); border:1px solid rgba(242,243,241,.25); border-radius:20px; padding:7px 16px; background:rgba(242,243,241,.05);}
+  .depo-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:30px;}
+  .depo-card{border:1px solid rgba(242,243,241,.18); padding:30px 26px; border-radius:var(--radius); background:rgba(242,243,241,.03);}
+  .depo-card .stars{color:var(--cobre-claro); font-size:.85rem; letter-spacing:.15em; margin-bottom:16px;}
+  .depo-card p.quote{font-size:.96rem; color:var(--off-white); opacity:.9; margin-bottom:18px;}
+  .depo-card .name{font-family:'Sora',sans-serif; font-size:.82rem; font-weight:600; color:var(--cobre-claro);}
+  .depo-more{margin-top:36px; display:flex; justify-content:center;}
+  .depo-more a{font-family:'Sora',sans-serif; font-size:.82rem; font-weight:600; color:var(--cobre-claro); text-decoration:none; border-bottom:1px solid rgba(194,138,97,.4); padding-bottom:2px; transition:color .2s ease;}
+  .depo-more a:hover{color:var(--off-white);}
+  @media(max-width:860px){ .depo-grid{grid-template-columns:1fr 1fr;} }
+  @media(max-width:600px){ .depo-grid{grid-template-columns:1fr;} }
+  @media (max-width:899px){
+    section{padding:52px 0;}
+    .hero .wrap, .principle .wrap, .doctor .wrap, .local .wrap{grid-template-columns:1fr; gap:36px;}
+    .hero-photo{max-width:300px;}
+    .hero{padding:36px 0 48px;}
+    .hero-photo::after{inset:10px -10px -10px 10px;}
+    .sign-list, .cards{grid-template-columns:1fr;}
+    .doctor img{max-width:300px;}
+    header.top .btn{display:none;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+  .doc-strip{display:flex; align-items:center; gap:14px; margin-bottom:20px;}
+  .doc-strip .ph{display:block; width:64px; height:64px; border-radius:50%; overflow:hidden; border:2px solid rgba(242,243,241,.4); flex:none; margin:0;}
+  .doc-strip .ph{position:relative;}
+  .doc-strip .ph img{position:absolute; display:block; width:290%; max-width:none; height:auto; left:-91.8%; top:-39.2%;}
+  .doc-strip strong{display:block; font-family:"Sora",sans-serif; font-size:1rem; color:var(--off-white);}
+  .doc-strip span{display:block; font-size:.82rem; line-height:1.4; color:var(--cinza); margin-top:2px;}
+  .price-pill{display:inline-block; margin:2px 0 18px; padding:7px 16px; line-height:1.3; border:1px solid var(--cobre-claro); border-radius:999px; font-size:.9rem; color:var(--off-white);}
+  .price-pill strong{font-weight:600;}
+  @media (min-width:900px){ .doc-strip{display:none;} }
+  @media (max-width:560px){ .hero{padding:22px 0 40px;} .hero h1{font-size:1.7rem; line-height:1.15;} .hero .lead{font-size:.98rem; line-height:1.5;} .doc-strip{margin-bottom:14px;} .price-pill{margin:0 0 14px;} }
+  .floating-cta{transition:opacity .25s ease, transform .2s ease, background .2s ease;}
+  .floating-cta.is-away{opacity:0; pointer-events:none; transform:translateY(10px);}
+
+  /* ---------- seções copiadas da página inicial (sobre o médico e conhecimento) ---------- */
+  .sobre, .publications{font-size:1rem; line-height:1.6; padding:120px 0;}
+  .sobre svg, .publications svg{display:block; max-width:100%;}
+  .sobre .eyebrow, .publications .eyebrow{font-size:.72rem; display:flex; align-items:center; gap:.6rem; margin-bottom:0;}
+  .sobre .eyebrow::before, .publications .eyebrow::before{content:""; width:22px; height:1px; background:var(--cobre); display:inline-block;}
+  .sobre h2, .publications h2{text-wrap:wrap;}
+  .sobre h4{font-family:'Sora',sans-serif; font-weight:600; color:var(--ardosia); line-height:1.15;}
+  .sobre .wrap, .publications .wrap{max-width:1180px; padding:0 32px;}
+  @media(max-width:720px){ .sobre, .publications{padding:76px 0;} .sobre .wrap, .publications .wrap{padding:0 22px;} }
+  .sobre{padding-top:60px;}
+  .sobre .wrap{display:grid; grid-template-columns:.85fr 1.15fr; gap:70px; align-items:start;}
+  @media(max-width:900px){ .sobre .wrap{grid-template-columns:1fr; gap:40px;} }
+  .sobre h2{font-size:clamp(1.7rem,3vw,2.3rem); margin:14px 0 20px;}
+  .sobre p.intro{color:var(--aco); font-size:1.02rem; margin-bottom:8px;}
+  .sobre-photo-wrap{position:relative; padding:22px 0 0 22px;}
+  .sobre-photo-wrap::before{
+    content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:var(--cobre); border-radius:var(--radius); z-index:0;
+  }
+  .sobre-photo{aspect-ratio:3/4; border-radius:var(--radius); overflow:hidden; position:relative; z-index:1;}
+  .sobre-photo img{width:100%; height:100%; object-fit:cover; object-position:top center; filter:saturate(.93) contrast(1.04);}
+  .sobre-photo::after{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(180deg, transparent 60%, rgba(27,36,42,.55));
+  }
+  .sobre-photo span{position:absolute; left:22px; bottom:18px; z-index:1; color:var(--off-white); font-family:'Sora',sans-serif; font-size:.78rem; letter-spacing:.05em;}
+  @media(max-width:900px){ .sobre-photo-wrap{max-width:340px;} }
+  @media(max-width:640px){ .sobre-photo-wrap{display:none;} }
+  .sobre-credentials{
+    display:inline-flex; gap:14px; align-items:center; margin:6px 0 0; font-size:.82rem; color:var(--aco);
+    font-family:'Sora',sans-serif; font-weight:600;
+  }
+
+  .icon-list{margin-top:30px; display:grid; gap:26px;}
+  .icon-list li{list-style:none; display:flex; gap:18px; align-items:flex-start;}
+  .icon-list .ic{
+    flex:none; width:46px; height:46px; border-radius:50%; border:1px solid var(--cinza);
+    display:flex; align-items:center; justify-content:center; color:var(--cobre);
+  }
+  .icon-list .ic svg{width:22px; height:22px;}
+  .icon-list h4{font-size:1rem; margin-bottom:3px;}
+  .icon-list p{color:var(--aco); font-size:.92rem;}
+
+  /* ---------- publicações científicas ---------- */
+  .publications{background:var(--areia);}
+  .publications .wrap{display:grid; grid-template-columns:.85fr 1.15fr; gap:60px; align-items:center;}
+  @media(max-width:900px){ .publications .wrap{grid-template-columns:1fr; gap:36px;} }
+  .publications-photo{border-radius:var(--radius); overflow:hidden; aspect-ratio:4/5; position:relative;}
+  .publications-photo img{width:100%; height:100%; object-fit:cover; object-position:top center; filter:saturate(.95) contrast(1.03);}
+  .publications h2{font-size:clamp(1.6rem,2.8vw,2.1rem); margin:14px 0 20px;}
+  .publications-list{margin-top:26px; display:grid; gap:20px;}
+  .publications-list li{list-style:none; display:flex; gap:14px; align-items:flex-start; font-size:.9rem; color:var(--aco); line-height:1.5;}
+  .publications-list .ic{color:var(--cobre); flex:none; margin-top:2px;}
+  .publications-list .ic svg{width:19px; height:19px;}
+  .publications-list strong{color:var(--ardosia); font-weight:600;}
+  .publications-more{display:inline-block; margin-top:28px; font-family:'Sora',sans-serif; font-size:.84rem; font-weight:600; color:var(--cobre-btn); text-decoration:none; border-bottom:1px solid rgba(148,96,58,.4); padding-bottom:2px;}
+  .publications-more:hover{color:var(--cobre-btn-hover);}
+
+  .publications-carousel-wrap{margin-top:56px; max-width:100%; overflow:hidden; padding:0 clamp(24px,5vw,64px); box-sizing:border-box;}
+  .publications-carousel-label{font-size:.72rem; color:var(--cobre); text-transform:uppercase; letter-spacing:.06em; font-weight:600; margin-bottom:16px;}
+  .publications-carousel-head{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:16px;}
+  .publications-carousel-head .publications-carousel-label{margin-bottom:0;}
+  .publications-carousel-nav{display:flex; gap:8px; flex:none;}
+  .publications-carousel-nav button{width:38px; height:38px; border-radius:50%; border:1.5px solid var(--cobre); background:transparent; color:var(--cobre); font-size:1.3rem; line-height:1; cursor:pointer; transition:background .15s, color .15s;}
+  .publications-carousel-nav button:hover{background:var(--cobre); color:var(--branco);}
+  .publications-carousel{
+    display:flex; gap:20px; width:100%; box-sizing:border-box; overflow-x:auto; overflow-y:hidden; padding-bottom:12px; scroll-snap-type:x proximity;
+    scroll-behavior:smooth; -webkit-overflow-scrolling:touch; scrollbar-width:thin; scrollbar-color:var(--cobre) transparent;
+  }
+  .publications-carousel::-webkit-scrollbar{height:5px;}
+  .publications-carousel::-webkit-scrollbar-thumb{background:var(--cobre); border-radius:10px;}
+  .publications-carousel figure{
+    flex:0 0 230px; scroll-snap-align:start;
+    margin:0; border-radius:var(--radius); overflow:hidden; aspect-ratio:4/5; position:relative;
+  }
+  .publications-carousel img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(.95) contrast(1.03);}
+  @media(max-width:900px){
+    .publications-carousel{gap:16px;}
+    .publications-carousel-nav{display:none;}
+    .publications-carousel figure{flex-basis:200px;}
+  }
+  @media(max-width:560px){ .publications-carousel figure{flex-basis:160px;} }
+  .publications-more, .publications-more:hover{color:var(--ardosia);}
+  /* menos espaço entre "Sua consulta" e "Sobre o médico" nas páginas de especialidade */
+  section.sobre{padding-top:40px;}
+  @media(max-width:720px){ section.sobre{padding-top:20px;} }
+  /* celular: botões do topo e do convite final com a mesma largura */
+  @media (max-width:560px){ .cta-row > a{flex:1 1 100%; text-align:center;} }
+</style>
+<script>
+(function(){
+  if(!location.hash) return;
+  document.documentElement.style.scrollBehavior='auto';
+  addEventListener('load', function(){
+    var t=document.querySelector(location.hash);
+    if(t) t.scrollIntoView();
+    setTimeout(function(){ document.documentElement.style.scrollBehavior=''; }, 50);
+  });
+})();
+</script>
+<link rel="stylesheet" href="/assets/componentes.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">Otávio Vitório<small>Ortopedia e Cirurgia da Coluna</small></a>
+    <a class="top-link" href="/guia/">Guia<span class="so-desk"> ilustrado</span></a>
+    <a class="top-link" href="/">Site completo</a>
+    <a class="btn btn-primary" href="https://wa.me/5531986535956?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20doen%C3%A7a%20discal%20degenerativa%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="doc-strip"><span class="ph"><img src="/images/dr-otavio.jpg" alt="Dr. Otávio Vitório" width="64" height="96"></span><div><strong>Dr. Otávio Vitório</strong><span>Ortopedista e cirurgião de coluna<br>CRM-MG 86882 · RQE 62889</span></div></div>
+      <p class="eyebrow">Doença discal degenerativa · Belo Horizonte</p>
+      <h1>Doença discal degenerativa: avaliação especializada em Belo Horizonte</h1>
+      <p class="lead">Entenda o desgaste dos discos da coluna e as opções de tratamento. Ter um disco com desgaste não significa, necessariamente, sentir dor ou precisar de cirurgia: a decisão começa pela avaliação dos seus sintomas e dos seus exames.</p>
+      <p class="price-pill">Consulta particular · <strong>R$ 600</strong></p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/5531986535956?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20doen%C3%A7a%20discal%20degenerativa%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.51 1.36 5.03L2 22l5.25-1.38a9.9 9.9 0 004.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.31-1.93 1.35-.5.05-1.02.24-3.42-.71-2.9-1.15-4.76-4.1-4.9-4.29-.14-.19-1.17-1.56-1.17-2.97 0-1.42.74-2.11 1-2.4.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.82 2 .9 2.14.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.75 1.24 1.62 2 1.11.99 2.05 1.3 2.34 1.44.29.15.46.13.63-.08.17-.2.72-.84.91-1.13.19-.29.38-.24.63-.14.26.09 1.64.77 1.92.91.29.15.48.22.55.34.07.13.07.72-.17 1.4z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+      </div>
+      <a class="rating" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener" aria-label="Nota 5 de 5 no Doctoralia, com 77 avaliações de pacientes. Ver avaliações">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+        <strong>5,0 no Doctoralia</strong>
+        <small>77 avaliações de pacientes</small>
+      </a>
+      <div class="creds">
+        <div><strong>CRM-MG 86882</strong>RQE 62889</div>
+        <div><strong>UFMG</strong>Graduação em Medicina</div>
+        <div><strong>AO Spine</strong>Professor e instrutor</div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="/images/dr-otavio.jpg" width="900" height="1350" alt="Dr. Otávio Vitório, ortopedista e cirurgião de coluna">
+    </div>
+  </div>
+</section>
+
+<section class="guia" id="sem-cirurgia">
+  <div class="wrap">
+    <p class="eyebrow">Entenda em imagem</p>
+    <h2>Doença discal degenerativa: o que é e como tratar?</h2>
+    <p class="guia-intro">A doença discal degenerativa é o nome utilizado para descrever alterações nos discos da coluna, geralmente relacionadas ao envelhecimento. Apesar do nome, <strong>ter um disco com desgaste não significa, necessariamente, sentir dor ou precisar de cirurgia</strong>. Essas alterações são muito comuns, inclusive em pessoas sem nenhum sintoma. Quando causam desconforto, o tratamento costuma começar com fisioterapia, exercícios e medidas para controlar a dor.</p>
+
+    <figure class="guia-fig">
+      <button class="guia-zoom" type="button" data-full="/images/guia/doenca-discal-degenerativa.webp" aria-label="Ampliar a ilustração: doença discal degenerativa lombar">
+        <img src="/images/guia/doenca-discal-degenerativa.webp" width="1536" height="1024" alt="Ilustração educativa em três etapas: disco preservado entre L4 e L5, disco degenerado com perda de hidratação e fissuras nas fibras, e degeneração avançada com perda acentuada de altura e osteófitos.">
+        <span class="guia-zoom-hint">Toque para ampliar</span>
+      </button>
+      <figcaption>Ilustração educativa, anatomia simplificada. Essas alterações são comuns e nem sempre causam dor. O exame, sozinho, não define a necessidade de cirurgia.</figcaption>
+    </figure>
+
+    <div class="guia-resumo">
+      <strong>Resumo em 30 segundos</strong>
+      <ul>
+        <li>O desgaste do disco é muito comum, inclusive em quem não sente nada. Ter degeneração no exame não significa dor nem cirurgia.</li>
+        <li>O tratamento costuma começar com fisioterapia, exercícios e controle da dor. A degeneração na ressonância, por si só, não é indicação cirúrgica.</li>
+        <li>Dificuldade nova para urinar, perda do controle da urina ou das fezes, dormência na região íntima ou fraqueza importante nas pernas exigem emergência.</li>
+      </ul>
+    </div>
+
+    <div class="guia-tools">
+      <nav class="guia-chips" aria-label="Atalhos desta explicação">
+        <a href="#di-discos">Os discos</a>
+        <a href="#di-sintomas">Sintomas</a>
+        <a href="#di-hernia">É hérnia?</a>
+        <a href="#di-tratamento">Tratamento</a>
+        <a href="#di-cirurgia">Cirurgia</a>
+        <a href="#sinais-de-alerta">Urgência</a>
+      </nav>
+      <button class="guia-toggle" type="button" data-guia-toggle>Abrir todas</button>
+    </div>
+
+    <div class="guia-acc">
+      <details id="di-discos">
+        <summary>O que são os discos da coluna?</summary>
+        <p>Os discos ficam entre as vértebras, que são os ossos da coluna. Eles funcionam como pequenas almofadas: ajudam a distribuir as cargas, absorver impactos e permitir os movimentos.</p>
+        <p>Cada disco possui uma parte central mais gelatinosa e uma camada externa resistente. Com o passar dos anos, ele pode perder água, elasticidade e altura, além de desenvolver pequenas fissuras. Nos laudos, essas alterações podem aparecer como <strong>“desidratação discal”, “discopatia degenerativa” ou “redução da altura do disco”</strong>.</p>
+        <p>Esses termos descrevem a aparência do disco no exame, mas não determinam, sozinhos, a gravidade do problema.</p>
+      </details>
+      <details id="di-porque">
+        <summary>Por que acontece?</summary>
+        <p>O envelhecimento é um dos principais fatores, mas a genética também tem participação importante. Isso ajuda a explicar por que algumas pessoas apresentam alterações nos discos ainda jovens, enquanto outras desenvolvem mudanças mais tarde.</p>
+        <p>Tabagismo, excesso de peso e determinadas sobrecargas também podem contribuir. Entretanto, nem sempre existe uma causa única, e o desgaste não deve ser atribuído apenas a uma postura ou atividade específica.</p>
+        <p><strong>A degeneração discal é muito frequente e nem sempre representa uma doença que precisa ser tratada. O foco do cuidado é a pessoa, seus sintomas e sua capacidade de realizar as atividades.</strong></p>
+      </details>
+      <details id="di-sintomas">
+        <summary>Quais são os sintomas?</summary>
+        <p>Muitas pessoas não apresentam sintomas e descobrem o desgaste por acaso em um exame. Quando há sintomas, podem ocorrer:</p>
+        <ul>
+          <li>Dor na parte baixa das costas, que pode ser contínua ou aparecer em crises.</li>
+          <li>Rigidez e dificuldade para alguns movimentos.</li>
+          <li>Desconforto ao permanecer muito tempo na mesma posição.</li>
+          <li>Dor que limita atividades, exercícios ou o trabalho.</li>
+        </ul>
+        <p>Quando existe uma hérnia de disco ou um estreitamento do espaço dos nervos associado, também podem surgir <strong>dor que desce pela perna, formigamento, dormência ou fraqueza</strong>.</p>
+        <p>Algumas pessoas apresentam dor, peso ou cansaço nas pernas ao caminhar ou ficar em pé, com melhora ao sentar. Isso pode indicar compressão dos nervos por estreitamento do canal da coluna, chamado de <strong>estenose lombar</strong>.</p>
+      </details>
+      <details id="di-hernia">
+        <summary>Degeneração discal é a mesma coisa que hérnia de disco?</summary>
+        <p>Não. A degeneração corresponde às mudanças na estrutura do disco. A hérnia ocorre quando parte do seu conteúdo se desloca para fora de sua posição habitual, podendo irritar ou comprimir um nervo.</p>
+        <p>As duas condições podem ocorrer juntas, mas <strong>nem todo disco degenerado apresenta hérnia, e nem toda hérnia causa sintomas</strong>.</p>
+      </details>
+      <details id="di-diagnostico">
+        <summary>Como é feito o diagnóstico?</summary>
+        <p>A avaliação começa com a história dos sintomas e o exame físico. O médico verifica os movimentos da coluna, a força, a sensibilidade e os reflexos, além de investigar outras possíveis causas da dor.</p>
+        <p>A ressonância magnética pode ajudar a avaliar os discos e os nervos quando existe indicação. Porém, <strong>o grau de desgaste no exame nem sempre acompanha a intensidade da dor</strong>: uma pessoa pode ter alterações importantes e sentir pouco desconforto, enquanto outra pode apresentar dor intensa com mudanças discretas.</p>
+        <p>Na ausência de sinais de alerta, nem sempre é necessário fazer exames de imagem logo no início. Muitas vezes, é possível começar o tratamento e acompanhar a evolução. Os exames são considerados quando seus resultados podem mudar a conduta.</p>
+      </details>
+      <details id="di-tratamento">
+        <summary>Como é o tratamento?</summary>
+        <p><strong>Fisioterapia e exercícios.</strong> O tratamento inicial costuma ser conservador, ou seja, sem cirurgia. A fisioterapia e os exercícios ajudam a melhorar a força, a mobilidade e a tolerância às atividades.</p>
+        <p>O programa deve ser adaptado aos sintomas e à capacidade de cada pessoa, com progressão gradual. <strong>O objetivo é recuperar movimento e função, sem depender de que o disco volte a ter a aparência de antes.</strong></p>
+        <p>Repouso prolongado geralmente não ajuda. Sempre que possível, recomenda-se manter as atividades toleradas e retomar as demais aos poucos.</p>
+        <p><strong>Medicamentos e hábitos de vida.</strong> Analgésicos e anti-inflamatórios podem ser utilizados em situações específicas, conforme avaliação médica. A escolha depende dos sintomas, das condições de saúde e dos riscos de cada medicamento.</p>
+        <p>Controlar o peso, parar de fumar, cuidar do sono e alternar posições ao longo do dia também podem fazer parte do tratamento.</p>
+        <p>Quando a dor persiste, ela pode afetar o humor, o sono e a confiança para se movimentar. Nesses casos, um cuidado multidisciplinar pode ajudar na recuperação da qualidade de vida.</p>
+        <p><strong>Infiltrações.</strong> Em pacientes selecionados, especialmente quando há dor irradiada pela perna por irritação de um nervo, infiltrações guiadas por imagem podem ser consideradas.</p>
+        <p>Elas utilizam medicamentos próximos à região afetada para reduzir a inflamação e aliviar os sintomas. O benefício costuma ser temporário e pode facilitar a participação na reabilitação. <strong>As infiltrações não regeneram o disco e não são indicadas automaticamente para todo desgaste ou toda dor lombar.</strong></p>
+      </details>
+      <details id="di-cirurgia">
+        <summary>Quando a cirurgia pode ser necessária?</summary>
+        <p>A cirurgia é considerada em situações específicas, como:</p>
+        <ul>
+          <li>Perda de força importante ou progressiva por compressão dos nervos.</li>
+          <li>Compressão nervosa que provoque dor ou limitação persistente, apesar do tratamento conservador adequado.</li>
+          <li>Instabilidade da coluna associada aos sintomas.</li>
+          <li>Situações de emergência, como a síndrome da cauda equina.</li>
+        </ul>
+        <p>Dependendo do problema, o procedimento pode aliviar a compressão dos nervos ou estabilizar um segmento da coluna.</p>
+        <p>Para a dor lombar isolada atribuída ao desgaste do disco, os benefícios da cirurgia são menos previsíveis. <strong>A presença de degeneração na ressonância, por si só, não é indicação cirúrgica.</strong> A decisão exige avaliar os sintomas, os exames, os tratamentos já realizados e os possíveis riscos e benefícios.</p>
+      </details>
+      <details id="di-piora">
+        <summary>O desgaste vai piorar? Vou sentir dor para sempre?</summary>
+        <p>Não necessariamente. As alterações estruturais costumam evoluir lentamente na vida adulta, e sua progressão não significa que a dor também aumentará.</p>
+        <p>Os sintomas podem melhorar, desaparecer por períodos ou voltar em crises. Muitas pessoas conseguem manter uma vida ativa com tratamento adequado.</p>
+        <p>Quando a dor se torna persistente, ela pode interferir no trabalho, no lazer e na vida social. Nesses casos, o acompanhamento ajuda a ajustar o tratamento e recuperar a autonomia.</p>
+        <p><strong>Mesmo quando o desgaste permanece no exame, é possível melhorar a dor e a capacidade de realizar as atividades.</strong></p>
+      </details>
+    </div>
+
+    <div class="guia-alerta" id="sinais-de-alerta" role="note">
+      <h3>Quais sinais exigem atendimento urgente?</h3>
+      <p><strong>Procure um serviço de emergência se surgirem:</strong></p>
+      <ul>
+        <li>Dificuldade nova para urinar ou incapacidade de esvaziar a bexiga.</li>
+        <li>Perda nova do controle da urina ou das fezes.</li>
+        <li>Dormência na região íntima, entre as pernas ou ao redor do ânus.</li>
+        <li>Fraqueza importante ou que está piorando nas pernas.</li>
+      </ul>
+      <p>Esses sintomas podem indicar compressão grave dos nervos, incluindo a <strong>síndrome da cauda equina</strong>, que exige investigação imediata.</p>
+      <p>Também é necessária avaliação rápida quando a dor aparece com febre, perda de peso sem explicação, histórico de câncer, trauma ou dor intensa e persistente em repouso. Pessoas com osteoporose, imunidade reduzida ou uso prolongado de corticoides precisam de atenção especial.</p>
+    </div>
+
+    <p class="guia-nota"><em>Não se deve atribuir automaticamente toda dor nas costas ao desgaste dos discos. Uma avaliação individualizada é essencial para identificar a causa e orientar o cuidado.</em></p>
+
+    <div class="guia-acoes">
+      <a class="btn btn-primary" href="https://wa.me/5531986535956?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20doen%C3%A7a%20discal%20degenerativa%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+      <a class="btn btn-ghost-dark" data-guia-share href="https://api.whatsapp.com/send?text=Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio%20explica%3A%20Doen%C3%A7a%20discal%20degenerativa%3A%20o%20que%20%C3%A9%20e%20como%20tratar%3F%20https%3A%2F%2Fdrotaviovitorio.com.br%2Fdoenca-discal-degenerativa%2F%3Futm_source%3Dconsulta%26utm_medium%3Dwhatsapp" target="_blank" rel="noopener">Enviar ao paciente</a>
+    </div>
+    <p class="guia-autor">Conteúdo educativo elaborado pelo Dr. Otávio Vitório · CRM-MG 86882 · RQE 62889. Não substitui a consulta médica. <a href="/guia/">Ver o guia ilustrado completo</a></p>
+  </div>
+</section>
+
+<section class="signs">
+  <div class="wrap">
+    <p class="eyebrow">Quando buscar avaliação</p>
+    <h2>Você se identifica com algum destes sinais?</h2>
+    <p class="section-lead">A degeneração dos discos pode ou não causar sintomas, e o quadro varia de pessoa para pessoa. Uma avaliação médica é o caminho para entender o que está acontecendo.</p>
+    <ul class="sign-list">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Dor na parte baixa das costas, contínua ou em crises</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Rigidez e dificuldade para alguns movimentos</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Desconforto ao permanecer muito tempo na mesma posição</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Dor que limita atividades, exercícios ou o trabalho</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Dor que desce pela perna, com formigamento, dormência ou fraqueza</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Desgaste do disco descoberto por acaso em um exame</li>
+    </ul>
+    <p class="fine-note">Os sinais variam de pessoa para pessoa. Somente a consulta médica pode definir o diagnóstico e a conduta adequada. Procure um pronto-socorro imediatamente em caso de dor intensa e repentina, perda de força importante ou que esteja piorando nas pernas, dormência na região genital ou entre as pernas, ou dificuldade nova para urinar ou para controlar a urina ou as fezes.</p>
+  </div>
+</section>
+
+<section id="avaliacao">
+  <div class="wrap">
+    <p class="eyebrow">Sua consulta</p>
+    <h2>O que você terá na avaliação</h2>
+    <p class="section-lead">Uma consulta pensada para você sair entendendo o seu quadro e os próximos passos.</p>
+    <ul class="check-list">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><div><strong>Avaliação clínica detalhada</strong><span>Exame físico da coluna, força, sensibilidade e reflexos.</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><div><strong>Análise do histórico e dos sintomas</strong><span>Quando a dor começou, como evoluiu e o que incomoda hoje.</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><div><strong>Análise dos seus exames</strong><span>Leve radiografias, ressonância ou tomografia, se já tiver. Se não tiver, você recebe a orientação sobre quais fazer.</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><div><strong>Esclarecimento das possibilidades de tratamento</strong><span>Com linguagem clara, incluindo as opções sem cirurgia.</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><div><strong>Definição dos próximos passos</strong><span>Você sai sabendo o que fazer a seguir.</span></div></li>
+    </ul>
+    <div class="cta-row" style="margin-top:34px;">
+      <a class="btn btn-primary" href="https://wa.me/5531986535956?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20doen%C3%A7a%20discal%20degenerativa%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="sobre" id="medico">
+  <div class="wrap">
+    <div>
+      <div class="sobre-photo-wrap">
+        <div class="sobre-photo">
+          <img src="/images/dr-otavio-consultorio.jpg" loading="lazy" decoding="async" alt="Dr. Otávio Vitório em consultório">
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow">Sobre o médico</p>
+      <h2 >Conheça o Dr. Otávio Vitório</h2>
+      <p class="intro">Ortopedista e Cirurgião da Coluna em Belo Horizonte</p>
+      <p class="sobre-credentials">CRM MG 86882 &nbsp;|&nbsp; RQE 62889</p>
+      <ul class="icon-list">
+        <li>
+          <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6v11a9 9 0 0018 0V6"/><circle cx="15" cy="6" r="2.2"/><circle cx="33" cy="6" r="2.2"/><path d="M24 26v6a8 8 0 008 8 8 8 0 008-8"/><circle cx="40" cy="40" r="4"/></svg></span>
+          <div><h4>Graduação em Medicina</h4><p>Universidade Federal de Minas Gerais (UFMG)</p></div>
+        </li>
+        <li>
+          <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 33a3.5 3.5 0 010-7 3.5 3.5 0 013.4-4.3L27.7 8.4A3.5 3.5 0 0132 4a3.5 3.5 0 013.5 4.5A3.5 3.5 0 0140 12a3.5 3.5 0 01-3.7 5.3L23 30.6A3.5 3.5 0 0119.5 35 3.5 3.5 0 0116 40a3.5 3.5 0 01-3.5-3.5A3.5 3.5 0 0111 33z"/></svg></span>
+          <div><h4>Residência em Ortopedia e Traumatologia</h4><p>Hospital Felício Rocho</p></div>
+        </li>
+        <li>
+          <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="24" y1="5" x2="24" y2="43"/><ellipse cx="24" cy="10" rx="6" ry="3"/><ellipse cx="24" cy="18" rx="7" ry="3.3"/><ellipse cx="24" cy="26" rx="8" ry="3.7"/><ellipse cx="24" cy="34" rx="8.5" ry="4"/></svg></span>
+          <div><h4>Especialização em Cirurgia da Coluna</h4><p>AO Spine e Hospital Universitário Cajuru</p></div>
+        </li>
+        <li>
+          <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8 44 17 24 26 4 17Z"/><path d="M14 21v10c0 3.3 4.5 6 10 6s10-2.7 10-6V21"/><line x1="44" y1="17" x2="44" y2="30"/></svg></span>
+          <div><h4>Professor e Instrutor da AO Spine</h4><p>Organização mundial de ensino e pesquisa em cirurgia de coluna</p></div>
+        </li>
+        <li>
+          <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 42 15v6L24 30 6 21v-6Z"/><line x1="24" y1="30" x2="24" y2="42"/><line x1="16" y1="42" x2="32" y2="42"/><line x1="24" y1="15" x2="24" y2="23"/><line x1="20" y1="19" x2="28" y2="19"/></svg></span>
+          <div><h4>Equipe de Cirurgia de Coluna</h4><p>Hospital Felício Rocho</p></div>
+        </li>
+      </ul>
+      <a class="btn btn-ghost-dark" href="/" style="margin-top:34px;">Conhecer o site completo</a>
+    </div>
+  </div>
+</section>
+
+<section class="depo" id="depoimentos">
+  <div class="wrap">
+    <p class="eyebrow">Depoimentos</p>
+    <h2>O que dizem os pacientes que já passaram pelo consultório</h2>
+    <div class="depo-top">
+      <div class="rating-badge">
+        <span class="num">5,0</span>
+        <div class="meta">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span class="count">77 avaliações no Doctoralia</span>
+        </div>
+      </div>
+      <div>
+        <p class="mentioned-label">Mais mencionado pelos pacientes</p>
+        <div class="mentioned-tags">
+          <span>Atencioso durante a consulta</span>
+          <span>Explicações detalhadas</span>
+          <span>Pontual</span>
+        </div>
+      </div>
+    </div>
+    <div class="depo-car">
+      <button class="depo-nav prev" type="button" aria-label="Avaliações anteriores">‹</button>
+      <div class="depo-track" tabindex="0" role="region" aria-label="Avaliações de pacientes no Doctoralia">
+      <article class="depo-c">
+        <div class="depo-c-top"><span class="depo-av" aria-hidden="true">P</span><div><strong>Paciente</strong><small>Diagnóstico</small></div><span class="depo-src">Doctoralia</span></div>
+        <div class="depo-stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p class="depo-quote">“Desde a primeira consulta até o pós-procedimento, tive um acompanhamento cuidadoso. Recebi um diagnóstico preciso e um tratamento que fez toda a diferença.”</p>
+        <button class="depo-lm" type="button" hidden>Leia mais</button>
+      </article>
+      <article class="depo-c">
+        <div class="depo-c-top"><span class="depo-av" aria-hidden="true">P</span><div><strong>Paciente</strong><small>Avaliação conservadora</small></div><span class="depo-src">Doctoralia</span></div>
+        <div class="depo-stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p class="depo-quote">“Dr. Otávio é muito especializado, o que nos traz segurança e compreensão do quadro. Apresenta as possibilidades de tratamento sempre de forma conservadora, direta e objetiva.”</p>
+        <button class="depo-lm" type="button" hidden>Leia mais</button>
+      </article>
+      <article class="depo-c">
+        <div class="depo-c-top"><span class="depo-av" aria-hidden="true">P</span><div><strong>Paciente</strong><small>Cirurgia</small></div><span class="depo-src">Doctoralia</span></div>
+        <div class="depo-stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p class="depo-quote">“Sou profundamente grato ao Dr. Otávio pelo sucesso da cirurgia de hérnia de disco e por todo o cuidado que recebi.”</p>
+        <button class="depo-lm" type="button" hidden>Leia mais</button>
+      </article>
+      <article class="depo-c">
+        <div class="depo-c-top"><span class="depo-av" aria-hidden="true">P</span><div><strong>Paciente</strong><small>Segurança</small></div><span class="depo-src">Doctoralia</span></div>
+        <div class="depo-stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p class="depo-quote">“Ele me explicou detalhadamente minha situação e me passou todas as orientações necessárias, mesmo grávida de 26 semanas. Agora estou muito mais segura para dar continuidade ao tratamento.”</p>
+        <button class="depo-lm" type="button" hidden>Leia mais</button>
+      </article>
+      <article class="depo-c">
+        <div class="depo-c-top"><span class="depo-av" aria-hidden="true">P</span><div><strong>Paciente</strong><small>Alívio</small></div><span class="depo-src">Doctoralia</span></div>
+        <div class="depo-stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p class="depo-quote">“Fez um exame detalhado e explicou a causa da minha dor. Senti mais conforto assim que iniciei o tratamento indicado.”</p>
+        <button class="depo-lm" type="button" hidden>Leia mais</button>
+      </article>
+      <article class="depo-c">
+        <div class="depo-c-top"><span class="depo-av" aria-hidden="true">P</span><div><strong>Paciente</strong><small>Atendimento</small></div><span class="depo-src">Doctoralia</span></div>
+        <div class="depo-stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p class="depo-quote">“Buscou entender a causa do problema para solucionar da melhor maneira. Atencioso e pontual em todo o atendimento.”</p>
+        <button class="depo-lm" type="button" hidden>Leia mais</button>
+      </article>
+      <article class="depo-c">
+        <div class="depo-c-top"><span class="depo-av" aria-hidden="true">P</span><div><strong>Paciente</strong><small>Atendimento</small></div><span class="depo-src">Doctoralia</span></div>
+        <div class="depo-stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p class="depo-quote">“Ótimo atendimento, com foco e atenção no paciente.”</p>
+        <button class="depo-lm" type="button" hidden>Leia mais</button>
+      </article>
+      </div>
+      <button class="depo-nav next" type="button" aria-label="Próximas avaliações">›</button>
+    </div>
+    <div class="depo-more">
+      <a href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener">Ver todas as avaliações no Doctoralia →</a>
+    </div>
+  </div>
+</section>
+
+<section id="duvidas">
+  <div class="wrap">
+    <p class="eyebrow">Dúvidas frequentes</p>
+    <h2>Antes de agendar</h2>
+    <div class="faq-wrap" style="margin-top:28px;">
+      <details>
+        <summary>Doença discal degenerativa precisa de cirurgia?</summary>
+        <p>Não necessariamente. Ter um disco com desgaste não significa, necessariamente, sentir dor ou precisar de cirurgia. O tratamento costuma começar com fisioterapia, exercícios e medidas para controlar a dor, e a degeneração na ressonância, por si só, não é indicação cirúrgica.</p>
+      </details>
+      <details>
+        <summary>Preciso ter exames para agendar?</summary>
+        <p>Não. Se você já tem radiografias, ressonância ou tomografia da coluna, leve para a consulta. Se não tem, o médico orienta quais exames são necessários para o seu caso.</p>
+      </details>
+      <details>
+        <summary>Como funciona a consulta e qual o valor?</summary>
+        <p>A consulta é particular, no valor de R$ 600, com hora marcada, no consultório do Prado, em Belo Horizonte.</p>
+      </details>
+      <details>
+        <summary>Como faço para agendar?</summary>
+        <p>Você pode agendar sua consulta pelo WhatsApp.</p>
+      </details>
+      <details>
+        <summary>Onde fica o consultório?</summary>
+        <p>Rua Jaceguai, 208, Sala 708, Edifício Cayler, Prado, Belo Horizonte/MG. O edifício tem estacionamento próprio.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="local" id="localizacao">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Localização</p>
+      <h2>Onde encontrar o Dr. Otávio</h2>
+      <div class="local-card">
+        <h4>Consultório — Prado</h4>
+        <p>Rua Jaceguai, 208 — Sala 708, Edifício Cayler<br>Prado, Belo Horizonte/MG — 30411-073</p>
+      </div>
+      <div class="local-card">
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 010 6H9"/></svg> Estacionamento</h4>
+        <p>Vagas disponíveis no próprio edifício, com fácil acesso para quem chega de carro.</p>
+      </div>
+      <div class="local-card">
+        <h4>Também atende em</h4>
+        <p>Hospital Felício Rocho (Barro Preto) e Elcenter (Contagem), para procedimentos e infiltrações.</p>
+      </div>
+    </div>
+    <div class="map-frame">
+      <iframe src="https://maps.google.com/maps?q=Rua+Jaceguai%2C+208%2C+Prado%2C+Belo+Horizonte%2FMG%2C+30411-073&t=m&z=16&output=embed&iwloc=near" loading="lazy" title="Localização do consultório — Rua Jaceguai, 208, Prado, Belo Horizonte/MG" aria-label="Mapa com a localização do consultório"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="publications">
+  <div class="wrap">
+    <div class="publications-photo">
+      <img src="/images/dr-otavio-congresso-coluna.jpg" loading="lazy" decoding="async" alt="Dr. Otávio Vitório apresentando pesquisa científica em congresso internacional de coluna">
+    </div>
+    <div>
+      <p class="eyebrow">Conhecimento que vai além do consultório</p>
+      <h2>Conhecimento que circula entre especialistas</h2>
+      <p style="color:var(--aco); font-size:.98rem;">O Dr. Otávio Vitório mantém atuação acadêmica e científica em cirurgia da coluna, participando de congressos internacionais, do ensino pela AO Spine e da produção de pesquisa na área.</p>
+      <ul class="publications-list">
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1Z"/><path d="M14 3v5h5"/><line x1="8.5" y1="12" x2="15.5" y2="12"/><line x1="8.5" y1="15.5" x2="15.5" y2="15.5"/></svg></span><span><strong>Global Spine Journal (2026)</strong> — Mechanical Instability After Civilian Thoracolumbar Gunshot Injuries: A Systematic Review to Support Classification Development</span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1Z"/><path d="M14 3v5h5"/><line x1="8.5" y1="12" x2="15.5" y2="12"/><line x1="8.5" y1="15.5" x2="15.5" y2="15.5"/></svg></span><span><strong>Coluna/Columna (2026)</strong> — Surgeon Preference as a Key Factor in Decision Making in Degenerative Spondylolisthesis</span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1Z"/><path d="M14 3v5h5"/><line x1="8.5" y1="12" x2="15.5" y2="12"/><line x1="8.5" y1="15.5" x2="15.5" y2="15.5"/></svg></span><span><strong>Coluna/Columna (2025)</strong> — Clinical, Diagnostic, and Therapeutic Aspects of Chordoma: A Narrative Review</span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1Z"/><path d="M14 3v5h5"/><line x1="8.5" y1="12" x2="15.5" y2="12"/><line x1="8.5" y1="15.5" x2="15.5" y2="15.5"/></svg></span><span><strong>Coluna/Columna (2025)</strong> — Management of Retained Gunshot Injuries to the Spine: A Systematic Literature Review</span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1Z"/><path d="M14 3v5h5"/><line x1="8.5" y1="12" x2="15.5" y2="12"/><line x1="8.5" y1="15.5" x2="15.5" y2="15.5"/></svg></span><span><strong>Tratado de Cirurgia da Coluna Vertebral (Dilivros, 2026)</strong> — Autor de quatro capítulos: vertebrectomia torácica e lombar nas neoplasias, sacrectomia, instabilidade vertebral em neoplasia de coluna e lesões traumáticas do sacro</span></li>
+      </ul>
+      <p class="publications-carousel-label" style="margin-top:30px;">Congressos recentes</p>
+      <ul class="publications-list" style="margin-top:0;">
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><line x1="3.5" y1="10" x2="20.5" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span><strong>Global Spine Congress 2025 (AO Spine)</strong> — apresentação na sessão Rapid-Fire, em português</span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><line x1="3.5" y1="10" x2="20.5" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span><strong>Congresso Brasileiro de Ortopedia e Traumatologia 2025</strong> — Sociedade Brasileira de Ortopedia e Traumatologia (SBOT)</span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><line x1="3.5" y1="10" x2="20.5" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span><strong>20º Congresso da Sociedade Brasileira de Coluna (Curitiba, 2026)</strong> — apresentação de pôsteres científicos</span></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><line x1="3.5" y1="10" x2="20.5" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span><strong>25º Congresso Mineiro de Ortopedia e Traumatologia (Ouro Preto, agosto de 2026)</strong> — participação em debate de mesa-redonda</span></li>
+      </ul>
+      <a class="publications-more" href="/producao-cientifica/">Ver toda a produção científica →</a>
+    </div>
+  </div>
+  <div class="publications-carousel-wrap">
+      <div class="publications-carousel-head">
+        <p class="publications-carousel-label">Congressos, eventos e produção científica</p>
+        <div class="publications-carousel-nav">
+          <button type="button" data-dir="prev" aria-label="Fotos anteriores">&#8249;</button>
+          <button type="button" data-dir="next" aria-label="Próximas fotos">&#8250;</button>
+        </div>
+      </div>
+      <div class="publications-carousel">
+        <figure><img src="/images/congresso-deformidade-pediatrica.jpg" loading="lazy" decoding="async" alt="Dr. Otávio Vitório em congresso internacional sobre deformidade espinhal pediátrica"></figure>
+        <figure><img src="/images/congresso-sessao-cientifica.jpg" loading="lazy" decoding="async" alt="Dr. Otávio Vitório apresentando em sessão científica de congresso de coluna"></figure>
+        <figure><img src="/images/treinamento-tecnicas-cirurgicas.jpg" loading="lazy" decoding="async" alt="Dr. Otávio Vitório em treinamento prático de técnicas cirúrgicas de coluna"></figure>
+        <figure><img src="/images/congresso-sbc-coluna.jpg" loading="lazy" decoding="async" alt="Dr. Otávio Vitório no 20º Congresso da Sociedade Brasileira de Coluna"></figure>
+        <figure><img src="/images/congresso-global-spine-2025.jpg" loading="lazy" decoding="async" alt="Dr. Otávio Vitório na sessão Rapid-Fire do Global Spine Congress 2025, da AO Spine"></figure>
+        <figure><img src="/images/congresso-sbc-poster-arma-de-fogo.jpg" loading="lazy" decoding="async" alt="Dr. Otávio Vitório ao lado de pôster científico sobre ferimentos por arma de fogo na coluna, no 20º Congresso da Sociedade Brasileira de Coluna"></figure>
+        <figure><img src="/images/congresso-sbc-poster-espondilolistese.jpg" loading="lazy" decoding="async" alt="Dr. Otávio Vitório ao lado de pôster científico sobre espondilolistese degenerativa, no 20º Congresso da Sociedade Brasileira de Coluna"></figure>
+        <figure><img src="/images/congresso-mineiro-mesa-redonda.jpg" loading="lazy" decoding="async" alt="Dr. Otávio Vitório em mesa-redonda do 25º Congresso Mineiro de Ortopedia e Traumatologia, em Ouro Preto"></figure>
+        <figure><img src="/images/tratado-cirurgia-coluna-vertebral.jpg" loading="lazy" decoding="async" alt="Capa do Tratado de Cirurgia da Coluna Vertebral (SBC e Dilivros), que reúne capítulos do Dr. Otávio Vitório"></figure>
+      </div>
+    </div>
+  <script>
+  (function () {
+    var trilho = document.querySelector('.publications-carousel');
+    if (!trilho) return;
+    document.querySelectorAll('.publications-carousel-nav button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = trilho.querySelector('figure');
+        var passo = (f ? f.getBoundingClientRect().width + 20 : 250) * 2;
+        trilho.scrollBy({ left: b.getAttribute('data-dir') === 'prev' ? -passo : passo, behavior: 'smooth' });
+      });
+    });
+  })();
+  </script>
+</section>
+
+<section class="final" id="agendar">
+  <div class="wrap">
+    <h2>Entenda o seu caso e decida com segurança</h2>
+    <p style="margin-bottom:18px;">Agende sua avaliação com o Dr. Otávio Vitório.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://wa.me/5531986535956?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20doen%C3%A7a%20discal%20degenerativa%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:var(--off-white);">Dr. Otávio Vitório</strong> · Ortopedia e Cirurgia da Coluna · CRM-MG 86882 · RQE 62889</p>
+    <p>Este conteúdo tem caráter informativo e não substitui a consulta médica. O diagnóstico e o tratamento dependem de avaliação individual.</p>
+    <p>© 2026 Dr. Otávio Vitório · <a href="/">drotaviovitorio.com.br</a></p>
+  </div>
+</footer>
+
+<a class="floating-cta" href="https://wa.me/5531986535956?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20doen%C3%A7a%20discal%20degenerativa%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.51 1.36 5.03L2 22l5.25-1.38a9.9 9.9 0 004.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.31-1.93 1.35-.5.05-1.02.24-3.42-.71-2.9-1.15-4.76-4.1-4.9-4.29-.14-.19-1.17-1.56-1.17-2.97 0-1.42.74-2.11 1-2.4.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.82 2 .9 2.14.07.15.12.32.02.51-.1.19-.15.31-.3.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.75 1.24 1.62 2 1.11.99 2.05 1.3 2.34 1.44.29.15.46.13.63-.08.17-.2.72-.84.91-1.13.19-.29.38-.24.63-.14.26.09 1.64.77 1.92.91.29.15.48.22.55.34.07.13.07.72-.17 1.4z"/></svg>
+  <span>Agendar</span>
+</a>
+
+<script>
+  // Esconde o balão do WhatsApp enquanto o botão do topo está visível; mostra ao rolar a página
+  (function () {
+    var f = document.querySelector('.floating-cta');
+    var b = document.querySelector('.hero .btn-primary, .hero a[href*="wa.me"]');
+    if (!f || !b || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) { f.classList.toggle('is-away', e.isIntersecting); });
+    }).observe(b);
+  })();
+</script>
+<script src="/assets/componentes.js" defer></script>
+</body>
+</html>
