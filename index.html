@@ -170,23 +170,27 @@
     display:none; background:var(--cobre); color:#fff; font-family:'Sora',sans-serif; font-size:.76rem; font-weight:600;
     padding:9px 14px; border-radius:var(--radius); letter-spacing:.01em; white-space:nowrap;
   }
-  @media(max-width:1000px){ .header-cta-mobile{display:inline-block;} }
+  @media(max-width:1180px){ .header-cta-mobile{display:inline-block;} }
   .menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:6px; z-index:210; position:relative;}
   .menu-toggle span{display:block; width:24px; height:2px; background:var(--ardosia); margin:5px 0; transition:transform .25s ease, opacity .25s ease;}
   .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
   .menu-toggle.open span:nth-child(2){opacity:0;}
   .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-  @media(min-width:1001px){ .logo, .header-cta{white-space:nowrap;} }
-  @media(min-width:1281px) and (max-width:1450px){
-    nav.main-nav{gap:22px;}
+  @media(min-width:1181px){ .logo, .header-cta{white-space:nowrap;} }
+  @media(min-width:1341px) and (max-width:1500px){ nav.main-nav{gap:18px; font-size:.82rem;} }
+  @media(min-width:1261px) and (max-width:1340px){
+    nav.main-nav{gap:14px; font-size:.78rem;}
+    .header-cta{padding-left:14px; padding-right:14px; font-size:.78rem;}
+    header, header.solid{padding-left:24px; padding-right:24px;}
+    .logo{font-size:.92rem; gap:8px;}
   }
-  @media(min-width:1001px) and (max-width:1280px){
+  @media(min-width:1181px) and (max-width:1260px){
     nav.main-nav{gap:10px; font-size:.75rem;}
     .header-cta{padding-left:12px; padding-right:12px; font-size:.78rem;}
     header, header.solid{padding-left:24px; padding-right:24px;}
     .logo{font-size:.92rem; gap:8px;}
   }
-  @media(max-width:1000px){
+  @media(max-width:1180px){
     nav.main-nav, .header-cta{display:none;}
     .menu-toggle{display:block;}
   }
@@ -634,9 +638,10 @@
     <a href="#diagnosticos">Diagnósticos</a>
     <a href="#sobre">Sobre</a>
     <a href="/producao-cientifica/">Produção científica</a>
-    <a href="/tratamentos/">Tratamentos</a>
     <a href="#consultorio">Consultório</a>
     <a href="#localizacao">Localização</a>
+    <a href="/guia/">Guia ilustrado</a>
+    <a href="/tratamentos/">Tratamentos</a>
     <div class="nav-dropdown">
       <button class="nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">
         Especialidades
@@ -654,7 +659,6 @@
           <a href="/sindrome-facetaria-lombar/">Síndrome facetária lombar</a>
           <a href="/espondilolistese/">Espondilolistese</a>
           <a href="/fratura-processo-transverso/">Fratura do processo transverso</a>
-          <a href="/guia/"><strong>Guia ilustrado (todas as imagens)</strong></a>
         </div>
       </div>
     </div>
@@ -692,7 +696,6 @@
           <a href="/sindrome-facetaria-lombar/">Síndrome facetária lombar</a>
           <a href="/espondilolistese/">Espondilolistese</a>
       <a href="/fratura-processo-transverso/">Fratura do processo transverso</a>
-      <a href="/guia/"><strong>Guia ilustrado (todas as imagens)</strong></a>
     </div>
   </div>
   <a class="header-cta" href="https://wa.me/5531986535956?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
