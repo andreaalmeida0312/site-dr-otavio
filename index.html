@@ -387,9 +387,10 @@
   .diag-grid{display:flex; flex-wrap:wrap; justify-content:center; gap:50px 40px; text-align:center;}
   .diag-item{flex:0 1 260px;}
   @media(max-width:560px){ .diag-item{flex-basis:100%;} }
-  .diag-item .ic{display:block; width:44px; height:44px; color:var(--cobre); margin:0 auto 4px;}
+  .dg-top{display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:10px;}
+  .diag-item .ic{display:block; flex:none; width:44px; height:44px; color:var(--cobre); margin:0;}
   .diag-item .ic svg{display:block; width:44px; height:44px;}
-  .diag-item h3{font-size:1.08rem; margin-bottom:10px;}
+  .diag-item h3{font-size:1.08rem; margin:0; text-align:left;}
   .diag-item h3 .h3-alt{display:block; font-size:.72em; font-weight:500; color:var(--aco); letter-spacing:0; line-height:1.2; margin-top:2px;}
   .diag-item p{font-size:.9rem; color:var(--aco); max-width:32ch; margin:0 auto;}
   .diag-item details{margin-top:16px; text-align:left; max-width:280px; margin-left:auto; margin-right:auto;}
@@ -794,8 +795,10 @@
     </div>
     <div class="diag-grid">
       <div class="diag-item reveal">
+        <div class="dg-top">
         <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 6 Q24 2 32 6 Q34 10 33 15 L35 41 Q24 45 13 41 L15 15 Q14 10 16 6 Z"/><line x1="24" y1="24" x2="24" y2="39"/><ellipse cx="24" cy="26" rx="3.2" ry="1.5"/><ellipse cx="24" cy="30" rx="3.6" ry="1.6"/><ellipse cx="24" cy="34" rx="4" ry="1.7"/><ellipse cx="24" cy="38" rx="4.4" ry="1.8"/><path d="M31 34.5l3-2.5"/><path d="M32 37.5h4"/></svg></span>
-        <h3 class="h3-duo">Lombalgia <small class="h3-alt">(dor lombar)</small></h3><p>Dor na região inferior das costas, com investigação da causa e avaliação individualizada.</p>
+        <h3 class="h3-duo">Lombalgia <small class="h3-alt">(dor lombar)</small></h3>
+        </div><p>Dor na região inferior das costas, com investigação da causa e avaliação individualizada.</p>
         <details>
           <summary>Ver sintomas e como avaliamos</summary>
           <div class="diag-detail">
@@ -808,8 +811,10 @@
         </details>
       </div>
       <div class="diag-item reveal">
+        <div class="dg-top">
         <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 6 Q24 2 32 6 Q34 10 33 15 L35 41 Q24 45 13 41 L15 15 Q14 10 16 6 Z"/><line x1="24" y1="14" x2="24" y2="40"/><ellipse cx="24" cy="17" rx="3" ry="1.4"/><ellipse cx="24" cy="21" rx="3.3" ry="1.5"/><path d="M18.5 25.5c-4.3.4-5.7 2.8-4.6 4.8 1.1 2 4.3 1.4 5.4-.8"/><ellipse cx="24" cy="25.5" rx="3.7" ry="1.6"/><ellipse cx="24" cy="30" rx="4" ry="1.7"/><ellipse cx="24" cy="34.5" rx="4.4" ry="1.8"/><ellipse cx="24" cy="39" rx="4.7" ry="1.9"/></svg></span>
-        <h3>Hérnia de disco</h3><p>Alteração do disco entre as vértebras, que pode causar dor, formigamento ou outros sintomas.</p>
+        <h3>Hérnia de disco</h3>
+        </div><p>Alteração do disco entre as vértebras, que pode causar dor, formigamento ou outros sintomas.</p>
         <details>
           <summary>Ver sintomas e como avaliamos</summary>
           <div class="diag-detail">
@@ -822,8 +827,10 @@
         </details>
       </div>
       <div class="diag-item reveal">
+        <div class="dg-top">
         <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6 Q24 2 33 6 Q35 10 34 15 L36 41 Q24 46 12 41 L14 15 Q13 10 15 6 Z"/><path d="M23 9c7 2.4 8 7.8 1.5 11S18 27 25 30s6.5 6.3 0 10.5" stroke-width="1.6"/><circle cx="23" cy="9" r="1.5" fill="currentColor" stroke="none"/><circle cx="27" cy="14.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="19" cy="20" r="1.5" fill="currentColor" stroke="none"/><circle cx="25" cy="25.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="18.5" cy="31.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="21" cy="37" r="1.5" fill="currentColor" stroke="none"/><circle cx="25" cy="40.5" r="1.5" fill="currentColor" stroke="none"/></svg></span>
-        <h3>Escoliose</h3><p>Desvio da coluna com diferentes graus e características, avaliados individualmente.</p>
+        <h3>Escoliose</h3>
+        </div><p>Desvio da coluna com diferentes graus e características, avaliados individualmente.</p>
         <details>
           <summary>Ver sintomas e como avaliamos</summary>
           <div class="diag-detail">
@@ -836,8 +843,10 @@
         </details>
       </div>
       <div class="diag-item reveal">
+        <div class="dg-top">
         <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="21" cy="12" r="7"/><path d="M21 19v10"/><path d="M13 41c2.5-5 5-7.5 8-7.5s5.5 2.5 8 7.5"/><path d="M30 14q4 1.5 3 6"/><path d="M33 11q7 2.5 4.5 10.5"/></svg></span>
-        <h3>Dor na cervical</h3><p>Desconforto na região do pescoço, relacionado a diferentes condições da coluna cervical.</p>
+        <h3>Dor na cervical</h3>
+        </div><p>Desconforto na região do pescoço, relacionado a diferentes condições da coluna cervical.</p>
         <details>
           <summary>Ver sintomas e como avaliamos</summary>
           <div class="diag-detail">
@@ -850,8 +859,10 @@
         </details>
       </div>
       <div class="diag-item reveal">
+        <div class="dg-top">
         <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="29" cy="9" r="4"/><path d="M27 13 Q13 17 15 27 Q16 33 21 37"/><path d="M21 37 L18 44"/><path d="M21 37 L26 44"/><path d="M15 27 L10 30"/></svg></span>
-        <h3>Cifose</h3><p>Curvatura acentuada da parte superior da coluna, que pode causar postura encurvada e desconforto.</p>
+        <h3>Cifose</h3>
+        </div><p>Curvatura acentuada da parte superior da coluna, que pode causar postura encurvada e desconforto.</p>
         <details>
           <summary>Ver sintomas e como avaliamos</summary>
           <div class="diag-detail">
@@ -864,8 +875,10 @@
         </details>
       </div>
       <div class="diag-item reveal">
+        <div class="dg-top">
         <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 6 Q24 2 32 6 Q34 10 33 15 L35 41 Q24 45 13 41 L15 15 Q14 10 16 6 Z"/><line x1="24" y1="10" x2="24" y2="38"/><ellipse cx="24" cy="14" rx="4" ry="1.7"/><ellipse cx="24" cy="19" rx="3.3" ry="1.5"/><ellipse cx="24" cy="24" rx="2.6" ry="1.2"/><ellipse cx="24" cy="29" rx="3.3" ry="1.5"/><ellipse cx="24" cy="34" rx="4" ry="1.7"/><path d="M18.5 22.5l2.5 1.8"/><path d="M29.5 22.5l-2.5 1.8"/></svg></span>
-        <h3>Estenose do canal</h3><p>Estreitamento do canal vertebral, que pode comprimir estruturas nervosas e causar sintomas nas pernas.</p>
+        <h3>Estenose do canal</h3>
+        </div><p>Estreitamento do canal vertebral, que pode comprimir estruturas nervosas e causar sintomas nas pernas.</p>
         <details>
           <summary>Ver sintomas e como avaliamos</summary>
           <div class="diag-detail">
