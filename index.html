@@ -310,12 +310,11 @@
   }
   @media(max-width:900px){ .hero-media{min-height:280px; max-height:340px; margin-top:0;} .hero-media::before{display:none;} }
 
-  /* capa (computador): fundo claro e foto em cartão com moldura em cobre, sem degradê */
+  /* capa (computador): texto em fundo claro e foto em altura total, com corte diagonal e fio de cobre */
   @media(min-width:901px){
-    .hero-media{overflow:visible; isolation:isolate; align-self:center; min-height:0; margin:100px clamp(40px,5.5vw,88px) 40px clamp(8px,1.5vw,24px);}
-    .hero-media img{position:static; height:auto; aspect-ratio:4/5; border-radius:var(--radius); box-shadow:0 22px 48px rgba(27,36,42,.18);}
-    .hero-media::before{display:none;}
-    .hero-media::after{inset:16px -16px -16px 16px; border:1.5px solid var(--cobre); background:none; z-index:-1;}
+    .hero-media img{clip-path:polygon(12% 0,100% 0,100% 100%,0 100%);}
+    .hero-media::before{width:auto; right:0; background:var(--cobre); clip-path:polygon(12% 0,calc(12% + 5px) 0,5px 100%,0 100%); z-index:2;}
+    .hero-media::after{display:none;}
   }
 
   /* ---------- sobre ---------- */
