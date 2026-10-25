@@ -403,11 +403,9 @@
   .diag-item summary::after{content:" +"; }
   .diag-item details[open] summary::after{content:" –"; }
   @media(max-width:560px){
-    .diag-grid{text-align:left;}
-    .diag-item .dg-top{width:100%; justify-content:flex-start;}
-    .diag-item p{max-width:none; margin:0; text-align:left;}
-    .diag-item details{max-width:none; margin-left:0; margin-right:0;}
-    .diag-item summary{text-align:left;}
+    .diag-item .dg-top{width:100%; justify-content:center; position:relative; min-height:44px;}
+    .diag-item .ic{position:absolute; left:7%; top:50%; transform:translateY(-50%);}
+    .diag-item h3{text-align:center; padding:0 64px;}
   }
   .diag-item summary:hover{color:var(--ardosia);}
   .diag-detail{
