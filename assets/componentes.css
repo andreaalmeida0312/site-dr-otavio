@@ -104,3 +104,6 @@
 .guia-gal-2 .guia-zoom{background:#fff; border-color:var(--areia);}
 .guia-gal-2 .guia-zoom img{aspect-ratio:auto; object-fit:contain; max-height:none;}
 @media (max-width:700px){ .guia-gal-2{grid-template-columns:1fr;} .guia-gal-2 .guia-zoom img{max-height:none;} }
+
+/* link do topo que só aparece em telas maiores */
+@media (max-width:560px){ .top-link.top-desk{display:none;} }
