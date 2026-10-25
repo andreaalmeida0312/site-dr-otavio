@@ -190,7 +190,8 @@
   /* ---------- mobile menu overlay ---------- */
   .mobile-menu{
     position:fixed; inset:0; z-index:200; background:var(--off-white);
-    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:30px;
+    display:flex; flex-direction:column; align-items:center; justify-content:flex-start; gap:30px;
+    overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch; padding:84px 24px 56px;
     opacity:0; visibility:hidden; transform:translateY(-8px);
     transition:opacity .25s ease, transform .25s ease, visibility .25s;
   }
@@ -217,7 +218,7 @@
     display:flex; flex-direction:column; align-items:center; gap:16px;
     max-height:0; overflow:hidden; transition:max-height .25s ease, margin-top .25s ease; margin-top:0;
   }
-  .mobile-dropdown.open .mobile-dropdown-panel{max-height:420px; margin-top:18px;}
+  .mobile-dropdown.open .mobile-dropdown-panel{max-height:720px; margin-top:18px;}
   .mobile-dropdown-panel a{font-family:'Inter',sans-serif; font-size:1.05rem; font-weight:500; color:var(--aco);}
 
   /* ---------- vertebral signature nav (desktop only) ---------- */
