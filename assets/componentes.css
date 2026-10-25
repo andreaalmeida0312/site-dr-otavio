@@ -107,3 +107,8 @@
 
 /* link do topo que só aparece em telas maiores */
 @media (max-width:560px){ .top-link.top-desk{display:none;} }
+
+/* links entre condições e tratamentos */
+.guia-rel{font-size:.95rem; color:var(--aco); margin:0 0 22px;}
+.guia-rel strong{color:var(--ardosia); font-weight:600;}
+.guia-rel a{color:var(--cobre-btn); font-weight:600; text-decoration:underline; text-underline-offset:3px;}
