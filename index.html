@@ -389,9 +389,9 @@
   @media(max-width:560px){ .diag-item{flex-basis:100%;} }
   .diag-item .ic{color:var(--cobre); margin:0 auto 18px;}
   .diag-item .ic svg{width:44px; height:44px;}
-  .diag-item h3{font-size:1.08rem; margin-bottom:10px;}
+  .diag-item h3{font-size:1.08rem; margin-bottom:10px; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; min-height:2.35rem;}
+  @media(max-width:560px){ .diag-item h3{min-height:0;} }
   .diag-item h3 .h3-alt{display:block; font-size:.72em; font-weight:500; color:var(--aco); letter-spacing:0; line-height:1.2; margin-top:2px;}
-  .diag-item h3.h3-duo{margin-bottom:-7px;}
   .diag-item p{font-size:.9rem; color:var(--aco); max-width:32ch; margin:0 auto;}
   .diag-item details{margin-top:16px; text-align:left; max-width:280px; margin-left:auto; margin-right:auto;}
   .diag-item summary{
