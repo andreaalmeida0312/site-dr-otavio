@@ -98,3 +98,9 @@
 .guia-mapa figcaption{font-size:.86rem; color:var(--aco); margin-top:8px;}
 .guia-ampliar{margin-top:10px; background:none; border:1px solid var(--cobre); color:var(--cobre-btn); border-radius:999px; padding:10px 20px; font-family:'Sora',sans-serif; font-weight:600; font-size:.88rem; cursor:pointer; min-height:44px;}
 .guia-ampliar:hover{background:var(--cobre-btn); color:#fff;}
+
+/* ===== Galeria de 2 imagens (ilustrações em fundo claro) ===== */
+.guia-gal-2{grid-template-columns:repeat(2,1fr); align-items:start;}
+.guia-gal-2 .guia-zoom{background:#fff; border-color:var(--areia);}
+.guia-gal-2 .guia-zoom img{aspect-ratio:auto; object-fit:contain; max-height:none;}
+@media (max-width:700px){ .guia-gal-2{grid-template-columns:1fr;} .guia-gal-2 .guia-zoom img{max-height:none;} }
