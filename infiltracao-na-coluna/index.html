@@ -470,6 +470,22 @@
     .hero-photo img{position:absolute; inset:0; width:100%; height:100%; aspect-ratio:auto; object-fit:cover; object-position:top center; border-radius:0; clip-path:polygon(12% 0,100% 0,100% 100%,0 100%);}
     .hero-photo::after{inset:0; border:0; border-radius:0; background:var(--cobre); clip-path:polygon(12% 0,calc(12% + 5px) 0,5px 100%,0 100%); z-index:2;}
   }
+  /* topo (celular): dobra inicial clara, igual à página inicial */
+  @media (max-width:899px){
+    .hero{background:var(--off-white);}
+    .hero h1{color:var(--ardosia);}
+    .hero .lead{color:var(--aco);}
+    .doc-strip strong{color:var(--ardosia);}
+    .doc-strip span{color:var(--aco);}
+    .doc-strip .ph{border-color:var(--cobre);}
+    .price-pill{color:var(--ardosia); border-color:var(--cobre);}
+    .rating{color:var(--ardosia); border-color:var(--cinza);}
+    .rating .stars{color:var(--cobre);}
+    .rating small{color:var(--aco);}
+    .creds{border-top-color:var(--cinza); color:var(--aco);}
+    .creds strong{color:var(--ardosia);}
+    .hero-photo{isolation:isolate;}
+  }
 </style>
 <script>
 (function(){
@@ -534,6 +550,14 @@
     <p class="eyebrow">Tratamentos</p>
     <h2>Infiltração na coluna: o que é, quando é indicada e quais os benefícios?</h2>
     <p class="guia-intro">A infiltração na coluna, também conhecida como bloqueio anestésico, é um <strong>procedimento minimamente invasivo usado para aliviar dores na coluna e nos nervos que saem dela</strong>. Pode ser indicada em casos de hérnia de disco, desgaste das articulações da coluna, inflamação das raízes nervosas e outras condições que provocam dor persistente. Consiste na aplicação de medicamentos na região responsável pela dor, com o objetivo de <strong>reduzir a inflamação, aliviar os sintomas e facilitar a recuperação</strong>.</p>
+
+    <figure class="guia-fig" style="max-width:520px; margin-left:auto; margin-right:auto;">
+      <button class="guia-zoom" type="button" data-full="/images/guia/infiltracao-bloqueio-radioscopia.webp" aria-label="Ampliar a imagem de radioscopia durante um bloqueio da coluna">
+        <img src="/images/guia/infiltracao-bloqueio-radioscopia.webp" width="1247" height="1261" alt="Imagem de radioscopia da coluna lombar durante um bloqueio: a agulha entra pela lateral e o contraste desenha o caminho do medicamento junto à região tratada." loading="eager">
+        <span class="guia-zoom-hint">Toque para ampliar</span>
+      </button>
+      <figcaption>Imagem de radioscopia (raio X em tempo real) durante um bloqueio da coluna: a agulha e o contraste permitem acompanhar onde o medicamento é aplicado.</figcaption>
+    </figure>
 
     <div class="guia-resumo">
       <strong>Resumo em 30 segundos</strong>
