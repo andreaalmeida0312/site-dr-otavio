@@ -419,6 +419,9 @@
     padding:6px 14px; background:var(--off-white); transition:all .2s ease;
   }
   .tag-pill:hover{border-color:var(--cobre); color:var(--cobre);}
+  a.tag-pill{text-decoration:none;}
+  .tag-pill.tag-link{border-color:var(--cobre); color:var(--cobre); font-weight:600; background:var(--branco);}
+  .tag-pill.tag-link:hover{background:var(--cobre); color:#fff;}
   .tag-cloud-toggle{
     margin:22px auto 0; display:block; background:none; border:1px solid var(--cobre); color:var(--cobre);
     font-family:'Sora',sans-serif; font-size:.78rem; font-weight:600; padding:10px 22px; border-radius:20px;
@@ -814,34 +817,6 @@
         </details>
       </div>
       <div class="diag-item reveal">
-        <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="21" cy="12" r="7"/><path d="M21 19v10"/><path d="M13 41c2.5-5 5-7.5 8-7.5s5.5 2.5 8 7.5"/><path d="M30 14q4 1.5 3 6"/><path d="M33 11q7 2.5 4.5 10.5"/></svg></span>
-        <h3>Dor na cervical</h3><p>Desconforto na região do pescoço, relacionado a diferentes condições da coluna cervical.</p>
-        <details>
-          <summary>Ver sintomas e como avaliamos</summary>
-          <div class="diag-detail">
-            <strong>Sintomas comuns</strong>
-            <p>Dor no pescoço que pode irradiar para ombros e braços, rigidez ao movimentar a cabeça e, em alguns casos, formigamento nas mãos.</p>
-            <strong>Como avaliamos</strong>
-            <p>Exame físico e postural detalhado, com investigação de possíveis compressões nervosas antes de qualquer indicação de tratamento.</p>
-            <p><a href="/dor-cervical/" class="diag-detail-link">Ver página completa sobre dor cervical →</a></p>
-          </div>
-        </details>
-      </div>
-      <div class="diag-item reveal">
-        <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 6 Q24 2 32 6 Q34 10 33 15 L35 41 Q24 45 13 41 L15 15 Q14 10 16 6 Z"/><line x1="24" y1="10" x2="24" y2="38"/><ellipse cx="24" cy="14" rx="4" ry="1.7"/><ellipse cx="24" cy="19" rx="3.3" ry="1.5"/><ellipse cx="24" cy="24" rx="2.6" ry="1.2"/><ellipse cx="24" cy="29" rx="3.3" ry="1.5"/><ellipse cx="24" cy="34" rx="4" ry="1.7"/><path d="M18.5 22.5l2.5 1.8"/><path d="M29.5 22.5l-2.5 1.8"/></svg></span>
-        <h3>Estenose do canal</h3><p>Estreitamento do canal vertebral, que pode comprimir estruturas nervosas e causar sintomas nas pernas.</p>
-        <details>
-          <summary>Ver sintomas e como avaliamos</summary>
-          <div class="diag-detail">
-            <strong>Sintomas comuns</strong>
-            <p>Dor, peso ou cansaço nas pernas ao caminhar ou ficar muito tempo em pé, com melhora ao sentar ou se inclinar para frente.</p>
-            <strong>Como avaliamos</strong>
-            <p>Exame físico, avaliação da tolerância à marcha e exames de imagem para confirmar o grau de estreitamento do canal.</p>
-            <p><a href="/estenose-do-canal/" class="diag-detail-link">Ver página completa sobre estenose do canal →</a></p>
-          </div>
-        </details>
-      </div>
-      <div class="diag-item reveal">
         <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6 Q24 2 33 6 Q35 10 34 15 L36 41 Q24 46 12 41 L14 15 Q13 10 15 6 Z"/><path d="M23 9c7 2.4 8 7.8 1.5 11S18 27 25 30s6.5 6.3 0 10.5" stroke-width="1.6"/><circle cx="23" cy="9" r="1.5" fill="currentColor" stroke="none"/><circle cx="27" cy="14.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="19" cy="20" r="1.5" fill="currentColor" stroke="none"/><circle cx="25" cy="25.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="18.5" cy="31.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="21" cy="37" r="1.5" fill="currentColor" stroke="none"/><circle cx="25" cy="40.5" r="1.5" fill="currentColor" stroke="none"/></svg></span>
         <h3>Escoliose</h3><p>Desvio da coluna com diferentes graus e características, avaliados individualmente.</p>
         <details>
@@ -852,6 +827,20 @@
             <strong>Como avaliamos</strong>
             <p>Exame postural completo e acompanhamento radiográfico, para entender o grau da curva e sua evolução antes de discutir a conduta.</p>
             <p><a href="/escoliose/" class="diag-detail-link">Ver página completa sobre escoliose →</a></p>
+          </div>
+        </details>
+      </div>
+      <div class="diag-item reveal">
+        <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="21" cy="12" r="7"/><path d="M21 19v10"/><path d="M13 41c2.5-5 5-7.5 8-7.5s5.5 2.5 8 7.5"/><path d="M30 14q4 1.5 3 6"/><path d="M33 11q7 2.5 4.5 10.5"/></svg></span>
+        <h3>Dor na cervical</h3><p>Desconforto na região do pescoço, relacionado a diferentes condições da coluna cervical.</p>
+        <details>
+          <summary>Ver sintomas e como avaliamos</summary>
+          <div class="diag-detail">
+            <strong>Sintomas comuns</strong>
+            <p>Dor no pescoço que pode irradiar para ombros e braços, rigidez ao movimentar a cabeça e, em alguns casos, formigamento nas mãos.</p>
+            <strong>Como avaliamos</strong>
+            <p>Exame físico e postural detalhado, com investigação de possíveis compressões nervosas antes de qualquer indicação de tratamento.</p>
+            <p><a href="/dor-cervical/" class="diag-detail-link">Ver página completa sobre dor cervical →</a></p>
           </div>
         </details>
       </div>
@@ -869,11 +858,27 @@
           </div>
         </details>
       </div>
+      <div class="diag-item reveal">
+        <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 6 Q24 2 32 6 Q34 10 33 15 L35 41 Q24 45 13 41 L15 15 Q14 10 16 6 Z"/><line x1="24" y1="10" x2="24" y2="38"/><ellipse cx="24" cy="14" rx="4" ry="1.7"/><ellipse cx="24" cy="19" rx="3.3" ry="1.5"/><ellipse cx="24" cy="24" rx="2.6" ry="1.2"/><ellipse cx="24" cy="29" rx="3.3" ry="1.5"/><ellipse cx="24" cy="34" rx="4" ry="1.7"/><path d="M18.5 22.5l2.5 1.8"/><path d="M29.5 22.5l-2.5 1.8"/></svg></span>
+        <h3>Estenose do canal</h3><p>Estreitamento do canal vertebral, que pode comprimir estruturas nervosas e causar sintomas nas pernas.</p>
+        <details>
+          <summary>Ver sintomas e como avaliamos</summary>
+          <div class="diag-detail">
+            <strong>Sintomas comuns</strong>
+            <p>Dor, peso ou cansaço nas pernas ao caminhar ou ficar muito tempo em pé, com melhora ao sentar ou se inclinar para frente.</p>
+            <strong>Como avaliamos</strong>
+            <p>Exame físico, avaliação da tolerância à marcha e exames de imagem para confirmar o grau de estreitamento do canal.</p>
+            <p><a href="/estenose-do-canal/" class="diag-detail-link">Ver página completa sobre estenose do canal →</a></p>
+          </div>
+        </details>
+      </div>
     </div>
 
     <div class="diag-more reveal">
       <p class="diag-more-lead">O Dr. Otávio também trata outras condições da coluna e do sistema musculoesquelético.</p>
       <div class="tag-cloud" id="tagCloud">
+        <a class="tag-pill tag-link" href="/espondilolistese/">Espondilolistese ístmica</a>
+        <a class="tag-pill tag-link" href="/fratura-processo-transverso/">Fratura do processo transverso</a>
         <span class="tag-pill">Anormalidades Musculosqueléticas</span>
         <span class="tag-pill">Artrodese Cervical</span>
         <span class="tag-pill">Artrose</span>
@@ -901,8 +906,7 @@
         <span class="tag-pill">Dor No Flanco</span>
         <span class="tag-pill">Espinha Bífida Cística</span>
         <span class="tag-pill">Espinha Bífida Oculta</span>
-        <span class="tag-pill">Espondilólise</span>
-        <span class="tag-pill">Espondilolistese</span>
+        <a class="tag-pill tag-link" href="/espondilolistese/">Espondilólise</a>
         <span class="tag-pill">Fraturas Da Coluna Vertebral</span>
         <span class="tag-pill">Hematoma Epidural Espinal</span>
         <span class="tag-pill">Hérnia</span>
