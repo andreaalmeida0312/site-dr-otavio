@@ -54,6 +54,8 @@
   document.addEventListener('click', function (e) {
     var b = e.target.closest && e.target.closest('.guia-zoom, .guia-ampliar');
     if (b) { e.preventDefault(); abrirLb(b); }
+    var mb = e.target.closest && e.target.closest('.guia-mapa-box');
+    if (!b && mb && !e.target.closest('.mapa-pin')) { e.preventDefault(); abrirLb(mb); }
   });
 
   /* ---------- Seções (acordeão) ---------- */
