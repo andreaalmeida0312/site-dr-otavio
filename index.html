@@ -402,6 +402,13 @@
   .diag-item summary::-webkit-details-marker{display:none;}
   .diag-item summary::after{content:" +"; }
   .diag-item details[open] summary::after{content:" –"; }
+  @media(max-width:560px){
+    .diag-grid{text-align:left;}
+    .diag-item .dg-top{width:100%; justify-content:flex-start;}
+    .diag-item p{max-width:none; margin:0; text-align:left;}
+    .diag-item details{max-width:none; margin-left:0; margin-right:0;}
+    .diag-item summary{text-align:left;}
+  }
   .diag-item summary:hover{color:var(--ardosia);}
   .diag-detail{
     margin-top:14px; padding:16px 18px; background:var(--off-white); border-radius:var(--radius);
