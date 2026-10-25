@@ -315,6 +315,7 @@
 
   /* capa (celular): foto centralizada em cartão com moldura em cobre, igual às páginas de especialidade */
   @media(max-width:900px){
+    html, body{overflow-x:hidden;}
     .hero{overflow-x:clip;}
     .hero-media{min-height:0; max-height:none; margin:8px auto 56px; width:min(calc(100% - 72px),300px); overflow:visible; isolation:isolate;}
     .hero-media img{position:static; height:auto; aspect-ratio:4/5; border-radius:var(--radius);}
@@ -582,7 +583,7 @@
   footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; align-items:center;}
   footer .logo{color:var(--off-white);}
   footer .fine{font-size:.76rem; color:var(--aco);}
-  footer nav{display:flex; gap:22px; font-size:.82rem;}
+  footer nav{display:flex; flex-wrap:wrap; gap:8px 22px; font-size:.82rem;}
   .floating-cta{transition:opacity .25s ease, transform .2s ease, background .2s ease;}
   .floating-cta.is-away{opacity:0; pointer-events:none; transform:translateY(10px);}
   .logo .mono-photo{display:none;}
