@@ -451,6 +451,25 @@
   .price-pill strong{font-weight:600;}
   @media (min-width:900px){ .doc-strip{display:none;} }
   @media (max-width:560px){ .hero{padding:22px 0 40px;} .hero h1{font-size:1.7rem; line-height:1.15;} .hero .lead{font-size:.98rem; line-height:1.5;} .doc-strip{margin-bottom:14px;} .price-pill{margin:0 0 14px;} }
+  /* topo: foto centralizada no celular; no computador, igual à página inicial (fundo claro, foto em altura total com corte diagonal e fio de cobre) */
+  @media (max-width:899px){ .hero-photo{margin-left:auto; margin-right:auto;} }
+  @media (min-width:900px){
+    .hero{background:var(--off-white); position:relative; overflow:hidden; padding:64px 0 72px;}
+    .hero .wrap{grid-template-columns:1fr; position:static;}
+    .hero .wrap > div:first-child{max-width:min(620px,54%);}
+    .hero h1{color:var(--ardosia);}
+    .hero .lead{color:var(--aco);}
+    .price-pill{color:var(--ardosia); border-color:var(--cobre);}
+    .rating{color:var(--ardosia); border-color:var(--cinza);}
+    .rating:hover{border-color:var(--cobre);}
+    .rating .stars{color:var(--cobre);}
+    .rating small{color:var(--aco);}
+    .creds{border-top-color:var(--cinza); color:var(--aco);}
+    .creds strong{color:var(--ardosia);}
+    .hero-photo{position:absolute; top:0; right:0; bottom:0; width:42%; max-width:none; margin:0;}
+    .hero-photo img{position:absolute; inset:0; width:100%; height:100%; aspect-ratio:auto; object-fit:cover; object-position:top center; border-radius:0; clip-path:polygon(12% 0,100% 0,100% 100%,0 100%);}
+    .hero-photo::after{inset:0; border:0; border-radius:0; background:var(--cobre); clip-path:polygon(12% 0,calc(12% + 5px) 0,5px 100%,0 100%); z-index:2;}
+  }
 </style>
 <script>
 (function(){

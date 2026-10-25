@@ -176,7 +176,7 @@
   .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
   .menu-toggle.open span:nth-child(2){opacity:0;}
   .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-  .logo, .header-cta{white-space:nowrap;}
+  @media(min-width:1001px){ .logo, .header-cta{white-space:nowrap;} }
   @media(min-width:1281px) and (max-width:1450px){
     nav.main-nav{gap:22px;}
   }
@@ -190,7 +190,6 @@
     nav.main-nav, .header-cta{display:none;}
     .menu-toggle{display:block;}
   }
-
   /* ---------- mobile menu overlay ---------- */
   .mobile-menu{
     position:fixed; inset:0; z-index:200; background:var(--off-white);
@@ -309,6 +308,14 @@
     box-shadow:0 12px 28px rgba(27,36,42,.14);
   }
   @media(max-width:900px){ .hero-media{min-height:280px; max-height:340px; margin-top:0;} .hero-media::before{display:none;} }
+
+  /* capa (celular): foto centralizada em cartão com moldura em cobre, igual às páginas de especialidade */
+  @media(max-width:900px){
+    .hero{overflow-x:clip;}
+    .hero-media{min-height:0; max-height:none; margin:8px auto 56px; width:min(calc(100% - 72px),300px); overflow:visible; isolation:isolate;}
+    .hero-media img{position:static; height:auto; aspect-ratio:4/5; border-radius:var(--radius);}
+    .hero-media::after{display:block; inset:10px -10px -10px 10px; border:1.5px solid var(--cobre); background:none; z-index:-1;}
+  }
 
   /* capa (computador): texto em fundo claro e foto em altura total, com corte diagonal e fio de cobre */
   @media(min-width:901px){
