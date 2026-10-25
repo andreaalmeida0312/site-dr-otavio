@@ -87,7 +87,7 @@
 @media (max-width:560px){ .top-link .so-desk{display:none;} .top-link{margin-right:12px;} }
 
 /* ===== Mapa da coluna (imagem com números clicáveis) ===== */
-.guia-mapa{max-width:420px; margin:0 auto 10px;}
+.guia-mapa{max-width:420px; margin:0 0 10px;}
 .guia-mapa-box{cursor:zoom-in;}
 .mapa-pin{cursor:pointer;}
 .guia-mapa-box{position:relative;}
