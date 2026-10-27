@@ -75,10 +75,18 @@
 {
   "@context": "https://schema.org",
   "@type": "Physician",
+  "@id": "https://drotaviovitorio.com.br/#medico",
   "name": "Dr. Otávio Vitório",
-  "url": "https://drotaviovitorio.com.br/doenca-discal-degenerativa/",
+  "alternateName": "Otávio Vitório",
+  "description": "Ortopedista e cirurgião de coluna em Belo Horizonte. Atendimento particular, com hora marcada, a crianças, adolescentes e adultos.",
+  "url": "https://drotaviovitorio.com.br/",
+  "image": "https://drotaviovitorio.com.br/images/hero-photo.jpg",
+  "telephone": "+55 31 98653-5956",
   "medicalSpecialty": "Orthopedic",
-  "identifier": "CRM-MG 86882",
+  "identifier": [
+    { "@type": "PropertyValue", "name": "CRM-MG", "value": "86882" },
+    { "@type": "PropertyValue", "name": "RQE", "value": "62889" }
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Rua Jaceguai, 208, Sala 708, Edifício Cayler",
@@ -86,7 +94,35 @@
     "addressRegion": "MG",
     "postalCode": "30411-073",
     "addressCountry": "BR"
-  }
+  },
+  "areaServed": { "@type": "City", "name": "Belo Horizonte" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" }
+  ],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Universidade Federal de Minas Gerais (UFMG)" },
+    { "@type": "Hospital", "name": "Hospital Felício Rocho" },
+    { "@type": "Hospital", "name": "Hospital Universitário Cajuru" }
+  ],
+  "affiliation": [
+    { "@type": "Organization", "name": "AO Spine" },
+    { "@type": "Hospital", "name": "Hospital Felício Rocho" }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/drotaviovitorio/",
+    "https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/belo-horizonte",
+    "https://www.google.com/maps?cid=15562236128671724262"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Página inicial", "item": "https://drotaviovitorio.com.br/" },
+    { "@type": "ListItem", "position": 2, "name": "Doença discal degenerativa", "item": "https://drotaviovitorio.com.br/doenca-discal-degenerativa/" }
+  ]
 }
 </script>
 <style>

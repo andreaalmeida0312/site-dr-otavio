@@ -265,8 +265,9 @@
     position:relative; z-index:2;
   }
   @media(max-width:900px){ .hero-content{padding:100px 24px 50px;} }
-  .hero h1{font-size:clamp(2.1rem,3.6vw,3.1rem); margin:22px 0 24px; letter-spacing:-.01em;}
-  .hero h1 em{font-style:normal; color:var(--cobre);}
+  .hero h1{font-size:clamp(1.9rem,3.2vw,2.8rem); margin:22px 0 14px; letter-spacing:-.01em;}
+  .hero .slogan{font-family:'Sora',sans-serif; font-weight:500; font-size:clamp(1.05rem,1.5vw,1.3rem); line-height:1.35; margin:0 0 22px; color:var(--aco);}
+  .hero .slogan em{font-style:normal; color:var(--cobre);}
   .hero p.lead{font-size:1.05rem; color:var(--aco); max-width:44ch; margin-bottom:32px;}
   .hero-credentials{
     display:grid; grid-template-columns:repeat(3,1fr); gap:20px 26px; margin-top:40px; padding-top:24px; border-top:1px solid var(--cinza);
@@ -616,10 +617,18 @@
 {
   "@context": "https://schema.org",
   "@type": "Physician",
+  "@id": "https://drotaviovitorio.com.br/#medico",
   "name": "Dr. Otávio Vitório",
-  "medicalSpecialty": "Orthopedic",
+  "alternateName": "Otávio Vitório",
+  "description": "Ortopedista e cirurgião de coluna em Belo Horizonte. Atendimento particular, com hora marcada, a crianças, adolescentes e adultos.",
   "url": "https://drotaviovitorio.com.br/",
   "image": "https://drotaviovitorio.com.br/images/hero-photo.jpg",
+  "telephone": "+55 31 98653-5956",
+  "medicalSpecialty": "Orthopedic",
+  "identifier": [
+    { "@type": "PropertyValue", "name": "CRM-MG", "value": "86882" },
+    { "@type": "PropertyValue", "name": "RQE", "value": "62889" }
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Rua Jaceguai, 208, Sala 708, Edifício Cayler",
@@ -628,7 +637,24 @@
     "postalCode": "30411-073",
     "addressCountry": "BR"
   },
-  "identifier": "CRM-MG 86882"
+  "areaServed": { "@type": "City", "name": "Belo Horizonte" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" }
+  ],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Universidade Federal de Minas Gerais (UFMG)" },
+    { "@type": "Hospital", "name": "Hospital Felício Rocho" },
+    { "@type": "Hospital", "name": "Hospital Universitário Cajuru" }
+  ],
+  "affiliation": [
+    { "@type": "Organization", "name": "AO Spine" },
+    { "@type": "Hospital", "name": "Hospital Felício Rocho" }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/drotaviovitorio/",
+    "https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/belo-horizonte",
+    "https://www.google.com/maps?cid=15562236128671724262"
+  ]
 }
 </script>
 <link rel="stylesheet" href="/assets/componentes.css?v=4">
@@ -735,9 +761,10 @@
 
 <section class="hero" id="hero">
   <div class="hero-content">
-      <p class="eyebrow reveal">Ortopedista e cirurgião de coluna</p>
-      <h1 class="reveal">Precisão que <em>transforma</em>.<br>Conhecimento que conduz.</h1>
-      <p class="lead reveal">Ortopedista especialista em coluna em Belo Horizonte, com avaliação para hérnia de disco, dor lombar, dor cervical, escoliose e outras condições da coluna. Diagnóstico criterioso e um plano de tratamento individualizado para cada caso.</p>
+      <p class="eyebrow reveal">Dr. Otávio Vitório</p>
+      <h1 class="reveal">Ortopedista e cirurgião de coluna em Belo Horizonte</h1>
+      <p class="slogan reveal">Precisão que <em>transforma</em>. Conhecimento que conduz.</p>
+      <p class="lead reveal">Avaliação para hérnia de disco, dor lombar, dor cervical, escoliose e outras condições da coluna. Diagnóstico criterioso e um plano de tratamento individualizado para cada caso.</p>
       <div class="cta-row reveal">
         <a class="btn-primary" href="https://wa.me/5531986535956?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
       </div>
