@@ -263,6 +263,9 @@
   /* Nota Doctoralia */
   .rating{display:inline-flex; align-items:center; flex-wrap:wrap; gap:6px 12px; padding:10px 14px; margin-bottom:26px; border:1px solid rgba(174,182,186,.35); border-radius:var(--radius); text-decoration:none; color:var(--off-white); font-size:.92rem;}
   .rating:hover{border-color:var(--cobre-claro);}
+  .rating-row{display:flex; flex-wrap:wrap; gap:10px 12px; margin-bottom:26px;}
+  .rating-row .rating{margin-bottom:0; flex:1 1 150px; min-width:0;}
+  @media(max-width:560px){ .rating-row .rating{padding:9px 11px; gap:4px 8px;} .rating-row .rating .stars svg{width:13px; height:13px;} .rating-row .rating strong{font-size:.88rem;} .rating-row .rating small{font-size:.78rem;} }
   .rating .stars{display:inline-flex; gap:2px; color:var(--cobre-claro);}
   .rating .stars svg{width:16px; height:16px;}
   .rating strong{font-family:'Sora',sans-serif; font-weight:600;}
@@ -305,6 +308,8 @@
   .rating-badge .meta{display:flex; flex-direction:column; gap:3px;}
   .rating-badge .stars{color:var(--cobre-claro); font-size:.95rem; letter-spacing:.1em;}
   .rating-badge .count{font-size:.78rem; color:var(--cinza);}
+  a.rating-badge{text-decoration:none; color:inherit; transition:border-color .2s ease;}
+  a.rating-badge:hover{border-color:var(--cobre-claro);}
   .mentioned-label{font-size:.72rem; color:var(--cinza); text-transform:uppercase; letter-spacing:.06em; margin-bottom:9px;}
   .mentioned-tags{display:flex; flex-wrap:wrap; gap:10px;}
   .mentioned-tags span{font-size:.8rem; color:var(--off-white); border:1px solid rgba(242,243,241,.25); border-radius:20px; padding:7px 16px; background:rgba(242,243,241,.05);}
@@ -316,6 +321,7 @@
   .depo-more{margin-top:36px; display:flex; justify-content:center;}
   .depo-more a{font-family:'Sora',sans-serif; font-size:.82rem; font-weight:600; color:var(--cobre-claro); text-decoration:none; border-bottom:1px solid rgba(194,138,97,.4); padding-bottom:2px; transition:color .2s ease;}
   .depo-more a:hover{color:var(--off-white);}
+  .depo-more{flex-wrap:wrap; gap:14px 32px;}
   @media(max-width:860px){ .depo-grid{grid-template-columns:1fr 1fr;} }
   @media(max-width:600px){ .depo-grid{grid-template-columns:1fr;} }
   @media (max-width:899px){
@@ -480,7 +486,7 @@
 })();
 </script>
 <link rel="stylesheet" href="/assets/componentes.css?v=4">
-<link rel="stylesheet" href="/assets/cabecalho.css?v=4">
+<link rel="stylesheet" href="/assets/cabecalho.css?v=5">
 </head>
 <body>
 
@@ -598,11 +604,18 @@
           Agendar pelo WhatsApp
         </a>
       </div>
+      <div class="rating-row">
       <a class="rating" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener" aria-label="Nota 5 de 5 no Doctoralia, com 77 avaliações de pacientes. Ver avaliações">
         <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
         <strong>5,0 no Doctoralia</strong>
         <small>77 avaliações de pacientes</small>
       </a>
+      <a class="rating" href="https://www.google.com/maps?cid=15562236128671724262&hl=pt-BR" target="_blank" rel="noopener" aria-label="Nota 5 de 5 no Google, com 15 avaliações. Ver avaliações">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+        <strong>5,0 no Google</strong>
+        <small>15 avaliações</small>
+      </a>
+      </div>
       <div class="creds">
         <div><strong>CRM-MG 86882</strong>RQE 62889</div>
         <div><strong>UFMG</strong>Graduação em Medicina</div>
@@ -792,6 +805,13 @@
           <span class="count">77 avaliações no Doctoralia</span>
         </div>
       </div>
+      <a class="rating-badge" href="https://www.google.com/maps?cid=15562236128671724262&hl=pt-BR" target="_blank" rel="noopener" aria-label="Nota 5 de 5 no Google, com 15 avaliações. Ver avaliações">
+        <span class="num">5,0</span>
+        <div class="meta">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span class="count">15 avaliações no Google</span>
+        </div>
+      </a>
       <div>
         <p class="mentioned-label">Mais mencionado pelos pacientes</p>
         <div class="mentioned-tags">
@@ -851,6 +871,7 @@
     </div>
     <div class="depo-more">
       <a href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener">Ver todas as avaliações no Doctoralia →</a>
+      <a href="https://www.google.com/maps?cid=15562236128671724262&hl=pt-BR" target="_blank" rel="noopener">Ver avaliações no Google →</a>
     </div>
   </div>
 </section>
