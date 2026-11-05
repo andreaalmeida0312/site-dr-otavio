@@ -53,11 +53,12 @@ html{scroll-padding-top:84px;}
   display:none; background:var(--cobre); color:#fff; font-family:'Sora',sans-serif; font-size:.76rem; font-weight:600;
   padding:9px 14px; border-radius:var(--radius); letter-spacing:.01em; white-space:nowrap;
 }
-.site-header .menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:6px; z-index:210; position:relative;}
-.site-header .menu-toggle span{display:block; width:24px; height:2px; background:var(--ardosia); margin:5px 0; transition:transform .25s ease, opacity .25s ease;}
-.site-header .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-.site-header .menu-toggle.open span:nth-child(2){opacity:0;}
-.site-header .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.site-header .menu-toggle{display:none; align-items:center; gap:9px; background:none; border:1.5px solid var(--ardosia); border-radius:var(--radius); cursor:pointer; padding:8px 13px 8px 12px; z-index:210; position:relative; color:var(--ardosia); font-family:'Sora',sans-serif; font-size:.82rem; font-weight:600; letter-spacing:.02em;}
+.site-header .menu-toggle .mt-lines{display:block; width:20px;}
+.site-header .menu-toggle .mt-lines span{display:block; width:20px; height:2px; background:var(--ardosia); margin:4px 0; transition:transform .25s ease, opacity .25s ease;}
+.site-header .menu-toggle.open .mt-lines span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.site-header .menu-toggle.open .mt-lines span:nth-child(2){opacity:0;}
+.site-header .menu-toggle.open .mt-lines span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
 
 @media(min-width:1181px){ .site-header .logo, .site-header .header-cta{white-space:nowrap;} }
 @media(min-width:1341px) and (max-width:1500px){ .site-header nav.main-nav{gap:18px; font-size:.82rem;} }
@@ -75,8 +76,7 @@ html{scroll-padding-top:84px;}
 }
 @media(max-width:1180px){
   .site-header nav.main-nav, .site-header .header-cta{display:none;}
-  .site-header .menu-toggle{display:block;}
-  .site-header .header-cta-mobile{display:inline-block;}
+  .site-header .menu-toggle{display:flex;}
 }
 @media(max-width:900px){
   .site-header{padding-top:10px; padding-bottom:10px;}

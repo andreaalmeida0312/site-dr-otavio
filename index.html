@@ -171,12 +171,12 @@
     display:none; background:var(--cobre); color:#fff; font-family:'Sora',sans-serif; font-size:.76rem; font-weight:600;
     padding:9px 14px; border-radius:var(--radius); letter-spacing:.01em; white-space:nowrap;
   }
-  @media(max-width:1180px){ .header-cta-mobile{display:inline-block;} }
-  .menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:6px; z-index:210; position:relative;}
-  .menu-toggle span{display:block; width:24px; height:2px; background:var(--ardosia); margin:5px 0; transition:transform .25s ease, opacity .25s ease;}
-  .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-  .menu-toggle.open span:nth-child(2){opacity:0;}
-  .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .menu-toggle{display:none; align-items:center; gap:9px; background:none; border:1.5px solid var(--ardosia); border-radius:var(--radius); cursor:pointer; padding:8px 13px 8px 12px; z-index:210; position:relative; color:var(--ardosia); font-family:'Sora',sans-serif; font-size:.82rem; font-weight:600; letter-spacing:.02em;}
+  .menu-toggle .mt-lines{display:block; width:20px;}
+  .menu-toggle .mt-lines span{display:block; width:20px; height:2px; background:var(--ardosia); margin:4px 0; transition:transform .25s ease, opacity .25s ease;}
+  .menu-toggle.open .mt-lines span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+  .menu-toggle.open .mt-lines span:nth-child(2){opacity:0;}
+  .menu-toggle.open .mt-lines span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
   @media(min-width:1181px){ .logo, .header-cta{white-space:nowrap;} }
   @media(min-width:1601px){ nav.main-nav{gap:30px;} }
   @media(min-width:1451px) and (max-width:1600px){ nav.main-nav{gap:20px; font-size:.82rem;} }
@@ -195,7 +195,7 @@
   }
   @media(max-width:1180px){
     nav.main-nav, .header-cta{display:none;}
-    .menu-toggle{display:block;}
+    .menu-toggle{display:flex;}
   }
   /* ---------- mobile menu overlay ---------- */
   .mobile-menu{
@@ -719,7 +719,7 @@
   </nav>
   <a class="header-cta" href="https://wa.me/5531986535956?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar consulta</a>
   <a class="header-cta-mobile" href="https://wa.me/5531986535956?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Ot%C3%A1vio%20Vit%C3%B3rio." target="_blank" rel="noopener">Agendar</a>
-  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><span class="mt-lines"><span></span><span></span><span></span></span><span class="mt-label">Menu</span></button>
 </header>
 
 <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
