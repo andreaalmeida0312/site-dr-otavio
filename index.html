@@ -426,6 +426,10 @@
   @media(max-width:560px){ .dc-card{flex-basis:80%;} .dc-track{gap:16px;} }
   .dc-media{position:relative; aspect-ratio:4/5; border-radius:6px; overflow:hidden; background:var(--ardosia);}
   .dc-media img{display:block; width:100%; height:100%; object-fit:cover;}
+  a.dc-media{display:block; text-decoration:none; cursor:pointer;}
+  a.dc-media img{transition:transform .5s ease;}
+  a.dc-media:hover img,a.dc-media:focus-visible img{transform:scale(1.05);}
+  a.dc-media:focus-visible{outline:2px solid var(--cobre); outline-offset:3px;}
   .dc-media::after{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(22,36,46,.9) 0%, rgba(22,36,46,.4) 36%, rgba(22,36,46,0) 62%); pointer-events:none;}
   .dc-card .dc-title{position:absolute; left:18px; right:18px; bottom:18px; z-index:2; margin:0; color:#fff; font-size:1.32rem; line-height:1.15;}
   .dc-title small{display:block; margin-top:4px; font-family:'Inter',sans-serif; font-size:.68em; font-weight:500; color:rgba(255,255,255,.82); letter-spacing:0;}
@@ -903,10 +907,10 @@
         </li>
 
         <li class="dc-card">
-          <div class="dc-media">
+          <a class="dc-media" href="/hernia-de-disco/">
             <img src="/images/diag/hernia.jpg" alt="Ilustração de um disco da coluna com hérnia comprimindo o nervo" width="640" height="800" loading="lazy">
             <h3 class="dc-title">Hérnia de disco</h3>
-          </div>
+          </a>
           <div class="dc-body">
             <p>Alteração do disco entre as vértebras, que pode causar dor, formigamento ou outros sintomas.</p>
             <details>
@@ -923,10 +927,10 @@
         </li>
 
         <li class="dc-card">
-          <div class="dc-media">
+          <a class="dc-media" href="/escoliose/">
             <img src="/images/diag/escoliose.jpg" alt="Ilustração de uma coluna com desvio lateral (escoliose)" width="640" height="800" loading="lazy">
             <h3 class="dc-title">Escoliose</h3>
-          </div>
+          </a>
           <div class="dc-body">
             <p>Desvio da coluna com diferentes graus e características, avaliados individualmente.</p>
             <details>
@@ -943,10 +947,10 @@
         </li>
 
         <li class="dc-card">
-          <div class="dc-media">
+          <a class="dc-media" href="/dor-cervical/">
             <img src="/images/diag/cervical.jpg" alt="Ilustração do pescoço e dos ombros com as regiões da coluna cervical" width="640" height="800" loading="lazy">
             <h3 class="dc-title">Dor na cervical</h3>
-          </div>
+          </a>
           <div class="dc-body">
             <p>Desconforto na região do pescoço, relacionado a diferentes condições da coluna cervical.</p>
             <details>
@@ -963,10 +967,10 @@
         </li>
 
         <li class="dc-card">
-          <div class="dc-media">
+          <a class="dc-media" href="/cifose/">
             <img src="/images/diag/cifose.jpg" alt="Ilustração de uma pessoa de perfil com a curvatura da parte superior das costas" width="640" height="800" loading="lazy">
             <h3 class="dc-title">Cifose</h3>
-          </div>
+          </a>
           <div class="dc-body">
             <p>Curvatura acentuada da parte superior da coluna, que pode causar postura encurvada e desconforto.</p>
             <details>
@@ -983,10 +987,10 @@
         </li>
 
         <li class="dc-card">
-          <div class="dc-media">
+          <a class="dc-media" href="/estenose-do-canal/">
             <img src="/images/diag/estenose.jpg" alt="Ilustração de uma vértebra com o canal vertebral estreitado" width="640" height="800" loading="lazy">
             <h3 class="dc-title">Estenose do canal</h3>
-          </div>
+          </a>
           <div class="dc-body">
             <p>Estreitamento do canal vertebral, que pode comprimir estruturas nervosas e causar sintomas nas pernas.</p>
             <details>
@@ -1002,6 +1006,82 @@
           </div>
         </li>
 
+        <li class="dc-card">
+          <a class="dc-media" href="/doenca-discal-degenerativa/">
+            <img src="/images/diag/discal.jpg" alt="Ilustração de um disco da coluna preservado e outro degenerado entre as vértebras L4 e L5" width="640" height="800" loading="lazy">
+            <h3 class="dc-title">Doença discal degenerativa</h3>
+          </a>
+          <div class="dc-body">
+            <p>Desgaste natural dos discos entre as vértebras, comum com a idade e que nem sempre causa dor.</p>
+            <details>
+              <summary>Ver sintomas e como avaliamos</summary>
+              <div class="diag-detail">
+                <strong>Sintomas comuns</strong>
+                <p>Dor na parte baixa das costas, contínua ou em crises, com rigidez e desconforto ao ficar muito tempo na mesma posição. Muitas pessoas não têm sintoma algum.</p>
+                <strong>Como avaliamos</strong>
+                <p>História dos sintomas e exame físico. A ressonância é pedida quando há indicação, porque o desgaste no exame nem sempre acompanha a intensidade da dor.</p>
+                <p><a href="/doenca-discal-degenerativa/" class="diag-detail-link">Ver página completa sobre doença discal degenerativa →</a></p>
+              </div>
+            </details>
+          </div>
+        </li>
+        <li class="dc-card">
+          <a class="dc-media" href="/sindrome-facetaria-lombar/">
+            <img src="/images/diag/facetaria.jpg" alt="Ilustração da articulação facetária entre as vértebras da região lombar" width="640" height="800" loading="lazy">
+            <h3 class="dc-title">Síndrome facetária lombar</h3>
+          </a>
+          <div class="dc-body">
+            <p>Dor lombar que tem origem nas pequenas articulações da coluna e pode piorar ao inclinar o corpo para trás.</p>
+            <details>
+              <summary>Ver sintomas e como avaliamos</summary>
+              <div class="diag-detail">
+                <strong>Sintomas comuns</strong>
+                <p>Dor em peso na lombar, de um ou dos dois lados, que piora ao ficar muito tempo em pé, girar o tronco ou inclinar para trás, com rigidez ao levantar.</p>
+                <strong>Como avaliamos</strong>
+                <p>Conversa detalhada, exame físico dos movimentos que provocam dor e, quando necessário, exames de imagem. Nenhum exame confirma, sozinho, que a dor vem das facetas.</p>
+                <p><a href="/sindrome-facetaria-lombar/" class="diag-detail-link">Ver página completa sobre síndrome facetária lombar →</a></p>
+              </div>
+            </details>
+          </div>
+        </li>
+        <li class="dc-card">
+          <a class="dc-media" href="/espondilolistese/">
+            <img src="/images/diag/espondilolistese.jpg" alt="Ilustração da vértebra L5 deslizando para a frente sobre a S1" width="640" height="800" loading="lazy">
+            <h3 class="dc-title">Espondilolistese</h3>
+          </a>
+          <div class="dc-body">
+            <p>Deslizamento de uma vértebra para a frente em relação à de baixo, mais comum na parte inferior da lombar.</p>
+            <details>
+              <summary>Ver sintomas e como avaliamos</summary>
+              <div class="diag-detail">
+                <strong>Sintomas comuns</strong>
+                <p>Dor lombar durante certos esforços, rigidez e dor que pode se estender para a nádega ou a perna. Algumas pessoas descobrem a alteração por acaso em um exame.</p>
+                <strong>Como avaliamos</strong>
+                <p>Exame físico e radiografias para medir o deslizamento, relacionando a imagem com os sintomas, já que o grau do deslizamento, sozinho, não define o tratamento.</p>
+                <p><a href="/espondilolistese/" class="diag-detail-link">Ver página completa sobre espondilolistese →</a></p>
+              </div>
+            </details>
+          </div>
+        </li>
+        <li class="dc-card">
+          <a class="dc-media" href="/fratura-processo-transverso/">
+            <img src="/images/diag/fratura.jpg" alt="Tomografia da coluna lombar com fraturas dos processos transversos marcadas" width="640" height="800" loading="lazy">
+            <h3 class="dc-title">Fratura do processo transverso</h3>
+          </a>
+          <div class="dc-body">
+            <p>Fratura das pequenas projeções de osso nas laterais das vértebras, geralmente após queda, pancada ou acidente.</p>
+            <details>
+              <summary>Ver sintomas e como avaliamos</summary>
+              <div class="diag-detail">
+                <strong>Sintomas comuns</strong>
+                <p>Dor localizada nas costas após o trauma, que piora ao se movimentar.</p>
+                <strong>Como avaliamos</strong>
+                <p>Exame físico e exames de imagem, como a tomografia, para confirmar o tipo de fratura e verificar se há outras lesões associadas ao trauma.</p>
+                <p><a href="/fratura-processo-transverso/" class="diag-detail-link">Ver página completa sobre fratura do processo transverso →</a></p>
+              </div>
+            </details>
+          </div>
+        </li>
       </ul>
       <button type="button" class="dc-btn dc-next" aria-label="Próximas condições"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
