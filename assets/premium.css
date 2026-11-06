@@ -20,5 +20,10 @@ h2 { font-size: clamp(1.95rem, 3.2vw, 2.8rem) !important; line-height: 1.1 !impo
 .floating-cta { background: rgba(36, 59, 74, .96) !important; color: #fff !important; border-radius: 40px !important; padding: 15px 26px 15px 22px !important; font-size: .72rem !important; letter-spacing: .14em !important; text-transform: uppercase; gap: 11px !important; box-shadow: 0 18px 38px -12px rgba(15, 25, 32, .6), 0 0 0 1px rgba(255, 255, 255, .26) !important; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
 .floating-cta:hover { background: #A66D45 !important; transform: translateY(-2px); }
 .floating-cta svg { width: 20px !important; height: 20px !important; color: #fff; }
-@media (max-width: 560px) { .floating-cta { padding: 16px !important; } }
+/* No celular e no tablet o cabeçalho não tem botão de agendar: o flutuante vira o atalho principal (cobre, com texto) */
+@media (max-width: 1180px) {
+  .floating-cta { background: #A66D45 !important; right: 16px !important; bottom: 18px !important; padding: 15px 22px 15px 18px !important; border-radius: 40px !important; box-shadow: 0 16px 34px -10px rgba(120, 72, 38, .65), 0 0 0 1px rgba(255, 255, 255, .35) !important; }
+  .floating-cta span { display: inline !important; }
+  .floating-cta:hover { background: #243B4A !important; }
+}
 .header-cta { font-size: .72rem !important; letter-spacing: .1em !important; text-transform: uppercase !important; padding-top: 13px !important; padding-bottom: 13px !important; }
