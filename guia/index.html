@@ -38,18 +38,41 @@
   gtag('config', 'AW-18476924700');
   gtag('config', 'G-1HES65MM4S');
 
+  // Onde, na página, o visitante clicou (para saber qual botão traz mais contatos)
+  function localDoClique(el) {
+    if (el.closest('.floating-cta')) return 'flutuante';
+    if (el.closest('.mobile-menu')) return 'menu_celular';
+    if (el.closest('.header-cta-mobile')) return 'cabecalho_celular';
+    if (el.closest('.header-cta, header, .site-header')) return 'cabecalho';
+    if (el.closest('.hero')) return 'topo';
+    if (el.closest('.final, .cta-final')) return 'faixa_final';
+    if (el.closest('footer')) return 'rodape';
+    var s = el.closest('section[id], section[class]');
+    return s ? 'secao_' + (s.id || String(s.className).split(' ')[0]) : 'outro';
+  }
+  function aparelho() { return window.matchMedia('(max-width:1180px)').matches ? 'celular_ou_tablet' : 'computador'; }
+
   // Conversão "Clique WhatsApp": dispara em qualquer link para wa.me
   document.addEventListener('click', function (e) {
-    var link = e.target.closest && e.target.closest('a[href*="wa.me"]');
+    if (!e.target.closest) return;
+    var link = e.target.closest('a[href*="wa.me"]');
     if (link) {
-      gtag('event', 'whatsapp_click');
+      gtag('event', 'whatsapp_click', {local: localDoClique(link), pagina: location.pathname, aparelho: aparelho()});
       gtag('event', 'conversion', {'send_to': 'AW-18476924700/YLMqCKGy_IYdEJz-vepE'});
       return;
     }
-    if (e.target.closest && e.target.closest('a[href*="doctoralia"]')) {
-      gtag('event', 'doctoralia_click');
+    if (e.target.closest('a[href*="doctoralia"]')) {
+      gtag('event', 'doctoralia_click', {local: localDoClique(e.target.closest('a[href*="doctoralia"]')), pagina: location.pathname});
       gtag('event', 'conversion', {'send_to': 'AW-18476924700/M-wbCPSwjYsdEJz-vepE'});
+      return;
     }
+    // Uso do menu: abrir o menu do celular, abrir uma lista e clicar nos itens
+    var tog = e.target.closest('#menuToggle');
+    if (tog) { gtag('event', 'menu_aberto', {tipo: 'celular', pagina: location.pathname}); return; }
+    var dd = e.target.closest('.nav-dropdown-trigger, .mobile-dropdown-trigger');
+    if (dd) { gtag('event', 'menu_lista_aberta', {item: (dd.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 40), aparelho: aparelho(), pagina: location.pathname}); return; }
+    var nav = e.target.closest('.main-nav a, .mobile-menu a, .nav-dropdown-panel a');
+    if (nav) { gtag('event', 'menu_clique', {item: (nav.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 40), aparelho: aparelho(), pagina: location.pathname}); }
   }, true);
 </script>
 <title>Guia ilustrado da coluna | Dr. Otávio Vitório</title>
