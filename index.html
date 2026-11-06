@@ -363,11 +363,37 @@
   .icon-list .ic svg{width:22px; height:22px;}
   .icon-list h4{font-size:1rem; margin-bottom:3px;}
   .icon-list p{color:var(--aco); font-size:.92rem;}
+  .sobre-chips{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 30px;}
+  .sobre-chips span{font-family:'Sora',sans-serif; font-size:.78rem; font-weight:600; letter-spacing:.04em; color:var(--ardosia); border:1px solid rgba(36,59,74,.25); border-radius:20px; padding:6px 15px; background:var(--branco);}
+  .cv{margin:0;}
+  .cv-row{display:grid; grid-template-columns:150px 1fr; gap:24px; padding:19px 0; border-top:1px solid rgba(36,59,74,.12);}
+  .cv-row:last-child{border-bottom:1px solid rgba(36,59,74,.12);}
+  .cv dt{font-family:'Sora',sans-serif; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--cobre); font-weight:600; padding-top:4px;}
+  .cv dd{margin:0;}
+  .cv dd strong{display:block; font-family:'Sora',sans-serif; font-size:1.04rem; font-weight:600; color:var(--ardosia); line-height:1.3;}
+  .cv dd span{display:block; margin-top:4px; color:var(--aco); font-size:.93rem; line-height:1.5;}
+  @media(max-width:560px){ .cv-row{grid-template-columns:1fr; gap:5px; padding:15px 0;} }
 
   /* ---------- publicações científicas ---------- */
   .publications{background:var(--areia);}
-  .publications .wrap{display:grid; grid-template-columns:.85fr 1.15fr; gap:60px; align-items:center;}
-  @media(max-width:900px){ .publications .wrap{grid-template-columns:1fr; gap:36px;} }
+  .publications .wrap{display:block;}
+  .pub-head{display:flex; justify-content:space-between; align-items:flex-end; gap:24px 40px; flex-wrap:wrap; margin-bottom:40px;}
+  .pub-head h2{font-size:clamp(1.6rem,2.8vw,2.1rem); margin:14px 0 16px;}
+  .pub-intro{max-width:660px; color:var(--aco); font-size:1rem; margin:0;}
+  .pub-head .publications-more{margin:0 0 6px; flex:none;}
+  .pub-grid{display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.3fr) minmax(0,1.15fr); gap:22px; align-items:stretch;}
+  .pub-photo{position:relative; border-radius:var(--radius); overflow:hidden; min-height:440px;}
+  .pub-photo img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 22%;}
+  .pub-card{background:var(--branco); border:1px solid rgba(36,59,74,.08); border-radius:var(--radius); padding:28px 26px 14px;}
+  .pub-card h3{font-family:'Sora',sans-serif; font-size:.74rem; letter-spacing:.14em; text-transform:uppercase; color:var(--cobre); font-weight:600; margin:0 0 8px;}
+  .pub-list{list-style:none; margin:0; padding:0;}
+  .pub-list li{display:grid; grid-template-columns:46px 1fr; gap:14px; padding:16px 0; border-top:1px solid rgba(36,59,74,.1);}
+  .pub-list li:first-child{border-top:0;}
+  .pub-year{font-family:'Sora',sans-serif; font-weight:700; font-size:.82rem; color:var(--cobre); padding-top:2px;}
+  .pub-list strong{display:block; font-family:'Sora',sans-serif; font-weight:600; font-size:.93rem; color:var(--ardosia); line-height:1.35; margin-bottom:4px;}
+  .pub-list .d{display:block; font-size:.87rem; color:var(--aco); line-height:1.5;}
+  @media(max-width:1100px){ .pub-grid{grid-template-columns:1fr 1fr;} .pub-photo{grid-column:1 / -1; min-height:0; aspect-ratio:16/9;} .pub-photo img{object-position:center 30%;} }
+  @media(max-width:700px){ .pub-grid{grid-template-columns:1fr;} .pub-photo{aspect-ratio:4/3;} .pub-card{padding:22px 18px 8px;} .pub-list li{grid-template-columns:42px 1fr; gap:10px;} }
   .publications-photo{border-radius:var(--radius); overflow:hidden; aspect-ratio:4/5; position:relative;}
   .publications-photo img{width:100%; height:100%; object-fit:cover; object-position:top center;}
   .publications h2{font-size:clamp(1.6rem,2.8vw,2.1rem); margin:14px 0 20px;}
@@ -1241,58 +1267,52 @@
     <div>
       <p class="eyebrow reveal">Sobre o médico</p>
       <h2 class="reveal">Conheça o Dr. Otávio Vitório</h2>
-      <p class="intro reveal">Ortopedista e Cirurgião da Coluna em Belo Horizonte</p>
-      <p class="sobre-credentials reveal">CRM MG 86882 &nbsp;|&nbsp; RQE 62889</p>
-      <ul class="icon-list reveal">
-        <li>
-          <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6v11a9 9 0 0018 0V6"/><circle cx="15" cy="6" r="2.2"/><circle cx="33" cy="6" r="2.2"/><path d="M24 26v6a8 8 0 008 8 8 8 0 008-8"/><circle cx="40" cy="40" r="4"/></svg></span>
-          <div><h4>Graduação em Medicina</h4><p>Universidade Federal de Minas Gerais (UFMG)</p></div>
-        </li>
-        <li>
-          <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 33a3.5 3.5 0 010-7 3.5 3.5 0 013.4-4.3L27.7 8.4A3.5 3.5 0 0132 4a3.5 3.5 0 013.5 4.5A3.5 3.5 0 0140 12a3.5 3.5 0 01-3.7 5.3L23 30.6A3.5 3.5 0 0119.5 35 3.5 3.5 0 0116 40a3.5 3.5 0 01-3.5-3.5A3.5 3.5 0 0111 33z"/></svg></span>
-          <div><h4>Residência em Ortopedia e Traumatologia</h4><p>Hospital Felício Rocho</p></div>
-        </li>
-        <li>
-          <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="24" y1="5" x2="24" y2="43"/><ellipse cx="24" cy="10" rx="6" ry="3"/><ellipse cx="24" cy="18" rx="7" ry="3.3"/><ellipse cx="24" cy="26" rx="8" ry="3.7"/><ellipse cx="24" cy="34" rx="8.5" ry="4"/></svg></span>
-          <div><h4>Especialização em Cirurgia da Coluna</h4><p>AO Spine e Hospital Universitário Cajuru</p></div>
-        </li>
-        <li>
-          <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8 44 17 24 26 4 17Z"/><path d="M14 21v10c0 3.3 4.5 6 10 6s10-2.7 10-6V21"/><line x1="44" y1="17" x2="44" y2="30"/></svg></span>
-          <div><h4>Professor e Instrutor da AO Spine</h4><p>Organização mundial de ensino e pesquisa em cirurgia de coluna</p></div>
-        </li>
-        <li>
-          <span class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 42 15v6L24 30 6 21v-6Z"/><line x1="24" y1="30" x2="24" y2="42"/><line x1="16" y1="42" x2="32" y2="42"/><line x1="24" y1="15" x2="24" y2="23"/><line x1="20" y1="19" x2="28" y2="19"/></svg></span>
-          <div><h4>Equipe de Cirurgia de Coluna</h4><p>Hospital Felício Rocho</p></div>
-        </li>
-      </ul>
+      <p class="intro reveal">Ortopedista e cirurgião de coluna em Belo Horizonte</p>
+      <div class="sobre-chips reveal"><span>CRM-MG 86882</span><span>RQE 62889</span></div>
+      <dl class="cv reveal">
+        <div class="cv-row"><dt>Graduação</dt><dd><strong>Medicina</strong><span>Universidade Federal de Minas Gerais (UFMG)</span></dd></div>
+        <div class="cv-row"><dt>Residência</dt><dd><strong>Ortopedia e Traumatologia</strong><span>Hospital Felício Rocho</span></dd></div>
+        <div class="cv-row"><dt>Especialização</dt><dd><strong>Cirurgia da Coluna</strong><span>AO Spine e Hospital Universitário Cajuru</span></dd></div>
+        <div class="cv-row"><dt>Ensino</dt><dd><strong>Professor e instrutor da AO Spine</strong><span>Organização mundial de ensino e pesquisa em cirurgia de coluna</span></dd></div>
+        <div class="cv-row"><dt>Atuação</dt><dd><strong>Equipe de Cirurgia de Coluna</strong><span>Hospital Felício Rocho</span></dd></div>
+      </dl>
     </div>
   </div>
 </section>
 
 <section class="publications">
   <div class="wrap">
-    <div class="publications-photo reveal">
-      <img src="/images/dr-otavio-congresso-coluna.jpg" loading="lazy" decoding="async" alt="Dr. Otávio Vitório apresentando pesquisa científica em congresso internacional de coluna">
-    </div>
-    <div class="reveal">
-      <p class="eyebrow">Conhecimento que vai além do consultório</p>
-      <h2>Conhecimento que circula entre especialistas</h2>
-      <p style="color:var(--aco); font-size:.98rem;">O Dr. Otávio Vitório mantém atuação acadêmica e científica em cirurgia da coluna, participando de congressos internacionais, do ensino pela AO Spine e da produção de pesquisa na área.</p>
-      <ul class="publications-list">
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1Z"/><path d="M14 3v5h5"/><line x1="8.5" y1="12" x2="15.5" y2="12"/><line x1="8.5" y1="15.5" x2="15.5" y2="15.5"/></svg></span><span><strong>Global Spine Journal (2026)</strong> — Mechanical Instability After Civilian Thoracolumbar Gunshot Injuries: A Systematic Review to Support Classification Development</span></li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1Z"/><path d="M14 3v5h5"/><line x1="8.5" y1="12" x2="15.5" y2="12"/><line x1="8.5" y1="15.5" x2="15.5" y2="15.5"/></svg></span><span><strong>Coluna/Columna (2026)</strong> — Surgeon Preference as a Key Factor in Decision Making in Degenerative Spondylolisthesis</span></li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1Z"/><path d="M14 3v5h5"/><line x1="8.5" y1="12" x2="15.5" y2="12"/><line x1="8.5" y1="15.5" x2="15.5" y2="15.5"/></svg></span><span><strong>Coluna/Columna (2025)</strong> — Clinical, Diagnostic, and Therapeutic Aspects of Chordoma: A Narrative Review</span></li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1Z"/><path d="M14 3v5h5"/><line x1="8.5" y1="12" x2="15.5" y2="12"/><line x1="8.5" y1="15.5" x2="15.5" y2="15.5"/></svg></span><span><strong>Coluna/Columna (2025)</strong> — Management of Retained Gunshot Injuries to the Spine: A Systematic Literature Review</span></li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1Z"/><path d="M14 3v5h5"/><line x1="8.5" y1="12" x2="15.5" y2="12"/><line x1="8.5" y1="15.5" x2="15.5" y2="15.5"/></svg></span><span><strong>Tratado de Cirurgia da Coluna Vertebral (Dilivros, 2026)</strong> — Autor de quatro capítulos: vertebrectomia torácica e lombar nas neoplasias, sacrectomia, instabilidade vertebral em neoplasia de coluna e lesões traumáticas do sacro</span></li>
-      </ul>
-      <p class="publications-carousel-label" style="margin-top:30px;">Congressos recentes</p>
-      <ul class="publications-list" style="margin-top:0;">
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><line x1="3.5" y1="10" x2="20.5" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span><strong>Global Spine Congress 2025 (AO Spine)</strong> — apresentação na sessão Rapid-Fire, em português</span></li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><line x1="3.5" y1="10" x2="20.5" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span><strong>Congresso Brasileiro de Ortopedia e Traumatologia 2025</strong> — Sociedade Brasileira de Ortopedia e Traumatologia (SBOT)</span></li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><line x1="3.5" y1="10" x2="20.5" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span><strong>20º Congresso da Sociedade Brasileira de Coluna (Curitiba, 2026)</strong> — apresentação de pôsteres científicos</span></li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><line x1="3.5" y1="10" x2="20.5" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span><span><strong>25º Congresso Mineiro de Ortopedia e Traumatologia (Ouro Preto, agosto de 2026)</strong> — participação em debate de mesa-redonda</span></li>
-      </ul>
+    <div class="pub-head reveal">
+      <div>
+        <p class="eyebrow">Conhecimento que vai além do consultório</p>
+        <h2>Conhecimento que circula entre especialistas</h2>
+        <p class="pub-intro">O Dr. Otávio Vitório mantém atuação acadêmica e científica em cirurgia da coluna, participando de congressos internacionais, do ensino pela AO Spine e da produção de pesquisa na área.</p>
+      </div>
       <a class="publications-more" href="/producao-cientifica/">Ver toda a produção científica →</a>
+    </div>
+    <div class="pub-grid reveal">
+      <div class="pub-photo">
+        <img src="/images/dr-otavio-congresso-coluna.jpg" loading="lazy" decoding="async" alt="Dr. Otávio Vitório apresentando pesquisa científica em congresso internacional de coluna">
+      </div>
+      <div class="pub-card">
+        <h3>Publicações</h3>
+        <ul class="pub-list">
+            <li><span class="pub-year">2026</span><div><strong>Global Spine Journal</strong><span class="d">Mechanical Instability After Civilian Thoracolumbar Gunshot Injuries: A Systematic Review to Support Classification Development</span></div></li>
+            <li><span class="pub-year">2026</span><div><strong>Coluna/Columna</strong><span class="d">Surgeon Preference as a Key Factor in Decision Making in Degenerative Spondylolisthesis</span></div></li>
+            <li><span class="pub-year">2025</span><div><strong>Coluna/Columna</strong><span class="d">Clinical, Diagnostic, and Therapeutic Aspects of Chordoma: A Narrative Review</span></div></li>
+            <li><span class="pub-year">2025</span><div><strong>Coluna/Columna</strong><span class="d">Management of Retained Gunshot Injuries to the Spine: A Systematic Literature Review</span></div></li>
+            <li><span class="pub-year">2026</span><div><strong>Tratado de Cirurgia da Coluna Vertebral (Dilivros)</strong><span class="d">Autor de quatro capítulos: vertebrectomia torácica e lombar nas neoplasias, sacrectomia, instabilidade vertebral em neoplasia de coluna e lesões traumáticas do sacro</span></div></li>
+        </ul>
+      </div>
+      <div class="pub-card">
+        <h3>Congressos recentes</h3>
+        <ul class="pub-list">
+            <li><span class="pub-year">2025</span><div><strong>Global Spine Congress (AO Spine)</strong><span class="d">Apresentação na sessão Rapid-Fire, em português</span></div></li>
+            <li><span class="pub-year">2025</span><div><strong>Congresso Brasileiro de Ortopedia e Traumatologia</strong><span class="d">Sociedade Brasileira de Ortopedia e Traumatologia (SBOT)</span></div></li>
+            <li><span class="pub-year">2026</span><div><strong>20º Congresso da Sociedade Brasileira de Coluna</strong><span class="d">Curitiba · apresentação de pôsteres científicos</span></div></li>
+            <li><span class="pub-year">2026</span><div><strong>25º Congresso Mineiro de Ortopedia e Traumatologia</strong><span class="d">Ouro Preto, agosto · participação em debate de mesa-redonda</span></div></li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="publications-carousel-wrap reveal">
