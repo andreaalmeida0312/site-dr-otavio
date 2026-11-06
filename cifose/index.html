@@ -376,19 +376,23 @@
   .depo .eyebrow{color:var(--cobre-claro);}
   .depo h2{color:var(--off-white); margin:14px 0 40px; max-width:600px;}
   .depo-top{display:flex; align-items:center; gap:32px; flex-wrap:wrap; margin-bottom:44px;}
-  .depo-rates{display:flex; flex:none; border:1px solid rgba(242,243,241,.22); border-radius:var(--radius); background:rgba(242,243,241,.06); overflow:hidden;}
-  .depo-rate{display:flex; flex-direction:column; gap:7px; padding:16px 26px; color:var(--off-white); text-decoration:none; transition:background .2s ease;}
-  .depo-rate + .depo-rate{border-left:1px solid rgba(242,243,241,.22);}
-  .depo-rate:hover{background:rgba(242,243,241,.09);}
-  .depo-rate .who{display:flex; align-items:center; gap:8px; font-family:'Sora',sans-serif; font-size:.8rem; font-weight:600; letter-spacing:.03em;}
-  .depo-rate .src-ic{flex:none; width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:#fff;}
-  .depo-rate .src-ic svg{width:13px; height:13px;}
-  .depo-rate .src-ic.doc{background:#1fb5ad; color:#fff; font:700 .75rem/1 'Sora',sans-serif;}
-  .depo-rate .score{display:flex; align-items:center; gap:10px;}
-  .depo-rate .num{font-family:'Sora',sans-serif; font-size:1.9rem; font-weight:700; line-height:1;}
-  .depo-rate .stars{color:var(--cobre-claro); font-size:1rem; letter-spacing:.08em; white-space:nowrap;}
-  .depo-rate .count{font-size:.8rem; color:var(--cinza);}
-  @media(max-width:560px){ .depo-top{gap:16px;} .depo-rates{width:100%;} .depo-rate{flex:1 1 0; min-width:0; padding:12px 12px; gap:6px;} .depo-rate .who{font-size:.76rem;} .depo-rate .num{font-size:1.55rem;} .depo-rate .score{gap:7px;} .depo-rate .stars{font-size:.78rem; letter-spacing:.04em;} .depo-rate .count{font-size:.74rem;} .depo-top > div:not(.depo-rates){flex:1 1 100%;} }
+  .depo-rates{display:flex; align-items:center; flex:none; gap:0;}
+  .depo-rates .dr-total{display:flex; align-items:center; gap:16px; padding-right:34px;}
+  .depo-rates .dr-total .num{font-family:'Sora',sans-serif; font-size:3.2rem; font-weight:700; line-height:1; color:var(--off-white);}
+  .depo-rates .dr-meta{display:flex; flex-direction:column; gap:5px;}
+  .depo-rates .stars{color:var(--cobre-claro); font-size:1.05rem; letter-spacing:.1em; white-space:nowrap; line-height:1;}
+  .depo-rates .dr-meta .count{font-size:.84rem; color:var(--cinza);}
+  .depo-rates .dr-sources{display:flex; flex-direction:column; gap:11px; padding-left:34px; border-left:1px solid rgba(242,243,241,.22);}
+  .depo-rates .dr-src{display:flex; align-items:center; gap:10px; color:var(--off-white); text-decoration:none; font-size:.92rem; line-height:1.2;}
+  .depo-rates .dr-src .src-ic{flex:none; width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:#fff;}
+  .depo-rates .dr-src .src-ic svg{width:13px; height:13px;}
+  .depo-rates .dr-src .src-ic.doc{background:#1fb5ad; color:#fff; font:700 .75rem/1 'Sora',sans-serif;}
+  .depo-rates .dr-name{font-family:'Sora',sans-serif; font-weight:600;}
+  .depo-rates .dr-n{color:var(--cinza);}
+  .depo-rates .dr-arrow{color:var(--cobre-claro); transition:transform .2s ease;}
+  .depo-rates .dr-src:hover .dr-name{text-decoration:underline; text-underline-offset:3px;}
+  .depo-rates .dr-src:hover .dr-arrow{transform:translateX(3px);}
+  @media(max-width:560px){ .depo-top{gap:20px;} .depo-rates{width:100%; flex-direction:column; align-items:flex-start; gap:16px;} .depo-rates .dr-total{padding-right:0;} .depo-rates .dr-total .num{font-size:2.8rem;} .depo-rates .dr-sources{padding-left:0; border-left:0; border-top:1px solid rgba(242,243,241,.18); padding-top:14px; width:100%;} .depo-top > div:not(.depo-rates){flex:1 1 100%;} }
   .rating-badge{display:inline-flex; align-items:center; gap:16px; background:rgba(242,243,241,.06); border:1px solid rgba(242,243,241,.2); padding:16px 24px; border-radius:var(--radius); flex:none;}
   .rating-badge .num{font-family:'Sora',sans-serif; font-size:2.1rem; font-weight:700; color:var(--off-white); line-height:1;}
   .rating-badge .meta{display:flex; flex-direction:column; gap:3px;}
@@ -952,16 +956,21 @@
     <h2>O que dizem os pacientes que já passaram pelo consultório</h2>
     <div class="depo-top">
       <div class="depo-rates">
-        <a class="depo-rate" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener" aria-label="Nota 5 de 5 no Doctoralia, com 77 avaliações. Ver avaliações">
-          <span class="who"><span class="src-ic doc" aria-hidden="true">d</span>Doctoralia</span>
-          <span class="score"><span class="num">5,0</span><span class="stars" aria-hidden="true">★★★★★</span></span>
-          <span class="count">77 avaliações</span>
-        </a>
-        <a class="depo-rate" href="https://www.google.com/maps?cid=15562236128671724262&hl=pt-BR" target="_blank" rel="noopener" aria-label="Nota 5 de 5 no Google, com 15 avaliações. Ver avaliações">
-          <span class="who"><span class="src-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span>Google</span>
-          <span class="score"><span class="num">5,0</span><span class="stars" aria-hidden="true">★★★★★</span></span>
-          <span class="count">15 avaliações</span>
-        </a>
+        <div class="dr-total">
+          <span class="num">5,0</span>
+          <div class="dr-meta">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span class="count">92 avaliações de pacientes</span>
+          </div>
+        </div>
+        <div class="dr-sources">
+          <a class="dr-src" href="https://www.doctoralia.com.br/otavio-vitorio-2/ortopedista-traumatologista/contagem" target="_blank" rel="noopener" aria-label="Nota 5 de 5 no Doctoralia, com 77 avaliações. Ver avaliações">
+            <span class="src-ic doc" aria-hidden="true">d</span><span class="dr-name">Doctoralia</span><span class="dr-n">77 avaliações</span><span class="dr-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="dr-src" href="https://www.google.com/maps?cid=15562236128671724262&hl=pt-BR" target="_blank" rel="noopener" aria-label="Nota 5 de 5 no Google, com 15 avaliações. Ver avaliações">
+            <span class="src-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span><span class="dr-name">Google</span><span class="dr-n">15 avaliações</span><span class="dr-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
       <div>
         <p class="mentioned-label">Mais mencionado pelos pacientes</p>
