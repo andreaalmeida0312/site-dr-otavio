@@ -1,0 +1,12 @@
+/* Títulos em fonte com serifa (Cormorant Garamond): visual editorial, mais sofisticado */
+h1, h2 { font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif !important; font-weight: 600 !important; letter-spacing: -.005em !important; }
+h1 { font-size: clamp(2.35rem, 4.1vw, 3.7rem) !important; line-height: 1.05 !important; }
+h2 { font-size: clamp(1.95rem, 3.2vw, 2.8rem) !important; line-height: 1.1 !important; }
+@media (max-width: 560px) {
+  h1 { font-size: 2.25rem !important; line-height: 1.08 !important; }
+  h2 { font-size: 1.95rem !important; line-height: 1.1 !important; }
+}
+.dc-card .dc-title { font-family: 'Cormorant Garamond', Georgia, serif !important; font-weight: 600 !important; font-size: 1.65rem !important; line-height: 1.05 !important; letter-spacing: 0 !important; }
+.dc-title small { font-family: 'Inter', sans-serif; }
+.hero .slogan { font-family: 'Cormorant Garamond', Georgia, serif !important; font-style: italic; font-weight: 500 !important; font-size: clamp(1.4rem, 2vw, 1.75rem) !important; line-height: 1.25 !important; letter-spacing: 0 !important; }
+.hero .slogan em { font-style: italic; }
